@@ -1,9 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 //MANAGES EVENT
 public class EventManager : MonoBehaviour
 {
     public Transform PlayerEvent;
+    public GameObject choiceButtonA;
+    public GameObject choiceButtonB;
+    public TextMeshProUGUI mainSubtitles;
 
     private ActorManager actorManager; //ACTORMANAGER
     GameObject player;

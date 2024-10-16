@@ -1,163 +1,114 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-//CLASS FOR DIALOGUE NODES
+[System.Serializable]
+public class Dialogue
+{
+    public string dialogueText;
+    public Color dialogueColor = Color.white;
+    public float displayDuration = 2f;
+}
+
+// CLASS FOR DIALOGUE NODES
 [System.Serializable]
 public class DialogueNode
 {
     public bool closingDialogue;      // IS LAST DIALOGUE?
-    public string[] startDialogue;    // START DIALOGUE?
+    public Dialogue[] startDialogue;    // START DIALOGUE?
     public string choiceA;            // PREVIEW OF OPTION A
     public string choiceB;            // PREVIEW OF OPTION B
-    public string[] playerChoiceA;    // OPTION A DIALOGUE
-    public string[] playerChoiceB;    // OPTION B DIALOGUE
-    public string[] endDialogue;      // END DIALOGUE (OPTIONAL)
-
-    // Process dialogue for coloring before sending to DialogueManager
-    public string[] GetProcessedStartDialogue()
-    {
-        return ProcessDialogueArray(startDialogue);
-    }
-
-    public string[] GetProcessedPlayerChoiceA()
-    {
-        return ProcessDialogueArray(playerChoiceA);
-    }
-
-    public string[] GetProcessedPlayerChoiceB()
-    {
-        return ProcessDialogueArray(playerChoiceB);
-    }
-
-    public string[] GetProcessedEndDialogue()
-    {
-        return ProcessDialogueArray(endDialogue);
-    }
-
-    // Process an array of dialogue strings for coloring
-    private string[] ProcessDialogueArray(string[] dialogueArray)
-    {
-        string[] processedDialogue = new string[dialogueArray.Length];
-
-        for (int i = 0; i < dialogueArray.Length; i++)
-        {
-            processedDialogue[i] = ProcessText(dialogueArray[i]);
-        }
-
-        return processedDialogue;
-    }
-
-    // Private method to process and color the text
-    private string ProcessText(string input)
-    {
-        // Process each marker and replace it with the appropriate color tag
-        if (input.StartsWith("[P]"))
-        {
-            input = input.Replace("[P]", "");
-            return $"<color=#FFC0CB>{input}</color>";  // Pink
-        }
-        else if (input.StartsWith("[R]"))
-        {
-            input = input.Replace("[R]", "");
-            return $"<color=#DC143C>{input}</color>";  // Crimson Red
-        }
-        else if (input.StartsWith("[B]"))
-        {
-            input = input.Replace("[B]", "");
-            return $"<color=#87CEEB>{input}</color>";  // Sky Blue
-        }
-        else if (input.StartsWith("[G]"))
-        {
-            input = input.Replace("[G]", "");
-            return $"<color=#32CD32>{input}</color>";  // Limegreen
-        }
-        
-        // Return the text as is if no special marker is found
-        return input;
-    }
+    public Dialogue[] playerChoiceA;    // OPTION A DIALOGUE
+    public Dialogue[] playerChoiceB;    // OPTION B DIALOGUE
+    public Dialogue[] endDialogue;      // END DIALOGUE (OPTIONAL)
 }
 
-//CLASS FOR MANAGEMENT OF DIALOGUENODES AND OVERALL DIALOGUE
+// CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
 public class DialogueManager : MonoBehaviour
 {
     public DialogueNode[] nodes;             // LIST OF DIALOGUE NODES
-    public TextMeshProUGUI optionA, optionB; // UI FOR CHOICES
-    public TextMeshProUGUI subtitles;        // UI FOR SUBTITLES
+    private TextMeshProUGUI getTextA, getTextB; // UI FOR CHOICES
+    private Button getButtonA, getButtonB;
+    private TextMeshProUGUI getSubtitles;        // UI FOR SUBTITLES
 
     private int currentNodeIndex = 0;        // CURRENT NODE
     private DialogueNode currentNode;        // CURRENT NODE DATA
-    private bool playerMadeChoice = false;   // HAVE PLAYER MADE A CHOICE
+    private bool playerMadeChoice = false;   // HAS PLAYER MADE A CHOICE
 
-    private EventManager d_eventManager; //EVENT MANAGER
-    
+    private EventManager getEventManager; // EVENT MANAGER
+
     private void Start() {
-    d_eventManager = GameObject.FindObjectOfType<EventManager>();
+        getEventManager = GameObject.FindObjectOfType<EventManager>();
+        getSubtitles  = getEventManager.mainSubtitles;
+
+        getTextA = getEventManager.choiceButtonA.GetComponentInChildren<TextMeshProUGUI>();
+        getTextB = getEventManager.choiceButtonB.GetComponentInChildren<TextMeshProUGUI>();
+
+        getButtonA = getEventManager.choiceButtonA.GetComponent<Button>();
+        getButtonB = getEventManager.choiceButtonB.GetComponent<Button>();
     }
-    
+
     // INIT DIALOGUE
     public void StartDialogue()
-    {
+    {   
+        getButtonA.onClick.AddListener(OnChoiceA);
+        getButtonB.onClick.AddListener(OnChoiceB);
         currentNode = nodes[currentNodeIndex];
-        string[] processedDialogue = currentNode.GetProcessedStartDialogue();
-        StartCoroutine(PlayDialogueSequence(processedDialogue));
+        StartCoroutine(PlayDialogueSequence(currentNode.startDialogue, true));
     }
 
-    // PLAYS A SEQUENCE OF DIALOGUE ONE AFTER THE OTHER, AFTER THE OTHER ETC.
-    private IEnumerator PlayDialogueSequence(string[] dialogueSequence)
+    // PLAYS A SEQUENCE OF DIALOGUE ONE AFTER THE OTHER
+    private IEnumerator PlayDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter = false)
     {
-        foreach (string dialogue in dialogueSequence)
+        foreach (Dialogue dialogue in dialogueSequence)
         {
-            subtitles.text = dialogue;
-            yield return new WaitForSeconds(2f);  // WAIT TIME BETWEEN EACH DIALOGUE
+            getSubtitles.text = dialogue.dialogueText;
+            getSubtitles.color = dialogue.dialogueColor;
+            yield return new WaitForSeconds(dialogue.displayDuration);  // WAIT BASED ON DIALOGUE DURATION
         }
 
-        // SHOW CHOICES WHEN DIALOGUE IS DONE
+        if (showChoicesAfter)
+        {
         ShowChoices();
+        }
     }
 
     // DISPLAY OPTIONS UI-WISE
     private void ShowChoices()
     {
-        optionA.text = currentNode.choiceA;
-        optionB.text = currentNode.choiceB;
+        getTextA.text = currentNode.choiceA;
+        getTextB.text = currentNode.choiceB;
 
-        //ACTIVE OPTION UI
-        optionA.gameObject.SetActive(true);  
-        optionB.gameObject.SetActive(true);  
+        // ACTIVE OPTION UI
+        getTextA.transform.parent.gameObject.SetActive(true);
+        getTextB.transform.parent.gameObject.SetActive(true);
     }
 
     // PLAYER SELECTS OPTION A
     public void OnChoiceA()
-{   
-    playerMadeChoice = true;
-    optionA.gameObject.SetActive(false);
-    optionB.gameObject.SetActive(false);
-    string[] processedChoiceA = currentNode.GetProcessedPlayerChoiceA();
-    
-    // PLAYS CHOICE DIALOGUE
-    StartCoroutine(HandlePlayerChoice(processedChoiceA));
+    {
+        playerMadeChoice = true;
+        getTextA.transform.parent.gameObject.SetActive(false); 
+        getTextB.transform.parent.gameObject.SetActive(false);
+        StartCoroutine(HandlePlayerChoice(currentNode.playerChoiceA));
     }
 
     // PLAYER SELECTS OPTION B
     public void OnChoiceB()
     {
-    playerMadeChoice = true;
-    optionA.gameObject.SetActive(false);
-    optionB.gameObject.SetActive(false);
-    string[] processedChoiceB = currentNode.GetProcessedPlayerChoiceB();
-
-    // PLAYS CHOICE DIALOGUE
-    StartCoroutine(HandlePlayerChoice(processedChoiceB));
+        playerMadeChoice = true;
+        getTextA.transform.parent.gameObject.SetActive(false);  
+        getTextB.transform.parent.gameObject.SetActive(false);
+        StartCoroutine(HandlePlayerChoice(currentNode.playerChoiceB));
     }
 
-    // CHECK NEXT DIALOGUE AFTER DEALING WTIH CURRENT DIALOGUE
-    private IEnumerator HandlePlayerChoice(string[] choiceDialogue)
+    // HANDLE PLAYER'S CHOICE DIALOGUE
+    private IEnumerator HandlePlayerChoice(Dialogue[] choiceDialogue)
     {
-    yield return StartCoroutine(PlayDialogueSequence(choiceDialogue));
-    yield return StartCoroutine(CheckNextNode()); 
+        yield return StartCoroutine(PlayDialogueSequence(choiceDialogue));
+        yield return StartCoroutine(CheckNextNode());
     }
-
 
     // CHECK NEXT NODE IN SESSION (OR FINISH THE SESSION)
     private IEnumerator CheckNextNode()
@@ -166,17 +117,18 @@ public class DialogueManager : MonoBehaviour
 
         if (currentNode.closingDialogue)
         {
-            string[] processedEndDialogue = currentNode.GetProcessedEndDialogue();
-            StartCoroutine(PlayDialogueSequence(processedEndDialogue));
-            d_eventManager.EndConversation();
+            StartCoroutine(PlayDialogueSequence(currentNode.endDialogue));
+            getButtonA.onClick.RemoveListener(OnChoiceA);
+            getButtonB.onClick.RemoveListener(OnChoiceB);
+            getEventManager.EndConversation();
             yield break;  // CONVERSATION ENDS
         }
 
-        // MOVES TO NEXT NODE
+        // MOVE TO NEXT NODE
         if (currentNodeIndex < nodes.Length - 1)
         {
             currentNodeIndex++;
-            StartDialogue();  // STARTS NEXT DIALOGUE
+            StartDialogue();  // START NEXT DIALOGUE
         }
         else
         {
