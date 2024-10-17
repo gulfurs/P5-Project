@@ -824,7 +824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105.58472, y: -69.62268}
+  m_AnchoredPosition: {x: 105.58472, y: 824}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176081724
@@ -5768,7 +5768,7 @@ MonoBehaviour:
     - dialogueText: "Jeg pr\xF8ver bare at initiere en samtale her."
       dialogueColor: {r: 1, g: 1, b: 1, a: 1}
       displayDuration: 2
-      consequenceUID: badSide-Peter-0001
+      consequenceUID: 
     playerChoiceB:
     - dialogueText: Modtaget.
       dialogueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -5777,7 +5777,7 @@ MonoBehaviour:
     - dialogueText: "Det lige en ommer, lad mig pr\xF8ve igen."
       dialogueColor: {r: 1, g: 1, b: 1, a: 1}
       displayDuration: 0
-      consequenceUID: goodSide-Peter-0001
+      consequenceUID: 
     endDialogue: []
   - closingDialogue: 0
     startDialogue:
@@ -5815,7 +5815,7 @@ MonoBehaviour:
     - dialogueText: efterlade et godt indtryk hos klassekammeraterne
       dialogueColor: {r: 1, g: 1, b: 1, a: 1}
       displayDuration: 2
-      consequenceUID: 
+      consequenceUID: leaveClass-You-0001
     playerChoiceB:
     - dialogueText: Jeg ved at du ikke mener det der.
       dialogueColor: {r: 1, g: 1, b: 1, a: 1}
@@ -5828,7 +5828,7 @@ MonoBehaviour:
     - dialogueText: "S\xE5 den attitude kommer du og jeg til at arbejde p\xE5 sammen"
       dialogueColor: {r: 1, g: 1, b: 1, a: 1}
       displayDuration: 2
-      consequenceUID: 
+      consequenceUID: leaveClass-You-0001
     endDialogue: []
 --- !u!1 &1046299051
 GameObject:
@@ -6446,7 +6446,7 @@ GameObject:
   - component: {fileID: 1078745502}
   - component: {fileID: 1078745504}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LeaveObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6481,7 +6481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorObject: {fileID: 0}
-  selectable: 1
+  selectable: 0
   actorID: {fileID: 2129724823}
 --- !u!65 &1078745503
 BoxCollider:
@@ -6753,95 +6753,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144662073}
   m_Mesh: {fileID: -6199194599036011596, guid: 363e1a7b56dfa5c4ead6c2fffbf9031c, type: 3}
---- !u!1 &1163617698
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1163617699}
-  - component: {fileID: 1163617702}
-  - component: {fileID: 1163617701}
-  - component: {fileID: 1163617700}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1163617699
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163617698}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000013767881, y: 0.7071067, z: 0.7071068, w: 0.0000001376788}
-  m_LocalPosition: {x: -3.9324436, y: 0.93867934, z: 2.372797}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5226971947796100066}
-  m_Father: {fileID: 2042667984}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1163617700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163617698}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 5.4
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!114 &1163617701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163617698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actorObject: {fileID: 0}
-  selectable: 1
-  actorID: {fileID: 0}
---- !u!65 &1163617702
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163617698}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.01, y: 0.04, z: 0.025}
-  m_Center: {x: 0, y: 0, z: 0.01}
 --- !u!1 &1186984612
 GameObject:
   m_ObjectHideFlags: 0
@@ -8338,7 +8249,7 @@ GameObject:
   - component: {fileID: 1699909107}
   - component: {fileID: 1699909109}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LeaveObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8373,7 +8284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actorObject: {fileID: 0}
-  selectable: 1
+  selectable: 0
   actorID: {fileID: 893357842}
 --- !u!65 &1699909108
 BoxCollider:
@@ -8736,6 +8647,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d8db1ccbb1efb34ca568ffeeb4fe3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  consUID: leaveClass-You-0001
+  objectsToCheck:
+  - {fileID: 1699909105}
+  - {fileID: 1078745500}
 --- !u!1 &1770012530
 GameObject:
   m_ObjectHideFlags: 0
@@ -9650,7 +9565,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7964397215556896241}
-  - {fileID: 1163617699}
+  - {fileID: 5226971947796100066}
   m_Father: {fileID: 233155563}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2059078476
@@ -14268,12 +14183,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834815169895150154}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.00000013767881, y: 0.7071067, z: 0.7071068, w: 0.0000001376788}
+  m_LocalPosition: {x: -3.9324436, y: 0.93867934, z: 2.372797}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1163617699}
+  m_Father: {fileID: 2042667984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5232317425126248965
 MeshFilter:
