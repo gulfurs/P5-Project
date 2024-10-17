@@ -819,7 +819,9 @@ PrefabInstance:
       value: Court_with_texture
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8700617353114198275, guid: 810433c1997398b44a62c80119b7272d, type: 3}
+    - {fileID: 65702495048144492, guid: 810433c1997398b44a62c80119b7272d, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 810433c1997398b44a62c80119b7272d, type: 3}
