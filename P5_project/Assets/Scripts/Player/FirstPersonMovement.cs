@@ -5,7 +5,7 @@ public class FirstPersonMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float mouseSensitivity = 100f;
 
-    public Transform cameraTransform;  // Reference to the camera's transform
+    public Transform cameraTransform; 
     private CharacterController controller;
 
     float xRotation = 0f;
@@ -25,7 +25,7 @@ public class FirstPersonMovement : MonoBehaviour
 
     void Update()
     {
-        // Check if Shift is held down
+        // SHIFT TO CONTROL CURSOR
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
             // Unlock the cursor and make it visible
@@ -34,14 +34,14 @@ public class FirstPersonMovement : MonoBehaviour
         }
         else
         {
-            // Lock the cursor and make it invisible again
+            // LOCK THE CURSOR
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
 
             // Move the player based on WASD keys
             //MovePlayer();
 
-            // Rotate the camera based on mouse movement
+            // ROTATE CAMERA
             RotateCamera();
         }
     }
@@ -61,17 +61,17 @@ public class FirstPersonMovement : MonoBehaviour
 
     void RotateCamera()
     {
-        // Get mouse movement input
+        // MOVEMENT INPUT
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        // Rotate the camera around the X axis (looking up and down)
+        // ROTATE X AND Y
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);  // Clamp vertical rotation
 
         cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        // Rotate the player around the Y axis (turning left and right)
+        // ROTATE AROUND Y AXIS
         transform.Rotate(Vector3.up * mouseX);
     }
 }
