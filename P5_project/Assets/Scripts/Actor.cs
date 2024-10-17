@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 //HOME TO INTERACTABLE OBJECTS
 public class Actor : MonoBehaviour
@@ -8,6 +9,7 @@ public class Actor : MonoBehaviour
     ActorManager actorManager;  //GET ACTORMANAGER
     public GameObject actorObject; //GET GAMEOBJECT
     public bool selectable; //SELECTABLE OR NOT?
+    public GameObject actorID;
 
      void Awake()
     {

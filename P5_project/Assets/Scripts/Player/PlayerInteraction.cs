@@ -7,43 +7,55 @@ using UnityEngine.EventSystems;
 //PLAYER INTERACTION MADE POSSIBLE
 public class PlayerInteraction : MonoBehaviour {
 
-private Transform highlight;
-public Transform selection;
-private RaycastHit raycastHit;
+    private Transform highlight;
+    public Transform selection;
+    private RaycastHit raycastHit;
 
-public event Action<Transform> OnSelectionChanged; //EVENT FOR CHANGE OF SELECTION
+    public event Action<Transform> OnSelectionChanged; //EVENT FOR CHANGE OF SELECTION
 
-void Update()
-{
-    // REMOVES HIGHLIGHT (?)
-    if (highlight != null)
+    void Update()
     {
-        var outline = highlight.gameObject.GetComponent<Outline>();
-        if (outline != null)
-        {
-            outline.enabled = false;
-        }
-        highlight = null;
-    }
-
-    // CAST RAY FROM MOUSE. CHECKS IF HITS GAMEOBJECT
-    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit))
-    {
-        highlight = raycastHit.transform;
-
-        // CHECK IF ACTOR
-        Actor actor = highlight.GetComponent<Actor>();
-        if (actor != null && actor.selectable && highlight != selection)
+        // REMOVES HIGHLIGHT AND DEACTIVATES actorID
+        if (highlight != null)
         {
             var outline = highlight.gameObject.GetComponent<Outline>();
-            outline.enabled = true;
-        }
-        else
-        {
+            if (outline != null)
+            {
+                outline.enabled = false;
+            }
+
+            // Deactivate actorID when no longer hovering
+            Actor prevActor = highlight.GetComponent<Actor>();
+            if (prevActor != null && prevActor.actorID != null)
+            {
+                prevActor.actorID.SetActive(false);
+            }
+
             highlight = null;
         }
-    }
+
+        // CAST RAY FROM MOUSE. CHECKS IF HITS GAMEOBJECT
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (!EventSystem.current.IsPointerOverGameObject() && Physics.Raycast(ray, out raycastHit))
+        {
+            highlight = raycastHit.transform;
+
+            // CHECK IF ACTOR
+            Actor actor = highlight.GetComponent<Actor>();
+            if (actor != null && actor.selectable && highlight != selection)
+            {
+                var outline = highlight.gameObject.GetComponent<Outline>();
+                if (actor.actorID != null) {
+                    actor.actorID.SetActive(true); // Show actorID on hover
+                }
+                outline.enabled = true;
+            }
+            else
+            {
+                highlight = null; // Reset highlight when not selectable
+            }
+        }
+
         // CLICK HIGHLIGHTED OBJECT?
         if (Input.GetMouseButtonDown(0))
         {
@@ -56,7 +68,7 @@ void Update()
                 selection = raycastHit.transform;
                 //selection.gameObject.GetComponent<Outline>().enabled = true;
                 highlight = null;
-                OnSelectionChanged?.Invoke(selection); 
+                OnSelectionChanged?.Invoke(selection);
             }
             else
             {
@@ -69,5 +81,4 @@ void Update()
             }
         }
     }
-
 }

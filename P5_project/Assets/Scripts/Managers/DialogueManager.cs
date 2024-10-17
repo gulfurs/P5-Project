@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,6 +10,7 @@ public class Dialogue
     public string dialogueText;
     public Color dialogueColor = Color.white;
     public float displayDuration = 2f;
+    public string consequenceUID;
 }
 
 // CLASS FOR DIALOGUE NODES
@@ -31,6 +33,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI getTextA, getTextB; // UI FOR CHOICES
     private Button getButtonA, getButtonB;
     private TextMeshProUGUI getSubtitles;        // UI FOR SUBTITLES
+    private List<string> getEventracker;
 
     private int currentNodeIndex = 0;        // CURRENT NODE
     private DialogueNode currentNode;        // CURRENT NODE DATA
@@ -47,6 +50,7 @@ public class DialogueManager : MonoBehaviour
 
         getButtonA = getEventManager.choiceButtonA.GetComponent<Button>();
         getButtonB = getEventManager.choiceButtonB.GetComponent<Button>();
+        getEventracker = getEventManager.eventTrackerList;
     }
 
     // INIT DIALOGUE
@@ -65,6 +69,13 @@ public class DialogueManager : MonoBehaviour
         {
             getSubtitles.text = dialogue.dialogueText;
             getSubtitles.color = dialogue.dialogueColor;
+
+            if (!string.IsNullOrEmpty(dialogue.consequenceUID))
+            {
+            getEventracker.Add(dialogue.consequenceUID);
+            }
+
+
             yield return new WaitForSeconds(dialogue.displayDuration);  // WAIT BASED ON DIALOGUE DURATION
         }
 
@@ -120,7 +131,7 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(PlayDialogueSequence(currentNode.endDialogue));
             getButtonA.onClick.RemoveListener(OnChoiceA);
             getButtonB.onClick.RemoveListener(OnChoiceB);
-            getEventManager.EndConversation();
+            
             yield break;  // CONVERSATION ENDS
         }
 
@@ -132,6 +143,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
+            getEventManager.EndConversation();
             Debug.Log("End of dialogue nodes reached.");
         }
     }

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
 
 //MANAGES EVENT
 public class EventManager : MonoBehaviour
@@ -9,6 +11,8 @@ public class EventManager : MonoBehaviour
     public GameObject choiceButtonA;
     public GameObject choiceButtonB;
     public TextMeshProUGUI mainSubtitles;
+    
+    public List<string> eventTrackerList = new List<string>();
 
     private ActorManager actorManager; //ACTORMANAGER
     GameObject player;
@@ -19,7 +23,6 @@ public class EventManager : MonoBehaviour
 
         if (actorManager != null)
         {
-            // Get the Player GameObject from ActorManager
             player = actorManager.Player;
 
             if (player != null)
@@ -72,48 +75,39 @@ public class EventManager : MonoBehaviour
         //Debug.Log("PlayerEvent updated to: " + PlayerEvent);
     }
     
-    //HANDLES POST DIALOGUE
-    public void EndConversation() {
+    public void EndConversation()
+{
+    Debug.Log("EndConversation called"); // Debug log
+    
+    foreach (var actor in actorManager.Actors)
+    {
+        Collider[] colliders = actor.actorObject.GetComponents<Collider>();  
 
-        //ENABLES COLLIDERS OF ALL ACTORS
-        foreach (var actor in actorManager.Actors)
+        foreach (Collider collider in colliders)
         {
-            Collider[] colliders = actor.actorObject.GetComponents<Collider>();  
-
-            foreach (Collider collider in colliders)
-            {
-                collider.enabled = true;  
-            }
+            collider.enabled = true;  
         }
-
-        if (PlayerEvent != null)
-    {
-
-    //MAKE IT SO YOU CAN'T START THE SAME DIALOGUE
-    Actor actor = PlayerEvent.gameObject.GetComponent<Actor>();
-    if (actor != null)
-    {
-        actor.selectable = false;
-    }
-    
-    //DISABLES OUTLINE
-    Outline outline = PlayerEvent.gameObject.GetComponent<Outline>();
-        if (outline != null) {
-        
-        outline.enabled = false;
-        }
-    
-    PlayerEvent = null; // CLEAR PLAYEREVENT REFERENCE
     }
 
-    // RETURNS PLAYER TO STARTING POSITION
-    if (player != null)
+    if (PlayerEvent != null)
     {
+        Actor actor = PlayerEvent.gameObject.GetComponent<Actor>();
+        if (actor != null)
+        {
+            actor.selectable = false;
+        }
+    
+        Outline outline = PlayerEvent.gameObject.GetComponent<Outline>();
+        if (outline != null) 
+        {
+            outline.enabled = false;
+        }
+
+        PlayerEvent = null;
+    }
+
     FirstPersonMovement firstPersonMovement = player.GetComponent<FirstPersonMovement>();
-    if (firstPersonMovement != null) {
-        player.transform.position = firstPersonMovement.startingPosition;
-            }
-        }
-
-    }
+    player.transform.position = firstPersonMovement.startingPosition;
+    Debug.Log("Player moved to starting position");
+}
 }
