@@ -19,11 +19,17 @@ public class DialogueNode
 {
     public bool closingDialogue;      // IS LAST DIALOGUE?
     public Dialogue[] startDialogue;    // START DIALOGUE?
+
     public string choiceA;            // PREVIEW OF OPTION A
     public string choiceB;            // PREVIEW OF OPTION B
     public Dialogue[] playerChoiceA;    // OPTION A DIALOGUE
     public Dialogue[] playerChoiceB;    // OPTION B DIALOGUE
     public Dialogue[] endDialogue;      // END DIALOGUE (OPTIONAL)
+
+    public AudioClip startQuip;         // Sound for start dialogue
+    public AudioClip choiceAQuip;        // Sound for choice A
+    public AudioClip choiceBQuip;        // Sound for choice B
+    public AudioClip endQuip;    // Sound for end dialogue
 }
 
 // CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
@@ -35,6 +41,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI getSubtitles;        // UI FOR SUBTITLES
     private List<string> getEventracker;
 
+    public AudioSource getAudioSource;
     private int currentNodeIndex = 0;        // CURRENT NODE
     private DialogueNode currentNode;        // CURRENT NODE DATA
     private bool playerMadeChoice = false;   // HAS PLAYER MADE A CHOICE
@@ -59,12 +66,19 @@ public class DialogueManager : MonoBehaviour
         getButtonA.onClick.AddListener(OnChoiceA);
         getButtonB.onClick.AddListener(OnChoiceB);
         currentNode = nodes[currentNodeIndex];
+
+        if (currentNode.startQuip != null)
+        {
+            getAudioSource.PlayOneShot(currentNode.startQuip);
+        }
+
         StartCoroutine(PlayDialogueSequence(currentNode.startDialogue, true));
     }
 
     // PLAYS A SEQUENCE OF DIALOGUE ONE AFTER THE OTHER
     private IEnumerator PlayDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter = false)
     {
+        
         foreach (Dialogue dialogue in dialogueSequence)
         {
             getSubtitles.text = dialogue.dialogueText;
@@ -99,18 +113,36 @@ public class DialogueManager : MonoBehaviour
     // PLAYER SELECTS OPTION A
     public void OnChoiceA()
     {
-        playerMadeChoice = true;
         getTextA.transform.parent.gameObject.SetActive(false); 
         getTextB.transform.parent.gameObject.SetActive(false);
+
+        currentNode = nodes[currentNodeIndex];
+        if (currentNode.choiceAQuip != null)
+        {
+            getAudioSource.PlayOneShot(currentNode.choiceAQuip);
+        }
+
+        playerMadeChoice = true;
+        
+
         StartCoroutine(HandlePlayerChoice(currentNode.playerChoiceA));
-    }
+    }   
 
     // PLAYER SELECTS OPTION B
     public void OnChoiceB()
     {
-        playerMadeChoice = true;
         getTextA.transform.parent.gameObject.SetActive(false);  
         getTextB.transform.parent.gameObject.SetActive(false);
+        
+        currentNode = nodes[currentNodeIndex];
+        if (currentNode.choiceBQuip != null)
+        {
+            getAudioSource.PlayOneShot(currentNode.choiceBQuip);
+        }
+
+        playerMadeChoice = true;
+        
+        
         StartCoroutine(HandlePlayerChoice(currentNode.playerChoiceB));
     }
 
@@ -128,6 +160,11 @@ public class DialogueManager : MonoBehaviour
 
         if (currentNode.closingDialogue)
         {
+            if (currentNode.endQuip != null)
+            {
+                getAudioSource.PlayOneShot(currentNode.endQuip);
+            }
+
             StartCoroutine(PlayDialogueSequence(currentNode.endDialogue));
             getButtonA.onClick.RemoveListener(OnChoiceA);
             getButtonB.onClick.RemoveListener(OnChoiceB);
