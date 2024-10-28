@@ -18,7 +18,7 @@ public class FirstPersonMovement : MonoBehaviour
         Cursor.visible = false;
 
         
-        //controller = GetComponent<CharacterController>();
+        controller = GetComponent<CharacterController>();
         
         startingPosition = transform.position;
     }
@@ -39,13 +39,13 @@ public class FirstPersonMovement : MonoBehaviour
             Cursor.visible = false;
 
             // Move the player based on WASD keys
-            //MovePlayer();
+            MovePlayer();
 
             // ROTATE CAMERA
             RotateCamera();
         }
     }
-    /*
+    
     void MovePlayer()
     {
         // Get input for horizontal and vertical movement
@@ -57,7 +57,7 @@ public class FirstPersonMovement : MonoBehaviour
 
         // Apply the movement using the character controller
         controller.Move(move * moveSpeed * Time.deltaTime);
-    } */
+    } 
 
     void RotateCamera()
     {

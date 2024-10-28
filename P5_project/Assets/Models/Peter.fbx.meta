@@ -1,0 +1,1474 @@
+fileFormatVersion: 2
+guid: bf590d04ea7450b4882e42bc1d645155
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature.008|Action
+      takeName: Armature.008|Action
+      internalID: 3555521270285852639
+      firstFrame: 0
+      lastFrame: 310
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature.009
+        weight: 0
+      - path: Armature.009/Ctrl_ArmPole_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_ArmPole_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/Ctrl_FootRoll_Cursor_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/Foot_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/Foot_IK_Left/Foot_Snap_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/Foot_IK_Left/ToeTrack_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/Foot_IK_Left/ToeTrack_Left/Toe01_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/Foot_IK_Left/ToeTrack_Left/Toe01_IK_Left/Toe02_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left/ToeEnd_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left/ToeEnd_Left/Ctrl_Foot_01_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left/ToeEnd_Left/Ctrl_Foot_01_Left/Foot_01_Pole_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left/ToeEnd_Left/Ctrl_Foot_01_Left/Foot_IK_target_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left/ToeEnd_Left/Ctrl_Toe_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Left/FootHeelOut_Left/FootHeelIn_Left/FootHeelMid_Left/ToeEnd_Left/ToeEnd_01_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/Ctrl_FootRoll_Cursor_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/Foot_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/Foot_IK_Right/Foot_Snap_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/Foot_IK_Right/ToeTrack_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/Foot_IK_Right/ToeTrack_Right/Toe01_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/Foot_IK_Right/ToeTrack_Right/Toe01_IK_Right/Toe02_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right/ToeEnd_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right/ToeEnd_Right/Ctrl_Foot_01_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right/ToeEnd_Right/Ctrl_Foot_01_Right/Foot_01_Pole_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right/ToeEnd_Right/Ctrl_Foot_01_Right/Foot_IK_target_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right/ToeEnd_Right/Ctrl_Toe_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Foot_IK_Right/FootHeelOut_Right/FootHeelIn_Right/FootHeelMid_Right/ToeEnd_Right/ToeEnd_01_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Hand_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Hand_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_LegPole_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_LegPole_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Left/Ctrl_Leg_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Left/Ctrl_Leg_FK_Left/Ctrl_Foot_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Left/Ctrl_Leg_FK_Left/Ctrl_Foot_FK_Left/Foot_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Left/Ctrl_Leg_FK_Left/Ctrl_Foot_FK_Left/Foot_FK_Left/Ctrl_Toe_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Right/Ctrl_Leg_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Right/Ctrl_Leg_FK_Right/Ctrl_Foot_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Right/Ctrl_Leg_FK_Right/Ctrl_Foot_FK_Right/Foot_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Ctrl_UpLeg_FK_Right/Ctrl_Leg_FK_Right/Ctrl_Foot_FK_Right/Foot_FK_Right/Ctrl_Toe_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/Hips_Free_Helper
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/UpLeg_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/UpLeg_IK_Left/Leg_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/UpLeg_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Hips_Free/UpLeg_IK_Right/Leg_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Arm_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Arm_FK_Left/Ctrl_ForeArm_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Arm_FK_Left/Ctrl_ForeArm_FK_Left/Ctrl_Hand_FK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Arm_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Arm_FK_Right/Ctrl_ForeArm_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Arm_FK_Right/Ctrl_ForeArm_FK_Right/Ctrl_Hand_FK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Neck
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Neck/Ctrl_Head
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Shoulder_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Shoulder_Left/Arm_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Shoulder_Left/Arm_IK_Left/ForeArm_IK_Left
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Shoulder_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Shoulder_Right/Arm_IK_Right
+        weight: 1
+      - path: Armature.009/Ctrl_Master/Ctrl_Hips/Ctrl_Spine/Ctrl_Spine1/Ctrl_Spine2/Ctrl_Shoulder_Right/Arm_IK_Right/ForeArm_IK_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:LeftUpLeg
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:LeftUpLeg/mixamorig:LeftLeg/mixamorig:LeftFoot/mixamorig:LeftToeBase/mixamorig:LeftToe_End
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:RightUpLeg
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:RightUpLeg/mixamorig:RightLeg/mixamorig:RightFoot/mixamorig:RightToeBase/mixamorig:RightToe_End
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Index1_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Index1_Left/Ctrl_Index2_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Index1_Left/Ctrl_Index2_Left/Ctrl_Index3_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Middle1_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Middle1_Left/Ctrl_Middle2_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Middle1_Left/Ctrl_Middle2_Left/Ctrl_Middle3_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Pinky1_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Pinky1_Left/Ctrl_Pinky2_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Pinky1_Left/Ctrl_Pinky2_Left/Ctrl_Pinky3_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Ring1_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Ring1_Left/Ctrl_Ring2_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Ring1_Left/Ctrl_Ring2_Left/Ctrl_Ring3_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Thumb1_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Thumb1_Left/Ctrl_Thumb2_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/Ctrl_Thumb1_Left/Ctrl_Thumb2_Left/Ctrl_Thumb3_Left
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandIndex1/mixamorig:LeftHandIndex2/mixamorig:LeftHandIndex3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandMiddle1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandMiddle1/mixamorig:LeftHandMiddle2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandMiddle1/mixamorig:LeftHandMiddle2/mixamorig:LeftHandMiddle3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandPinky1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandPinky1/mixamorig:LeftHandPinky2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandPinky1/mixamorig:LeftHandPinky2/mixamorig:LeftHandPinky3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandRing1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandRing1/mixamorig:LeftHandRing2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandRing1/mixamorig:LeftHandRing2/mixamorig:LeftHandRing3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandThumb1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandThumb1/mixamorig:LeftHandThumb2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:LeftShoulder/mixamorig:LeftArm/mixamorig:LeftForeArm/mixamorig:LeftHand/mixamorig:LeftHandThumb1/mixamorig:LeftHandThumb2/mixamorig:LeftHandThumb3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/mixamorig:HeadTop_End
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L/DEF-brow.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L/DEF-cheek.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L/ORG-brow.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.001/DEF-brow.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.001/ORG-brow.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.002/DEF-brow.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.002/ORG-brow.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.003/DEF-brow.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.L.003/ORG-brow.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R/DEF-brow.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R/DEF-cheek.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R/ORG-brow.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.001/DEF-brow.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.001/ORG-brow.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.002/DEF-brow.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.002/ORG-brow.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.003/DEF-brow.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/brow.T.R.003/ORG-brow.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-forehead.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-forehead.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-forehead.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-forehead.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-forehead.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-forehead.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-temple.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/DEF-temple.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/DEF-ear.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/DEF-ear.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.002/DEF-ear.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.002/ORG-ear.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.003/DEF-ear.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.003/ORG-ear.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.004/DEF-ear.L.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.L/ear.L.004/ORG-ear.L.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/DEF-ear.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/DEF-ear.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.002/DEF-ear.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.002/ORG-ear.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.003/DEF-ear.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.003/ORG-ear.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.004/DEF-ear.R.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ear.R/ear.R.004/ORG-ear.R.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw.L/DEF-jaw.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw.L/ORG-jaw.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw.R/DEF-jaw.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw.R/ORG-jaw.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin/chin.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin/chin.001/DEF-chin.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin/chin.001/ORG-chin.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin/DEF-chin
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin/ORG-chin
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin.L/DEF-chin.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin.L/ORG-chin.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin.R/DEF-chin.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/chin.R/ORG-chin.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw/DEF-jaw
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw/ORG-jaw
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw.L.001/DEF-jaw.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw.L.001/ORG-jaw.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw.R.001/DEF-jaw.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/jaw.R.001/ORG-jaw.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.001/tongue.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.001/tongue.001/DEF-tongue.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.001/tongue.001/ORG-tongue.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.002/tongue.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.002/tongue.002/DEF-tongue.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/MCH-tongue.002/tongue.002/ORG-tongue.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/tongue.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/tongue_master
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/tongue_master/tongue
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/tongue_master/tongue/DEF-tongue
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/tongue_master/tongue/ORG-tongue
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L/DEF-brow.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L/ORG-brow.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.001/DEF-brow.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.001/ORG-brow.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.002/DEF-brow.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.002/ORG-brow.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.003/DEF-brow.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.003/ORG-brow.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/brow.B.L.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L/ORG-lid.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L.001/ORG-lid.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L.002/ORG-lid.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.B.L.003/ORG-lid.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L/ORG-lid.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L.001/ORG-lid.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L.002/ORG-lid.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/lid.T.L.003/ORG-lid.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-eye.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-eye.L/EyeLeft.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-eye.L/ORG-eye.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-eye.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L/DEF-lid.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L.001/DEF-lid.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L.002/DEF-lid.B.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.B.L.003/DEF-lid.B.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L/DEF-lid.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L.001/DEF-lid.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L.002/DEF-lid.T.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.L/MCH-lid.T.L.003/DEF-lid.T.L.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R/DEF-brow.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R/ORG-brow.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.001/DEF-brow.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.001/ORG-brow.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.002/DEF-brow.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.002/ORG-brow.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.003/DEF-brow.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.003/ORG-brow.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/brow.B.R.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R/ORG-lid.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R.001/ORG-lid.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R.002/ORG-lid.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.B.R.003/ORG-lid.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R/ORG-lid.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R.001/ORG-lid.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R.002/ORG-lid.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/lid.T.R.003/ORG-lid.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-eye.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-eye.R/EyeRight.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-eye.R/ORG-eye.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-eye.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R/DEF-lid.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R.001/DEF-lid.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R.002/DEF-lid.B.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.B.R.003/DEF-lid.B.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R/DEF-lid.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R.001/DEF-lid.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R.002/DEF-lid.T.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-lid.T.R.003/DEF-lid.T.R.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master/lip.B
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master/lip.B/chin.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master/lip.B/DEF-lip.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master/lip.B/DEF-lip.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001/lip.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001/lip.B.L.001/DEF-lip.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001/lip.B.L.001/ORG-lip.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001/lip.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001/lip.B.R.001/DEF-lip.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.001/lip.B.R.001/ORG-lip.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/cheek.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/cheek.B.L.001/DEF-cheek.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/cheek.B.L.001/ORG-cheek.B.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/cheek.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/cheek.B.R.001/DEF-cheek.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/cheek.B.R.001/ORG-cheek.B.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/lips.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/lips.L/DEF-cheek.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/lips.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.002/lips.R/DEF-cheek.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T/DEF-lip.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T/DEF-lip.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T/nose.005
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T.L.001/DEF-lip.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T.L.001/ORG-lip.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T.R.001/DEF-lip.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.003/lip.T.R.001/ORG-lip.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/cheek.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/cheek.T.L.001/DEF-cheek.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/cheek.T.L.001/ORG-cheek.T.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/cheek.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/cheek.T.R.001/DEF-cheek.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/cheek.T.R.001/ORG-cheek.T.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/DEF-nose.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.001/DEF-nose.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.001/ORG-nose.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.003/DEF-nose.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/nose.003/ORG-nose.003
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.002/ORG-nose.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.004/DEF-nose.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.004/ORG-nose.004
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.L.001/DEF-nose.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.L.001/ORG-nose.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.R.001/DEF-nose.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-jaw_master.004/nose_master/nose.R.001/ORG-nose.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/MCH-mouth_lock
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose/DEF-nose
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose/ORG-nose
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose.L/DEF-nose.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose.L/ORG-nose.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose.R/DEF-nose.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/nose.R/ORG-nose.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-cheek.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-cheek.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-cheek.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-cheek.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-ear.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-ear.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-ear.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-ear.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-forehead.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-forehead.L.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-forehead.L.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-forehead.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-forehead.R.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-forehead.R.002
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-lip.B.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-lip.B.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-lip.T.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-lip.T.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-teeth.B
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-teeth.T
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-temple.L
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/ORG-temple.R
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop.001
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Index1_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Index1_Right/Ctrl_Index2_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Index1_Right/Ctrl_Index2_Right/Ctrl_Index3_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Middle1_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Middle1_Right/Ctrl_Middle2_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Middle1_Right/Ctrl_Middle2_Right/Ctrl_Middle3_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Pinky1_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Pinky1_Right/Ctrl_Pinky2_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Pinky1_Right/Ctrl_Pinky2_Right/Ctrl_Pinky3_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Ring1_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Ring1_Right/Ctrl_Ring2_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Ring1_Right/Ctrl_Ring2_Right/Ctrl_Ring3_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Thumb1_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Thumb1_Right/Ctrl_Thumb2_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/Ctrl_Thumb1_Right/Ctrl_Thumb2_Right/Ctrl_Thumb3_Right
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandIndex1/mixamorig:RightHandIndex2/mixamorig:RightHandIndex3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandMiddle1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandMiddle1/mixamorig:RightHandMiddle2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandMiddle1/mixamorig:RightHandMiddle2/mixamorig:RightHandMiddle3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandPinky1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandPinky1/mixamorig:RightHandPinky2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandPinky1/mixamorig:RightHandPinky2/mixamorig:RightHandPinky3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandRing1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandRing1/mixamorig:RightHandRing2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandRing1/mixamorig:RightHandRing2/mixamorig:RightHandRing3
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1/mixamorig:RightHandThumb2
+        weight: 1
+      - path: Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:RightShoulder/mixamorig:RightArm/mixamorig:RightForeArm/mixamorig:RightHand/mixamorig:RightHandThumb1/mixamorig:RightHandThumb2/mixamorig:RightHandThumb3
+        weight: 1
+      - path: Armature.009/root
+        weight: 1
+      - path: Armature.009/root/MCH-eyes_parent
+        weight: 1
+      - path: Armature.009/root/MCH-eyes_parent/eyes
+        weight: 1
+      - path: Armature.009/root/MCH-eyes_parent/eyes/eye.L
+        weight: 1
+      - path: Armature.009/root/MCH-eyes_parent/eyes/eye.R
+        weight: 1
+      - path: Body.001
+        weight: 1
+      - path: Hair.008
+        weight: 1
+      - path: Tongue.001
+        weight: 1
+      - path: Watch
+        weight: 1
+      maskType: 1
+      maskSource: {fileID: 31900000, guid: 7cc380ae42346fe4ab36cd9f40b2053e, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Action.001
+      takeName: Armature.008|Action.001
+      internalID: 4501744355716140171
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Armature|mixamo.com|Layer0
+      takeName: Armature.008|Armature|mixamo.com|Layer0
+      internalID: -4616595223883566215
+      firstFrame: 0
+      lastFrame: 510
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Armature|mixamo.com|Layer0.002
+      takeName: Armature.008|Armature|mixamo.com|Layer0.002
+      internalID: 166141353414573651
+      firstFrame: 0
+      lastFrame: 68
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Armature|mixamo.com|Layer0.003
+      takeName: Armature.008|Armature|mixamo.com|Layer0.003
+      internalID: 5927264461604983853
+      firstFrame: 0
+      lastFrame: 68
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Blink
+      takeName: Armature.008|Blink
+      internalID: 4324038489297403445
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|EnteringLevator
+      takeName: Armature.008|EnteringLevator
+      internalID: -1060647451429382234
+      firstFrame: 0
+      lastFrame: 770
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Idle
+      takeName: Armature.008|Idle
+      internalID: 4843306986557849293
+      firstFrame: 0
+      lastFrame: 310
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Idle.001
+      takeName: Armature.008|Idle.001
+      internalID: -5217237413929935857
+      firstFrame: 0
+      lastFrame: 310
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Shy
+      takeName: Armature.008|Shy
+      internalID: 3252973723959395626
+      firstFrame: 0
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Shy.001
+      takeName: Armature.008|Shy.001
+      internalID: -7956269712534992629
+      firstFrame: 0
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Talk
+      takeName: Armature.008|Talk
+      internalID: -2730377802188645515
+      firstFrame: 0
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Walk
+      takeName: Armature.008|Walk
+      internalID: 4066561839139436596
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Walk.001
+      takeName: Armature.008|Walk.001
+      internalID: 6784110454788118704
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature.008|Walk.002
+      takeName: Armature.008|Walk.002
+      internalID: -7989654693589016271
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: mixamorig:Hips
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

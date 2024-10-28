@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 [System.Serializable]
 public class Dialogue
 {
     public string dialogueText;
-    public Color dialogueColor = Color.white;
     public float displayDuration = 2f;
+    public Actor actor; 
     public string consequenceUID;
 }
 
@@ -41,10 +42,12 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI getSubtitles;        // UI FOR SUBTITLES
     private List<string> getEventracker;
 
-    public AudioSource getAudioSource;
+    public GameObject getAudiomotor;
+    private AudioSource getAudioSource;
+    private LazyFollow getFollow;
+
     private int currentNodeIndex = 0;        // CURRENT NODE
     private DialogueNode currentNode;        // CURRENT NODE DATA
-    private bool playerMadeChoice = false;   // HAS PLAYER MADE A CHOICE
 
     private EventManager getEventManager; // EVENT MANAGER
 
@@ -58,6 +61,10 @@ public class DialogueManager : MonoBehaviour
         getButtonA = getEventManager.choiceButtonA.GetComponent<Button>();
         getButtonB = getEventManager.choiceButtonB.GetComponent<Button>();
         getEventracker = getEventManager.eventTrackerList;
+
+        getAudiomotor = FindObjectOfType<AudioMotor>().gameObject;
+        getFollow = getAudiomotor.GetComponent<LazyFollow>();
+        getAudioSource = getAudiomotor.GetComponent<AudioSource>();
     }
 
     // INIT DIALOGUE
@@ -82,7 +89,8 @@ public class DialogueManager : MonoBehaviour
         foreach (Dialogue dialogue in dialogueSequence)
         {
             getSubtitles.text = dialogue.dialogueText;
-            getSubtitles.color = dialogue.dialogueColor;
+            getSubtitles.color = dialogue.actor.actorColor;
+            getFollow.target = dialogue.actor.faceID.transform;
 
             if (!string.IsNullOrEmpty(dialogue.consequenceUID))
             {
@@ -121,10 +129,6 @@ public class DialogueManager : MonoBehaviour
         {
             getAudioSource.PlayOneShot(currentNode.choiceAQuip);
         }
-
-        playerMadeChoice = true;
-        
-
         StartCoroutine(HandlePlayerChoice(currentNode.playerChoiceA));
     }   
 
@@ -140,9 +144,6 @@ public class DialogueManager : MonoBehaviour
             getAudioSource.PlayOneShot(currentNode.choiceBQuip);
         }
 
-        playerMadeChoice = true;
-        
-        
         StartCoroutine(HandlePlayerChoice(currentNode.playerChoiceB));
     }
 
