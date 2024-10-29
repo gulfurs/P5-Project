@@ -1,0 +1,100 @@
+{
+    "name": "XRControls",
+    "maps": [
+        {
+            "name": "XRActionMap",
+            "id": "3367a7d2-ef4b-4b49-8974-9e3795b4242f",
+            "actions": [
+                {
+                    "name": "XR_GripButton_Left",
+                    "type": "Button",
+                    "id": "ca33024e-8765-4057-8de8-26bfa564c4d7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "XR_TriggerButton_Left",
+                    "type": "Button",
+                    "id": "f8408a8d-0435-4fff-8b60-b278b8702730",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "XR_GripButton_Right",
+                    "type": "Button",
+                    "id": "b1a0ac58-3715-4a33-8565-f407d416ec2d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "XR_TriggerButton_Right",
+                    "type": "Button",
+                    "id": "7b6acd5d-ff48-4b95-8e0e-7b9693f9ef24",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3bb431e5-9e6e-4207-a42b-c37ff6bb9ace",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XRControls",
+                    "action": "XR_GripButton_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c258dff-f9e4-4533-b2af-e39561cef5b7",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XRControls",
+                    "action": "XR_TriggerButton_Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dcf95705-f729-427e-b6ab-0baef6cdd07d",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XRControls",
+                    "action": "XR_GripButton_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "88ef6da1-f411-42b0-95a2-b79b3fd04436",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XRControls",
+                    "action": "XR_TriggerButton_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "XRControls",
+            "bindingGroup": "XRControls",
+            "devices": []
+        }
+    ]
+}
