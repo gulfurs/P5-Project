@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
 
     // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
     public void StartDialogue() {   
-        if (midConvo) return;
+        //if (midConvo) return;
         midConvo = true;
 
         getButtonA?.onClick.AddListener(OnChoiceA);
@@ -131,7 +131,7 @@ public class DialogueManager : MonoBehaviour
     signalReceived = false;
 
     currentDialogueIndex++;
-    Debug.Log($"Signal received - Current Dialogue Index: {currentDialogueIndex}, Current Node Index: {currentNodeIndex}");
+    //Debug.Log($"Signal received - Current Dialogue Index: {currentDialogueIndex}, Current Node Index: {currentNodeIndex}");
 
     if (currentDialogueIndex < currentDialogueSequence.Length) {
         PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
@@ -139,6 +139,9 @@ public class DialogueManager : MonoBehaviour
         if (showChoicesAfter) {
             ShowChoices();
             isDialoguePlaying = false;
+        } else {
+            isDialoguePlaying = false;
+            StartCoroutine(CheckNextNode());
         }
     }
 }
@@ -189,7 +192,7 @@ public class DialogueManager : MonoBehaviour
 
     // CHECK NEXT NODE
     private IEnumerator CheckNextNode() {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         if (currentNode.closingDialogue) {
              PlayTimeline(currentNode.endTimeline);
@@ -202,7 +205,7 @@ public class DialogueManager : MonoBehaviour
         // Move to next node if available
         if (currentNodeIndex < nodes.Length - 1) {
             currentNodeIndex++;
-            StartDialogue(); // Begin next dialogue
+            StartDialogue();
         } else {
             Debug.Log("End of dialogue nodes reached.");
             EndDialogue();
