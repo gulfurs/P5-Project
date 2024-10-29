@@ -48,22 +48,22 @@ public class DialogueManager : MonoBehaviour
     private LazyFollow getFollow;
 
     private int currentNodeIndex = 0; // Current node
+    private Dialogue[] currentDialogueSequence;
+    private int currentDialogueIndex = 0;
     private DialogueNode currentNode; // Current node data
 
     private EventManager getEventManager; // Event manager
-    private bool isDialogueRunning = false; // Track if dialogue is running
+    private bool midConvo = false; // CHECK IF MID CONVO
 
-    private bool isDialoguePlaying = false; // Track if dialogue is currently playing
-    private int currentDialogueIndex = 0; 
-    private bool signalReceived = false; // Flag to track if signal has been received
+    private bool isDialoguePlaying = false; // CHECK IF DIALOGUE IS PLAYING
+    private bool signalReceived = false; // BOOL TO CHECK FOR SIGNAL
 
     private PlayableDirector playableDirector;
 
     private void Start() {
-        // Initialize references and check for nulls
         getEventManager = GameObject.FindObjectOfType<EventManager>();
         if (getEventManager == null) {
-            Debug.LogError("EventManager not found.");
+            Debug.LogError("NO EVENTMANAGER HOMEBOY");
             return;
         }
 
@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
 
         getAudiomotor = FindObjectOfType<AudioMotor>()?.gameObject;
         if (getAudiomotor == null) {
-            Debug.LogError("AudioMotor not found.");
+            Debug.LogError("NO AUDIOMOTOR HOMEBOY");
             return;
         }
 
@@ -85,10 +85,10 @@ public class DialogueManager : MonoBehaviour
         playableDirector = GetComponent<PlayableDirector>();
     }
 
-    // Start the dialogue
+    // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
     public void StartDialogue() {   
-        if (isDialogueRunning) return; // Prevent overlapping dialogue starts
-        isDialogueRunning = true;
+        if (midConvo) return;
+        midConvo = true;
 
         getButtonA?.onClick.AddListener(OnChoiceA);
         getButtonB?.onClick.AddListener(OnChoiceB);
@@ -98,52 +98,53 @@ public class DialogueManager : MonoBehaviour
         StartDialogueSequence(currentNode.startDialogue, true);
     }
 
-    // Start the dialogue sequence
-    public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
-        if (isDialoguePlaying) return; // Prevent starting multiple sequences
-        isDialoguePlaying = true; // Set to true to indicate dialogue is playing
-        currentDialogueIndex = 0; // Reset dialogue index
+        public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
+        if (isDialoguePlaying) return;
+        isDialoguePlaying = true;
+        currentDialogueSequence = dialogueSequence;
+        currentDialogueIndex = 0;
 
-        // Start playing the first dialogue immediately
-        PlayDialogue(dialogueSequence[currentDialogueIndex], showChoicesAfter);
+        PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
     }
 
-    // Play an individual dialogue and wait for a signal to proceed
-    private void PlayDialogue(Dialogue dialogue, bool showChoicesAfter) {
-        if (dialogue == null) return; // Skip if dialogue is null
 
-        getSubtitles.text = dialogue.dialogueText;
-        getSubtitles.color = dialogue.actor.actorColor;
-        getFollow.target = dialogue.actor.faceID?.transform;
+        // PLAY DIALOGUE IN PROPER SHAPE AND IN THE FACE OF THE PROPER MAN.
+        private void PlayDialogue(Dialogue dialogue, bool showChoicesAfter) {
+            if (dialogue == null) return;
 
-        if (!string.IsNullOrEmpty(dialogue.consequenceUID)) {
-            getEventracker.Add(dialogue.consequenceUID);
-        }
+            getSubtitles.text = dialogue.dialogueText;
+            getSubtitles.color = dialogue.actor.actorColor;
+            getFollow.target = dialogue.actor.faceID?.transform;
 
-        // Wait for the signal emitted from the Timeline
-        StartCoroutine(WaitForSignal(showChoicesAfter));
-    }
-
-    // Coroutine that waits for the next signal
-    private IEnumerator WaitForSignal(bool showChoicesAfter) {
-        // Wait until a signal is received
-        yield return new WaitUntil(() => signalReceived);
-
-        signalReceived = false;
-        
-        // After receiving a signal, increment the dialogue index and check if we need to show choices
-        currentDialogueIndex++;
-        if (currentDialogueIndex < currentNode.startDialogue.Length) {
-            PlayDialogue(currentNode.startDialogue[currentDialogueIndex], showChoicesAfter); // Play next dialogue
-        } else {
-            if (showChoicesAfter) {
-            ShowChoices(); // Show choices if required
-            isDialoguePlaying = false; // Reset the flag once dialogue sequence is complete
+            //CONSEQUENCES?
+            if (!string.IsNullOrEmpty(dialogue.consequenceUID)) {
+                getEventracker.Add(dialogue.consequenceUID);
             }
+
+            // DEMAND TO KNOW IF SIGNAL IS STILL ACITVE
+            StartCoroutine(WaitForSignal(showChoicesAfter));
+        }
+
+        // SIGNAL? PLAY NEXT DIALOGUE ACCORDINGLY
+       private IEnumerator WaitForSignal(bool showChoicesAfter) {
+    yield return new WaitUntil(() => signalReceived);
+    signalReceived = false;
+
+    currentDialogueIndex++;
+    Debug.Log($"Signal received - Current Dialogue Index: {currentDialogueIndex}, Current Node Index: {currentNodeIndex}");
+
+    if (currentDialogueIndex < currentDialogueSequence.Length) {
+        PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
+    } else {
+        if (showChoicesAfter) {
+            ShowChoices();
+            isDialoguePlaying = false;
         }
     }
+}
 
-    // Display options UI-wise
+
+    // DISPLAY OPTIONS (UI-WISE)
     private void ShowChoices() {
         Debug.Log("End of dialogue");
         
@@ -157,17 +158,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // Player selects option A
+    // METHOD FOR CHOICE A AND ITS DIALOGUE. 
     public void OnChoiceA() {
         HandleChoice(currentNode.playerChoiceA, currentNode.choiceATimeline);
     }   
 
-    // Player selects option B
+    // METHOD FOR CHOICE B AND ITS DIALOGUE. 
     public void OnChoiceB() {
         HandleChoice(currentNode.playerChoiceB, currentNode.choiceBTimeline);
     }
 
-    // Handles player choice (A or B) to avoid duplicate code
+    // METHOD FOR CHOICE A AND B DIALOGUE
     private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline) {
         getTextA.transform.parent.gameObject.SetActive(false);
         getTextB.transform.parent.gameObject.SetActive(false);
@@ -186,14 +187,14 @@ public class DialogueManager : MonoBehaviour
         yield return StartCoroutine(CheckNextNode());
     }
 
-    // Check next node in session (or finish the session)
+    // CHECK NEXT NODE
     private IEnumerator CheckNextNode() {
-        yield return new WaitForSeconds(2f); // Pause before moving to next node
+        yield return new WaitForSeconds(2f);
 
         if (currentNode.closingDialogue) {
              PlayTimeline(currentNode.endTimeline);
             StartDialogueSequence(currentNode.endDialogue, false);
-            yield return new WaitUntil(() => !isDialoguePlaying); // Wait until dialogue sequence is complete
+            yield return new WaitUntil(() => !isDialoguePlaying);
             EndDialogue();
             yield break;
         }
@@ -208,24 +209,24 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // Cleanup after dialogue session ends
+    // END DIALOGUE
     private void EndDialogue() {
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
-        isDialogueRunning = false;
+        midConvo = false;
     }
 
+    //METHOD FOR PLAYING DIALOGUE
     private void PlayTimeline(PlayableAsset timeline)
-{
-    if (timeline != null)
     {
+        if (timeline != null)
+        {
         playableDirector.playableAsset = timeline;
         playableDirector.Play();
+        }
     }
-}
-    // Method to be called when the signal is emitted
+    // SIGNAL EMITTED? SIGNAL RECEIVED NOW TRUE.
     public void OnSignalReceived() {
-        signalReceived = true; // Set this to true to trigger the next dialogue
-        Debug.Log("SIGNAL RECEIVED");
+        signalReceived = true;
     }
 }
