@@ -23,7 +23,7 @@ public class FirstPersonMovement : MonoBehaviour
         startingPosition = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         // SHIFT TO CONTROL CURSOR
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
@@ -41,9 +41,13 @@ public class FirstPersonMovement : MonoBehaviour
             // Move the player based on WASD keys
             MovePlayer();
 
+            
+        }
+    }
+    
+    void LateUpdate() {
             // ROTATE CAMERA
             RotateCamera();
-        }
     }
     
     void MovePlayer()

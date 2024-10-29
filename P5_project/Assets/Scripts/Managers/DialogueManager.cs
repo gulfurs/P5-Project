@@ -35,6 +35,7 @@ public class DialogueNode
 }
 
 // CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
+// CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
 public class DialogueManager : MonoBehaviour
 {
     public DialogueNode[] nodes; // List of dialogue nodes
@@ -87,7 +88,6 @@ public class DialogueManager : MonoBehaviour
 
     // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
     public void StartDialogue() {   
-        //if (midConvo) return;
         midConvo = true;
 
         getButtonA?.onClick.AddListener(OnChoiceA);
@@ -141,7 +141,6 @@ public class DialogueManager : MonoBehaviour
             isDialoguePlaying = false;
         } else {
             isDialoguePlaying = false;
-            StartCoroutine(CheckNextNode());
         }
     }
 }
@@ -192,7 +191,7 @@ public class DialogueManager : MonoBehaviour
 
     // CHECK NEXT NODE
     private IEnumerator CheckNextNode() {
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(2f);
 
         if (currentNode.closingDialogue) {
              PlayTimeline(currentNode.endTimeline);
@@ -205,15 +204,16 @@ public class DialogueManager : MonoBehaviour
         // Move to next node if available
         if (currentNodeIndex < nodes.Length - 1) {
             currentNodeIndex++;
-            StartDialogue();
+            StartDialogue(); // Begin next dialogue
         } else {
-            Debug.Log("End of dialogue nodes reached.");
             EndDialogue();
         }
     }
 
     // END DIALOGUE
     private void EndDialogue() {
+        Debug.Log("End of dialogue nodes reached.");
+        getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
         midConvo = false;
