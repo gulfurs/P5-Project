@@ -7185,12 +7185,8 @@ MonoBehaviour:
       actor: {fileID: 1576206520}
       consequenceUID: 
     - dialogueText: I never made it this far
-      displayDuration: 4
+      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
-    - dialogueText: I never made it this far
-      displayDuration: 1
-      actor: {fileID: 779223213}
       consequenceUID: 
     choiceA: You stupid
     choiceB: You intelligent
@@ -7860,6 +7856,7 @@ MonoBehaviour:
   choiceButtonB: {fileID: 2086587978}
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
+  player: {fileID: 0}
 --- !u!114 &1743782179
 MonoBehaviour:
   m_ObjectHideFlags: 0
