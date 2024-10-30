@@ -3152,7 +3152,7 @@ MonoBehaviour:
   actorObject: {fileID: 0}
   selectable: 1
   actorID: {fileID: 945883296}
-  actorColor: {r: 0.654902, g: 0.3372549, b: 0.16078432, a: 1}
+  actorColor: {r: 0.6754716, g: 0.4461733, b: 0.3198931, a: 1}
   faceID: {fileID: 0}
 --- !u!65 &1044988915
 BoxCollider:
