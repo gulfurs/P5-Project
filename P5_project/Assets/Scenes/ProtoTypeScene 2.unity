@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 94e145aa5d752b245b3426d16b538b9c, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -4701,7 +4701,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5879757456845686538, guid: 71812637aeaddf945993f4457dbec968, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107981965800986400, guid: 71812637aeaddf945993f4457dbec968, type: 3}
+      propertyPath: m_MovementSpeed
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

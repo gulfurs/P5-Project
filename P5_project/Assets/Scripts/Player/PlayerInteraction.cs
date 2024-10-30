@@ -57,7 +57,7 @@ public class PlayerInteraction : MonoBehaviour {
         }
 
         // CLICK HIGHLIGHTED OBJECT?
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && highlight.GetComponent<Actor>().selectable)
         {
             if (highlight)
             {

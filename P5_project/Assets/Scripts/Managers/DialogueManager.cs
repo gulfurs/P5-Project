@@ -35,7 +35,6 @@ public class DialogueNode
 }
 
 // CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
-// CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
 public class DialogueManager : MonoBehaviour
 {
     public DialogueNode[] nodes; // List of dialogue nodes

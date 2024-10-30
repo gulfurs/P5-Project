@@ -71,6 +71,14 @@ public class EventManager : MonoBehaviour
         dialogueManager.StartDialogue();
         }
 
+        //START THE DIALOGUE OF THE SELECTION
+        CustomInteraction getInteraction = newSelection.gameObject.GetComponent<CustomInteraction>();
+        if (getInteraction != null)
+        {
+        getInteraction.InitializeInteraction();
+        PlayerEvent = null;
+        }
+
        
         //Debug.Log("PlayerEvent updated to: " + PlayerEvent);
     }
