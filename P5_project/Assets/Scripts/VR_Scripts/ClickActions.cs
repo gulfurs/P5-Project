@@ -23,6 +23,9 @@ public class ClickActions : MonoBehaviour
 
         // Subscribe to the actions
         LeftGrip.performed += LeftGripClass;
+        LeftTrigger.performed += LeftTriggerClass;
+        RightGrip.performed += RightGripClass;
+        RightTrigger.performed += GripTriggerClass;
 
         // Enable the actions
         LeftGrip.Enable();
@@ -34,6 +37,9 @@ public class ClickActions : MonoBehaviour
     void OnDisable()
     {
         LeftGrip.performed -= LeftGripClass;
+        LeftTrigger.performed -= LeftTriggerClass;
+        RightGrip.performed -= RightGripClass;
+        RightTrigger.performed -= GripTriggerClass;
 
         // Disable the actions
         LeftGrip.Disable();
@@ -42,7 +48,16 @@ public class ClickActions : MonoBehaviour
         RightTrigger.Disable();
     }
 
-    private void LeftGripClass(InputAction.CallbackContext context){
-        Debug.Log("test");
+    public void LeftGripClass(InputAction.CallbackContext context){
+        Debug.Log("test-gripLeft");
+    }
+    public void LeftTriggerClass(InputAction.CallbackContext context){
+        Debug.Log("test_trigger_left");
+    }
+    public void RightGripClass(InputAction.CallbackContext context){
+        Debug.Log("test_right_grip");
+    }
+    public void GripTriggerClass(InputAction.CallbackContext context){
+        Debug.Log("test_trigger_right");
     }
 }
