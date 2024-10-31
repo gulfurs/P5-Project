@@ -9,6 +9,9 @@ public class ClickActions : MonoBehaviour
     //The actionMap
     public InputActionAsset actionAsset;
 
+    //DialogMan Reference
+    public DialogueManager dialogueMan;
+
     //The different bindings
     private InputAction LeftGrip;
     private InputAction LeftTrigger;
@@ -16,7 +19,8 @@ public class ClickActions : MonoBehaviour
     private InputAction RightTrigger;
 
     //ButtonOptinos
-    //public ButtonOption_A
+    public GameObject ButtonOption_A;
+    public GameObject ButtonOption_B;
 
     void OnEnable() 
     {
@@ -27,12 +31,15 @@ public class ClickActions : MonoBehaviour
         RightGrip = actionMap.FindAction("XR_GripButton_Right");  
         RightTrigger = actionMap.FindAction("XR_TriggerButton_Right");  
 
+        
         // Subscribe to the actions
-        LeftGrip.performed += OnTriggerPress;
+        LeftGrip.performed += OnLeftTriggerPress;
         //LeftGrip.performed += LeftGripClass;
-        LeftTrigger.performed += LeftTriggerClass;
-        RightGrip.performed += RightGripClass;
-        RightTrigger.performed += GripTriggerClass;
+        //LeftTrigger.performed += LeftTriggerClass;
+
+        RightGrip.performed += OnRightTriggerPress;
+        //RightTrigger.performed += GripTriggerClass;
+
 
         // Enable the actions
         LeftGrip.Enable();
@@ -43,11 +50,12 @@ public class ClickActions : MonoBehaviour
 
     void OnDisable() //Oppersite of Enable
     {
-        LeftGrip.performed -= OnTriggerPress;
+        LeftGrip.performed -= OnLeftTriggerPress;
         //LeftGrip.performed -= LeftGripClass;
-        LeftTrigger.performed -= LeftTriggerClass;
-        RightGrip.performed -= RightGripClass;
-        RightTrigger.performed -= GripTriggerClass;
+        //LeftTrigger.performed -= LeftTriggerClass;
+
+        RightGrip.performed -= OnRightTriggerPress;
+        //RightTrigger.performed -= GripTriggerClass;
 
         // Disable the actions
         LeftGrip.Disable();
@@ -55,6 +63,8 @@ public class ClickActions : MonoBehaviour
         RightGrip.Disable();
         RightTrigger.Disable();
     }
+
+    
 
     //----The classes for each button - see if work. ----
     public void LeftGripClass(InputAction.CallbackContext context){
@@ -72,10 +82,25 @@ public class ClickActions : MonoBehaviour
     //---END of testing----
 
     //The triggerbutton trigger the button trigger :)
-    public void OnTriggerPress(InputAction.CallbackContext context)
+    //For left controller
+    public void OnLeftTriggerPress(InputAction.CallbackContext context)
     {
-        Debug.Log("Button has been pressed!");
+        if (ButtonOption_A != null){
+            dialogueMan?.OnChoiceA();
+            //delegate(dialogueMan.choiceA);
+            Debug.Log("Button A has been pressed!");
+        }
         //
+    }
+
+    //For right controller
+    public void OnRightTriggerPress(InputAction.CallbackContext context)
+    {
+        if (ButtonOption_B != null){
+            dialogueMan?.OnChoiceB();
+            //delegate(dialogueMan.choiceB);
+            Debug.Log("Button B has been pressed!");
+        }
     }
 
 }

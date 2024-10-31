@@ -60,6 +60,8 @@ public class DialogueManager : MonoBehaviour
 
     private PlayableDirector playableDirector;
 
+    private ClickActions getClickActions;
+
     private void Start() {
         getEventManager = GameObject.FindObjectOfType<EventManager>();
         if (getEventManager == null) {
@@ -83,18 +85,21 @@ public class DialogueManager : MonoBehaviour
         getFollow = getAudiomotor.GetComponent<LazyFollow>();
         getAudioSource = getAudiomotor.GetComponent<AudioSource>();
         playableDirector = GetComponent<PlayableDirector>();
+        getClickActions = FindObjectOfType<ClickActions>();
     }
 
     // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
     public void StartDialogue() {   
         midConvo = true;
 
-        getButtonA?.onClick.AddListener(OnChoiceA);
-        getButtonB?.onClick.AddListener(OnChoiceB);
+        //getButtonA?.onClick.AddListener(OnChoiceA);
+        //getButtonB?.onClick.AddListener(OnChoiceB);
+        getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
 
         currentNode = nodes[currentNodeIndex];
         PlayTimeline(currentNode.startTimeline);
         StartDialogueSequence(currentNode.startDialogue, true);
+
     }
 
         public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
