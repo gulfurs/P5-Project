@@ -88,6 +88,13 @@ public class DialogueManager : MonoBehaviour
         getClickActions = FindObjectOfType<ClickActions>();
     }
 
+    public bool ChoicesActive { 
+        get { 
+            return getTextA?.transform.parent.gameObject.activeSelf == true || 
+                   getTextB?.transform.parent.gameObject.activeSelf == true; 
+        } 
+    }
+
     // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
     public void StartDialogue() {   
         midConvo = true;
@@ -166,11 +173,13 @@ public class DialogueManager : MonoBehaviour
 
     // METHOD FOR CHOICE A AND ITS DIALOGUE. 
     public void OnChoiceA() {
+        if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceA, currentNode.choiceATimeline);
     }   
 
     // METHOD FOR CHOICE B AND ITS DIALOGUE. 
     public void OnChoiceB() {
+        if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceB, currentNode.choiceBTimeline);
     }
 

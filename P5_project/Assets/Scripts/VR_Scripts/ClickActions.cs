@@ -22,6 +22,7 @@ public class ClickActions : MonoBehaviour
     public GameObject ButtonOption_A;
     public GameObject ButtonOption_B;
 
+
     void OnEnable() 
     {
         //Connecting them to the code
@@ -33,11 +34,11 @@ public class ClickActions : MonoBehaviour
 
         
         // Subscribe to the actions
-        LeftGrip.performed += OnLeftTriggerPress;
+        LeftTrigger.performed += OnLeftTriggerPress;
         //LeftGrip.performed += LeftGripClass;
         //LeftTrigger.performed += LeftTriggerClass;
 
-        RightGrip.performed += OnRightTriggerPress;
+        RightTrigger.performed += OnRightTriggerPress;
         //RightTrigger.performed += GripTriggerClass;
 
 
@@ -50,11 +51,11 @@ public class ClickActions : MonoBehaviour
 
     void OnDisable() //Oppersite of Enable
     {
-        LeftGrip.performed -= OnLeftTriggerPress;
+        LeftTrigger.performed -= OnLeftTriggerPress;
         //LeftGrip.performed -= LeftGripClass;
         //LeftTrigger.performed -= LeftTriggerClass;
 
-        RightGrip.performed -= OnRightTriggerPress;
+        RightTrigger.performed -= OnRightTriggerPress;
         //RightTrigger.performed -= GripTriggerClass;
 
         // Disable the actions
@@ -64,7 +65,10 @@ public class ClickActions : MonoBehaviour
         RightTrigger.Disable();
     }
 
-    
+    void Update(){
+        ButtonOption_A.SetActive(dialogueMan.ChoicesActive);
+        ButtonOption_B.SetActive(dialogueMan.ChoicesActive);
+    }
 
     //----The classes for each button - see if work. ----
     public void LeftGripClass(InputAction.CallbackContext context){
@@ -85,7 +89,7 @@ public class ClickActions : MonoBehaviour
     //For left controller
     public void OnLeftTriggerPress(InputAction.CallbackContext context)
     {
-        if (ButtonOption_A != null){
+        if (ButtonOption_A != null && dialogueMan.ChoicesActive){
             dialogueMan?.OnChoiceA();
             //delegate(dialogueMan.choiceA);
             Debug.Log("Button A has been pressed!");
@@ -96,7 +100,7 @@ public class ClickActions : MonoBehaviour
     //For right controller
     public void OnRightTriggerPress(InputAction.CallbackContext context)
     {
-        if (ButtonOption_B != null){
+        if (ButtonOption_B != null && dialogueMan.ChoicesActive){
             dialogueMan?.OnChoiceB();
             //delegate(dialogueMan.choiceB);
             Debug.Log("Button B has been pressed!");
