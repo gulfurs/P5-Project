@@ -6,7 +6,9 @@ using TMPro;
 public class TextEqualizing : MonoBehaviour
 {
 
-    public TextMeshProUGUI handText;
+    [SerializeField] private TextMeshProUGUI handText;
+    //[SerializeField] private TextMeshProUGUI subtitleText;
+    //public TextMeshProUGUI handText;
     void Start()
     {
         
@@ -15,5 +17,6 @@ public class TextEqualizing : MonoBehaviour
     void Update()
     {
         gameObject.GetComponent<TextMeshPro>().text = handText.text;
+        //gameObject.GetComponent<TextMeshPro>().text = subtitleText.text;
     }
 }

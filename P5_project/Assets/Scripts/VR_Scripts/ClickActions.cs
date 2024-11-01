@@ -5,106 +5,131 @@ using UnityEngine.InputSystem;
 
 public class ClickActions : MonoBehaviour
 {
-
-    //The actionMap
-    public InputActionAsset actionAsset;
-
-    //DialogMan Reference
+    [Header("Required References")]
+    [SerializeField] private InputActionAsset actionAsset;
     public DialogueManager dialogueMan;
+    
+    [Header("UI Elements")]
+    [SerializeField] private GameObject ButtonOption_A;
+    [SerializeField] private GameObject ButtonOption_B;
 
-    //The different bindings
+    // Input Actions
     private InputAction LeftGrip;
     private InputAction LeftTrigger;
     private InputAction RightGrip;
     private InputAction RightTrigger;
 
-    //ButtonOptinos
-    public GameObject ButtonOption_A;
-    public GameObject ButtonOption_B;
-
-
-    void OnEnable() 
+    private void Awake()
     {
-        //Connecting them to the code
-        var actionMap = actionAsset.FindActionMap("XRActionMap"); 
-        LeftGrip = actionMap.FindAction("XR_GripButton_Left");  
-        LeftTrigger = actionMap.FindAction("XR_TriggerButton_Left");  
-        RightGrip = actionMap.FindAction("XR_GripButton_Right");  
-        RightTrigger = actionMap.FindAction("XR_TriggerButton_Right");  
+        // Validate required components
+        if (actionAsset == null)
+        {
+            Debug.LogError("Input Action Asset is not assigned to ClickActions script!", this);
+            enabled = false;
+            return;
+        }
 
-        
-        // Subscribe to the actions
-        LeftTrigger.performed += OnLeftTriggerPress;
-        //LeftGrip.performed += LeftGripClass;
-        //LeftTrigger.performed += LeftTriggerClass;
+        if (dialogueMan == null)
+        {
+            Debug.LogError("DialogueManager reference is missing in ClickActions script!", this);
+            enabled = false;
+            return;
+        }
 
-        RightTrigger.performed += OnRightTriggerPress;
-        //RightTrigger.performed += GripTriggerClass;
-
-
-        // Enable the actions
-        LeftGrip.Enable();
-        LeftTrigger.Enable();
-        RightGrip.Enable();
-        RightTrigger.Enable();
+        if (ButtonOption_A == null || ButtonOption_B == null)
+        {
+            Debug.LogError("Button options are not assigned in ClickActions script!", this);
+            enabled = false;
+            return;
+        }
     }
 
-    void OnDisable() //Oppersite of Enable
+    private void OnEnable() 
     {
-        LeftTrigger.performed -= OnLeftTriggerPress;
-        //LeftGrip.performed -= LeftGripClass;
-        //LeftTrigger.performed -= LeftTriggerClass;
+        try
+        {
+            // Setup input actions
+            var actionMap = actionAsset.FindActionMap("XRActionMap");
+            if (actionMap == null)
+            {
+                Debug.LogError("Could not find XRActionMap in the Input Action Asset!", this);
+                enabled = false;
+                return;
+            }
 
-        RightTrigger.performed -= OnRightTriggerPress;
-        //RightTrigger.performed -= GripTriggerClass;
+            // Initialize actions
+            LeftGrip = actionMap.FindAction("XR_GripButton_Left");
+            LeftTrigger = actionMap.FindAction("XR_TriggerButton_Left");
+            RightGrip = actionMap.FindAction("XR_GripButton_Right");
+            RightTrigger = actionMap.FindAction("XR_TriggerButton_Right");
 
-        // Disable the actions
-        LeftGrip.Disable();
-        LeftTrigger.Disable();
-        RightGrip.Disable();
-        RightTrigger.Disable();
+            // Validate all actions were found
+            if (LeftGrip == null || LeftTrigger == null || RightGrip == null || RightTrigger == null)
+            {
+                Debug.LogError("One or more input actions could not be found!", this);
+                enabled = false;
+                return;
+            }
+
+            // Subscribe to events
+            LeftTrigger.performed += OnLeftTriggerPress;
+            RightTrigger.performed += OnRightTriggerPress;
+
+            // Enable actions
+            LeftGrip.Enable();
+            LeftTrigger.Enable();
+            RightGrip.Enable();
+            RightTrigger.Enable();
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Error during input setup: {e.Message}", this);
+            enabled = false;
+        }
     }
 
-    void Update(){
-        ButtonOption_A.SetActive(dialogueMan.ChoicesActive);
-        ButtonOption_B.SetActive(dialogueMan.ChoicesActive);
+    private void OnDisable() 
+    {
+        if (LeftTrigger != null)
+        {
+            LeftTrigger.performed -= OnLeftTriggerPress;
+            LeftTrigger.Disable();
+        }
+
+        if (RightTrigger != null)
+        {
+            RightTrigger.performed -= OnRightTriggerPress;
+            RightTrigger.Disable();
+        }
+
+        if (LeftGrip != null) LeftGrip.Disable();
+        if (RightGrip != null) RightGrip.Disable();
     }
 
-    //----The classes for each button - see if work. ----
-    public void LeftGripClass(InputAction.CallbackContext context){
-       // Debug.Log("test-gripLeft");
+    private void Update()
+    {
+        if (ButtonOption_A != null && ButtonOption_B != null && dialogueMan != null)
+        {
+            ButtonOption_A.SetActive(dialogueMan.ChoicesActive);
+            ButtonOption_B.SetActive(dialogueMan.ChoicesActive);
+        }
     }
-    public void LeftTriggerClass(InputAction.CallbackContext context){
-        //Debug.Log("test_trigger_left");
-    }
-    public void RightGripClass(InputAction.CallbackContext context){
-        //Debug.Log("test_right_grip");
-    }
-    public void GripTriggerClass(InputAction.CallbackContext context){
-        //Debug.Log("test_trigger_right");
-    }
-    //---END of testing----
 
-    //The triggerbutton trigger the button trigger :)
-    //For left controller
     public void OnLeftTriggerPress(InputAction.CallbackContext context)
     {
-        if (ButtonOption_A != null && dialogueMan.ChoicesActive){
-            dialogueMan?.OnChoiceA();
-            //delegate(dialogueMan.choiceA);
+        if (dialogueMan != null && ButtonOption_A != null && dialogueMan.ChoicesActive)
+        {
+            dialogueMan.OnChoiceA();
             Debug.Log("Button A has been pressed!");
         }
-        //
     }
 
-    //For right controller
     public void OnRightTriggerPress(InputAction.CallbackContext context)
     {
-        if (ButtonOption_B != null && dialogueMan.ChoicesActive){
-            dialogueMan?.OnChoiceB();
-            //delegate(dialogueMan.choiceB);
+        if (dialogueMan != null && ButtonOption_B != null && dialogueMan.ChoicesActive)
+        {
+            dialogueMan.OnChoiceB();
             Debug.Log("Button B has been pressed!");
         }
     }
-
 }
