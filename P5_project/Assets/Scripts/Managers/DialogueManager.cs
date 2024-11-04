@@ -99,8 +99,8 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue() {   
         midConvo = true;
 
-        //getButtonA?.onClick.AddListener(OnChoiceA);
-        //getButtonB?.onClick.AddListener(OnChoiceB);
+        getButtonA?.onClick.AddListener(OnChoiceA);
+        getButtonB?.onClick.AddListener(OnChoiceB);
         getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
 
         currentNode = nodes[currentNodeIndex];
