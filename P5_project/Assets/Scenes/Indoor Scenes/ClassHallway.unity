@@ -691,7 +691,7 @@ PlayableDirector:
   m_GameObject: {fileID: 365128635}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -699,13 +699,9 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: 4834687938088148304, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
-    value: {fileID: 365128638}
-  - key: {fileID: 2430645504493848673, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 4834687938088148304, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
-    value: {fileID: 365128638}
-  - key: {fileID: 4834687938088148304, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
+  - key: {fileID: -5443476067823979502, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: -7021715329867424066, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
     value: {fileID: 365128638}
   m_ExposedReferences:
     m_References: []
@@ -763,21 +759,12 @@ MonoBehaviour:
       consequenceUID: 
     choiceA: A
     choiceB: B
-    playerChoiceA:
-    - dialogueText: test
-      actor: {fileID: 0}
-      consequenceUID: 
-    - dialogueText: testtese
-      actor: {fileID: 365128641}
-      consequenceUID: 
-    playerChoiceB:
-    - dialogueText: okokok
-      actor: {fileID: 0}
-      consequenceUID: 
+    playerChoiceA: []
+    playerChoiceB: []
     endDialogue: []
-    startTimeline: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
-    choiceATimeline: {fileID: 11400000, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
-    choiceBTimeline: {fileID: 11400000, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
+    startTimeline: {fileID: 0}
+    choiceATimeline: {fileID: 0}
+    choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
   getAudiomotor: {fileID: 0}
 --- !u!114 &365128640
@@ -1304,7 +1291,7 @@ PlayableDirector:
   m_GameObject: {fileID: 669658647}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -1312,13 +1299,9 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: 4834687938088148304, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
-    value: {fileID: 669658650}
-  - key: {fileID: 2430645504493848673, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 4834687938088148304, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
-    value: {fileID: 669658650}
-  - key: {fileID: 4834687938088148304, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
+  - key: {fileID: -2753002102722793026, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 5665071054406685815, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
     value: {fileID: 669658650}
   m_ExposedReferences:
     m_References: []
@@ -1368,7 +1351,14 @@ MonoBehaviour:
   - closingDialogue: 1
     options: 0
     startDialogue:
-    - dialogueText: ohhhhej
+    - dialogueText: "Hvorfor sidder du helt stille helt over i hj\xF8rnet"
+      actor: {fileID: 2083395168}
+      consequenceUID: 
+    - dialogueText: "Jeg ved ikke\u2026 Det virker som om, folk taler bag om ryggen
+        p\xE5 hinanden."
+      actor: {fileID: 669658653}
+      consequenceUID: 
+    - dialogueText: "Jeg pr\xF8ver bare at holde mig udenfor det hele."
       actor: {fileID: 669658653}
       consequenceUID: 
     choiceA: A
@@ -5267,7 +5257,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1178072385}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -5275,14 +5265,10 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 0}
     value: {fileID: 0}
-  - key: {fileID: 4834687938088148304, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
+  - key: {fileID: 2747967317624718515, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
     value: {fileID: 1178072388}
-  - key: {fileID: 2430645504493848673, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 4834687938088148304, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
-    value: {fileID: 1178072388}
-  - key: {fileID: 4834687938088148304, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
-    value: {fileID: 1178072388}
+  - key: {fileID: -350165210350759931, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
+    value: {fileID: 1999519634}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1178072388
@@ -5329,31 +5315,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - closingDialogue: 0
-    options: 1
+    options: 0
     startDialogue:
-    - dialogueText: ohhhhej
+    - dialogueText: Noget galt?
+      actor: {fileID: 2083395168}
+      consequenceUID: 
+    - dialogueText: "Tja\u2026 Jeg ved ikke rigtig."
       actor: {fileID: 1178072391}
       consequenceUID: 
-    - dialogueText: hejhej
-      actor: {fileID: 0}
+    - dialogueText: "Folk har bare v\xE6ret anderledes p\xE5 det sidste"
+      actor: {fileID: 1178072391}
+      consequenceUID: 
+    - dialogueText: "Nogle af os har h\xF8rt ting, der m\xE5ske ikke er helt sande\u2026"
+      actor: {fileID: 1178072391}
       consequenceUID: 
     choiceA: A
     choiceB: B
-    playerChoiceA:
-    - dialogueText: test
-      actor: {fileID: 0}
-      consequenceUID: 
-    - dialogueText: testtese
-      actor: {fileID: 1178072391}
-      consequenceUID: 
-    playerChoiceB:
-    - dialogueText: okokok
-      actor: {fileID: 0}
-      consequenceUID: 
+    playerChoiceA: []
+    playerChoiceB: []
     endDialogue: []
-    startTimeline: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
-    choiceATimeline: {fileID: 11400000, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
-    choiceBTimeline: {fileID: 11400000, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
+    startTimeline: {fileID: 11400000, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
+    choiceATimeline: {fileID: 0}
+    choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
   getAudiomotor: {fileID: 0}
 --- !u!114 &1178072390
@@ -6756,6 +6739,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0.25, y: 1.64}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &1999519634 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5879757456845686538, guid: 71812637aeaddf945993f4457dbec968, type: 3}
+  m_PrefabInstance: {fileID: 1313490978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2005825897
 GameObject:
   m_ObjectHideFlags: 0
@@ -6888,6 +6876,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ea3eb5f17d0cc446be27fc49e50bcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2083395168 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7670781382997168014, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
+  m_PrefabInstance: {fileID: 1594085129265103218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2086587978
