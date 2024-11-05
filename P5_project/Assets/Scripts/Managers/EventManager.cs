@@ -84,9 +84,24 @@ public class EventManager : MonoBehaviour
         //Debug.Log("PlayerEvent updated to: " + PlayerEvent);
     }
     
+
+    public void StartConversation() {
+        //DISABLE COLLIDERS OF ALL ACTORS
+        foreach (var actor in actorManager.Actors)
+        {
+            Collider[] colliders = actor.actorObject.GetComponents<Collider>();  
+
+            foreach (Collider collider in colliders)
+            {
+                collider.enabled = false;  // Disable each collider
+            }
+        }
+    }
+
     public void EndConversation()
-{
+    {
     Debug.Log("EndConversation called"); // Debug log
+    mainSubtitles.text = "";
     
     foreach (var actor in actorManager.Actors)
     {
@@ -114,9 +129,9 @@ public class EventManager : MonoBehaviour
 
         PlayerEvent = null;
     }
-
+    /*
     FirstPersonMovement firstPersonMovement = player.GetComponent<FirstPersonMovement>();
     player.transform.position = firstPersonMovement.startingPosition;
-    Debug.Log("Player moved to starting position");
-}
+    Debug.Log("Player moved to starting position");*/
+    }
 }

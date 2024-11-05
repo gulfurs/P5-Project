@@ -102,11 +102,13 @@ public class DialogueManager : MonoBehaviour
 
         getButtonA?.onClick.AddListener(OnChoiceA);
         getButtonB?.onClick.AddListener(OnChoiceB);
-        //getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
+        getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
 
         currentNode = nodes[currentNodeIndex];
         PlayTimeline(currentNode.startTimeline);
         StartDialogueSequence(currentNode.startDialogue, currentNode.options);
+        getEventManager.StartConversation();
+        getEventManager.PlayerEvent = gameObject.transform;
     }
 
         public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
@@ -152,8 +154,8 @@ public class DialogueManager : MonoBehaviour
             ShowChoices();
             isDialoguePlaying = false;
         } else {
-            isDialoguePlaying = false;
             HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
+            isDialoguePlaying = false;
         }
     }
 }
@@ -232,6 +234,7 @@ public class DialogueManager : MonoBehaviour
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
         midConvo = false;
+        getEventManager.EndConversation();
     }
 
     //METHOD FOR PLAYING DIALOGUE
