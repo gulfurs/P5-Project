@@ -20,6 +20,7 @@ public class Dialogue
 public class DialogueNode
 {
     public bool closingDialogue;      // IS LAST DIALOGUE?
+    public bool options = true;     
     public Dialogue[] startDialogue;    // START DIALOGUE?
 
     public string choiceA;            // PREVIEW OF OPTION A
@@ -101,12 +102,11 @@ public class DialogueManager : MonoBehaviour
 
         getButtonA?.onClick.AddListener(OnChoiceA);
         getButtonB?.onClick.AddListener(OnChoiceB);
-        getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
+        //getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
 
         currentNode = nodes[currentNodeIndex];
         PlayTimeline(currentNode.startTimeline);
-        StartDialogueSequence(currentNode.startDialogue, true);
-
+        StartDialogueSequence(currentNode.startDialogue, currentNode.options);
     }
 
         public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
@@ -153,6 +153,7 @@ public class DialogueManager : MonoBehaviour
             isDialoguePlaying = false;
         } else {
             isDialoguePlaying = false;
+            HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
         }
     }
 }
@@ -208,8 +209,8 @@ public class DialogueManager : MonoBehaviour
         //yield return new WaitForSeconds(2f);
 
         if (currentNode.closingDialogue) {
-             PlayTimeline(currentNode.endTimeline);
-            StartDialogueSequence(currentNode.endDialogue, false);
+            //PlayTimeline(currentNode.endTimeline);
+            //StartDialogueSequence(currentNode.endDialogue, false);
             yield return new WaitUntil(() => !isDialoguePlaying);
             EndDialogue();
             yield break;
