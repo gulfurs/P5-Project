@@ -435,7 +435,7 @@ GameObject:
   - component: {fileID: 73493567}
   - component: {fileID: 73493566}
   m_Layer: 0
-  m_Name: PeterID
+  m_Name: FrederikID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,9 +473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Peter
-
-'
+  m_text: Frederik
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -985,7 +983,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176081722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a816d40c1eaa63746bad4804ba06c077, type: 3}
   m_Name: 
@@ -2014,6 +2012,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &605726167
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: -3604724684850444174, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
+    - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_SceneBindings.Array.data[6].key
+      value: 
+      objectReference: {fileID: -4211636966979941103, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.221
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291329509595503426, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_Name
+      value: FrederikNPC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291329509595503426, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
 --- !u!1 &615859274 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
@@ -2039,12 +2110,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5, y: 2, z: 0.5}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &649018219
 GameObject:
   m_ObjectHideFlags: 0
@@ -3334,10 +3405,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorObject: {fileID: 0}
   selectable: 1
-  actorID: {fileID: 73493565}
-  actorColor: {r: 0.6754716, g: 0.4461733, b: 0.3198931, a: 1}
+  actorID: {fileID: 1129060846}
+  actorColor: {r: 0.32877922, g: 0.7509433, b: 0.1856105, a: 1}
   faceID: {fileID: 0}
-  actorName: 
+  actorName: Frederik
 --- !u!65 &1030057008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4619,6 +4690,11 @@ Transform:
   - {fileID: 1732498713}
   m_Father: {fileID: 1671578677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1129060846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2164392535951013889, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+  m_PrefabInstance: {fileID: 605726167}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1144662073
 GameObject:
   m_ObjectHideFlags: 0
@@ -32617,3 +32693,4 @@ SceneRoots:
   - {fileID: 1044988916}
   - {fileID: 526604612}
   - {fileID: 1030057009}
+  - {fileID: 605726167}
