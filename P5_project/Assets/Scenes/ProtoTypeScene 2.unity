@@ -4974,24 +4974,56 @@ MonoBehaviour:
   nodes:
   - closingDialogue: 0
     startDialogue:
-    - dialogueText: ohhhhej
+    - dialogueText: Hej Frederik, du virker lidt stille i dag. Er der noget, der
+        trykker dig?
+      actor: {fileID: 779223213}
+      consequenceUID: 
+    - dialogueText: "Det er bare\u2026 Peter. Han bliver ved med at skabe problemer
+        og g\xF8re mig til skurken i alt det her. Han siger, at jeg f\xE5r det hele
+        serveret, men han ser ikke, hvor meget jeg selv k\xE6mper."
       actor: {fileID: 1318571930}
       consequenceUID: 
-    - dialogueText: hejhej
-      actor: {fileID: 779223213}
-      consequenceUID: 
-    choiceA: A
-    choiceB: B
+    choiceA: "St\xF8ttende og beroligende"
+    choiceB: Direkte konfronterende svar
     playerChoiceA:
-    - dialogueText: test
+    - dialogueText: "Jeg forst\xE5r godt, at det er frustrerende. Nogle gange ser
+        folk kun deres egen kamp og ikke, hvad andre g\xE5r igennem. Peter f\xF8ler
+        sikkert, at han bliver sammenlignet med dig, og det g\xF8r tingene endnu
+        v\xE6rre."
       actor: {fileID: 779223213}
       consequenceUID: 
-    - dialogueText: testtese
+    - dialogueText: "Ja, m\xE5ske... Men det f\xF8les som om, han altid pr\xF8ver
+        at tr\xE6kke mig ned, i stedet for at fokusere p\xE5 sine egne problemer."
+      actor: {fileID: 1318571930}
+      consequenceUID: 
+    - dialogueText: "Jeg tror, han er fanget i sine egne f\xF8lelser lige nu, men
+        det \xE6ndrer ikke det faktum, at du ogs\xE5 har dine udfordringer. \"Det
+        vigtigste er, at du forts\xE6tter med at g\xF8re dit bedste uden at lade
+        dig rive med af hans usikkerheder."
+      actor: {fileID: 779223213}
+      consequenceUID: 
+    - dialogueText: "Du har nok ret... Jeg skal bare lade v\xE6re med at lade det
+        g\xE5 mig p\xE5. Det er bare s\xE5 sv\xE6rt, n\xE5r han bliver ved med at
+        angribe mig."
       actor: {fileID: 1318571930}
       consequenceUID: 
     playerChoiceB:
-    - dialogueText: okokok
+    - dialogueText: "Frederik, har du virkelig intet at g\xF8re med denne konflikt,
+        der skal 2 til en tango, er du sikker p\xE5 du ikke har noget med dette at
+        g\xF8re ogs\xE5, og det ikke kun er Peter skyld, har du overvejet at snakke
+        med ham"
       actor: {fileID: 779223213}
+      consequenceUID: 
+    - dialogueText: "Jeg ved det... Men det er ikke fair, at jeg skal tage det f\xF8rste
+        skridt. Han har startet alt det her med sine beskyldninger. Hvorfor skal
+        det v\xE6re mig, der g\xE5r hen til ham?"
+      actor: {fileID: 1318571930}
+      consequenceUID: 
+    - dialogueText: "Intet bliver l\xF8st, hvis ingen g\xF8r noget"
+      actor: {fileID: 779223213}
+      consequenceUID: 
+    - dialogueText: Du har nok ret
+      actor: {fileID: 1318571930}
       consequenceUID: 
     endDialogue: []
     startTimeline: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
@@ -6429,6 +6461,7 @@ MonoBehaviour:
   PlayerEvent: {fileID: 0}
   choiceButtonA: {fileID: 2005825897}
   choiceButtonB: {fileID: 2086587978}
+  resumeButton: {fileID: 0}
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
   player: {fileID: 0}
