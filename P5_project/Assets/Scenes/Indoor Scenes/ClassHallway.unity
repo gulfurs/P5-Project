@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 310862842}
   - component: {fileID: 310862841}
   m_Layer: 0
-  m_Name: PeterID
+  m_Name: MiranID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,9 +386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Peter
-
-'
+  m_text: Miran
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -748,13 +746,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 0
-    options: 1
+  - closingDialogue: 1
+    options: 0
     startDialogue:
-    - dialogueText: ohhhhej
+    - dialogueText: "Det virkelig vildt hvad der foreg\xE5r mellem Peter og Frederik\u2026 "
       actor: {fileID: 365128641}
       consequenceUID: 
-    - dialogueText: hejhej
+    - dialogueText: "Det bliver sp\xE6ndene at se hvad der kommer til at ske"
       actor: {fileID: 0}
       consequenceUID: 
     choiceA: A
@@ -762,7 +760,7 @@ MonoBehaviour:
     playerChoiceA: []
     playerChoiceB: []
     endDialogue: []
-    startTimeline: {fileID: 0}
+    startTimeline: {fileID: 11400000, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
@@ -1020,7 +1018,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 354bb53b1d435404db1617f61c0b17b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 914809367}
   m_SourcePrefab: {fileID: 100100000, guid: 354bb53b1d435404db1617f61c0b17b4, type: 3}
 --- !u!4 &585742703 stripped
 Transform:
@@ -1303,6 +1304,8 @@ PlayableDirector:
     value: {fileID: 1999519634}
   - key: {fileID: 5665071054406685815, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
     value: {fileID: 669658650}
+  - key: {fileID: 7988189759618943930, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &669658650
@@ -1351,7 +1354,7 @@ MonoBehaviour:
   - closingDialogue: 1
     options: 0
     startDialogue:
-    - dialogueText: "Hvorfor sidder du helt stille helt over i hj\xF8rnet"
+    - dialogueText: "Hvorfor sidder du helt stille helt over i hj\xF8rnet min ven"
       actor: {fileID: 2083395168}
       consequenceUID: 
     - dialogueText: "Jeg ved ikke\u2026 Det virker som om, folk taler bag om ryggen
@@ -1585,6 +1588,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839609899}
   m_CullTransparentMesh: 1
+--- !u!1 &914809365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 354bb53b1d435404db1617f61c0b17b4, type: 3}
+  m_PrefabInstance: {fileID: 585742702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &914809367
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914809365}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.69, y: 2.21, z: 0.71}
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!1001 &980105209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5269,6 +5298,8 @@ PlayableDirector:
     value: {fileID: 1178072388}
   - key: {fileID: -350165210350759931, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
     value: {fileID: 1999519634}
+  - key: {fileID: 2329838710275728843, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
+    value: {fileID: 1999519634}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1178072388
@@ -5314,7 +5345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 0
+  - closingDialogue: 1
     options: 0
     startDialogue:
     - dialogueText: Noget galt?
@@ -5426,7 +5457,7 @@ GameObject:
   - component: {fileID: 1210564943}
   - component: {fileID: 1210564942}
   m_Layer: 0
-  m_Name: PeterID
+  m_Name: AugustID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5464,9 +5495,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Peter
-
-'
+  m_text: August
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6566,7 +6595,7 @@ GameObject:
   - component: {fileID: 1987334663}
   - component: {fileID: 1987334662}
   m_Layer: 0
-  m_Name: PeterID
+  m_Name: WilliamID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6604,9 +6633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Peter
-
-'
+  m_text: William
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
