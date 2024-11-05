@@ -13,6 +13,7 @@ public class Actor : MonoBehaviour
     public GameObject actorID;
     public Color actorColor;
     public GameObject faceID;
+    public string actorName;
 
      void Awake()
     {

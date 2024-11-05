@@ -123,8 +123,9 @@ public class DialogueManager : MonoBehaviour
         private void PlayDialogue(Dialogue dialogue, bool showChoicesAfter) {
             if (dialogue == null) return;
 
-            getSubtitles.text = dialogue.dialogueText;
-            getSubtitles.color = dialogue.actor.actorColor;
+            string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
+            getSubtitles.text = actorName + " " + dialogue.dialogueText;
+            //getSubtitles.color = dialogue.actor.actorColor;
             getFollow.target = dialogue.actor.faceID?.transform;
 
             //CONSEQUENCES?
