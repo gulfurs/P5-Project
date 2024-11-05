@@ -3261,8 +3261,8 @@ MonoBehaviour:
     - dialogueText: Ugh.
       actor: {fileID: 1044988914}
       consequenceUID: 
-    choiceA: '[Empatisk] ...Du virker frustreret'
-    choiceB: '[Konfront] Du kan ikke bebrejde Frederik'
+    choiceA: Empatisk
+    choiceB: Konfronterende
     playerChoiceA:
     - dialogueText: Hey Peter, du virker lidt frustreret. Er alt okay?
       actor: {fileID: 779223213}
