@@ -3173,6 +3173,7 @@ MonoBehaviour:
   actorID: {fileID: 945883296}
   actorColor: {r: 0.6754716, g: 0.4461733, b: 0.3198931, a: 1}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!65 &1044988915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4152,6 +4153,7 @@ MonoBehaviour:
   actorID: {fileID: 2129724823}
   actorColor: {r: 0, g: 0, b: 0, a: 0}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!65 &1078745503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5116,6 +5118,7 @@ MonoBehaviour:
   actorID: {fileID: 302561173}
   actorColor: {r: 0.6754716, g: 0.4461733, b: 0.3198931, a: 1}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!65 &1318571931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5145,8 +5148,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318571924}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.92, y: 0.221, z: 10.98}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -13.352, y: 0.221, z: 13.17}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -5154,7 +5157,7 @@ Transform:
   - {fileID: 302561177}
   - {fileID: 265487127}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1394124657
 GameObject:
   m_ObjectHideFlags: 0
@@ -6174,6 +6177,7 @@ MonoBehaviour:
   actorID: {fileID: 893357842}
   actorColor: {r: 0, g: 0, b: 0, a: 0}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!65 &1699909108
 BoxCollider:
   m_ObjectHideFlags: 0
