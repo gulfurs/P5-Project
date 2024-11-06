@@ -62,6 +62,7 @@ public class DialogueManager : MonoBehaviour
     private PlayableDirector playableDirector;
 
     private ClickActions getClickActions;
+    public List<Actor> additionalActorsToRemove;
 
     private void Start() {
         getEventManager = GameObject.FindObjectOfType<EventManager>();
@@ -111,7 +112,7 @@ public class DialogueManager : MonoBehaviour
         getEventManager.PlayerEvent = gameObject.transform;
     }
 
-        public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
+    public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
         if (isDialoguePlaying) return;
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
@@ -189,8 +190,8 @@ public class DialogueManager : MonoBehaviour
 
     // METHOD FOR CHOICE A AND B DIALOGUE
     private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline) {
-        getTextA.transform.parent.gameObject.SetActive(false);
-        getTextB.transform.parent.gameObject.SetActive(false);
+        getTextA?.transform.parent.gameObject.SetActive(false);
+        getTextB?.transform.parent.gameObject.SetActive(false);
 
         PlayTimeline(choiceTimeline);
         StartCoroutine(HandlePlayerChoice(choiceDialogue));
@@ -234,6 +235,10 @@ public class DialogueManager : MonoBehaviour
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
         midConvo = false;
+        getEventManager.actorManager.Actors.Remove(gameObject.GetComponent<Actor>());
+         foreach (var actor in additionalActorsToRemove) {
+        getEventManager.actorManager.Actors.Remove(actor);
+        }
         getEventManager.EndConversation();
     }
 

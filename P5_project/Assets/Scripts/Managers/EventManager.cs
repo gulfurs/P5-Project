@@ -15,7 +15,7 @@ public class EventManager : MonoBehaviour
     
     public List<string> eventTrackerList = new List<string>();
 
-    private ActorManager actorManager; //ACTORMANAGER
+    public ActorManager actorManager; //ACTORMANAGER
     public GameObject player;
 
     void Start()
