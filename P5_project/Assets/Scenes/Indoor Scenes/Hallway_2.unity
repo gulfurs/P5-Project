@@ -9125,6 +9125,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1708898601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635397781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4378790146047142400, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+  m_PrefabInstance: {fileID: 1318245203}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &635397783 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4068530058336476244, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+  m_PrefabInstance: {fileID: 1318245203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &646129063
 GameObject:
   m_ObjectHideFlags: 0
@@ -14656,6 +14672,22 @@ PrefabInstance:
       value: PeterNPC
       objectReference: {fileID: 0}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].choiceA
+      value: "St\xF8t peter"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].choiceB
+      value: "St\xF8t Frederik"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].endDialogue.Array.data[0].actor
       value: 
       objectReference: {fileID: 0}
@@ -14666,11 +14698,19 @@ PrefabInstance:
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[0].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 141852870}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[1].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 141852870}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[2].actor
+      value: 
+      objectReference: {fileID: 1992371243}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[3].actor
+      value: 
+      objectReference: {fileID: 635397781}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[5].actor
       value: 
@@ -14708,12 +14748,82 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[0].actor
+      value: 
+      objectReference: {fileID: 635397781}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[2].actor
+      value: 
+      objectReference: {fileID: 1992371243}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[3].actor
+      value: 
+      objectReference: {fileID: 1992371243}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[4].actor
+      value: 
+      objectReference: {fileID: 1992371243}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[5].actor
+      value: 
+      objectReference: {fileID: 1323747144}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[6].actor
+      value: 
+      objectReference: {fileID: 818485235}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[11].actor
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceB.Array.data[10].actor
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[0].dialogueText
+      value: "Frederik, kan s\xE5 stoppe og det skal v\xE6re lige nu. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[1].dialogueText
+      value: "Du kan ikke bare tage alt \xE6ren, du bliver n\xF8d til anerkende peters
+        indsat"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[2].dialogueText
+      value: Jeg provokerer ham?! Han startede det her!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[3].dialogueText
+      value: "Jeg er tr\xE6t af at h\xF8re p\xE5 dig, Frederik!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[0].dialogueText
+      value: "Jeg er s\xE5 tr\xE6t af at st\xE5 i din skygge, Frederik!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[1].dialogueText
+      value: "Du f\xE5r alting for\xE6ret, mens jeg skal k\xE6mpe for hver eneste
+        lille ting!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[2].dialogueText
+      value: "Det er ikke min skyld, at du ikke kan f\xF8lge med!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[3].dialogueText
+      value: "Jeg har arbejdet for det her lige s\xE5 meget som dig,"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[4].dialogueText
+      value: og hvis du ikke kan klare det, er det dit eget problem!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[5].dialogueText
+      value: "Sl\xE5 ham, Frederik!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[6].dialogueText
+      value: Kom nu, Peter, lad ham ikke slippe
       objectReference: {fileID: 0}
     - target: {fileID: 3837901935592212914, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
@@ -14730,6 +14840,12 @@ PrefabInstance:
     - target: {fileID: 3837901935592212914, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881404253813192388, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: m_text
+      value: 'Peter & Frederik
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 4068530058336476244, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14775,9 +14891,24 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6143806028978610223, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143806028978610223, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: m_Size.z
+      value: 2.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6143806028978610223, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: m_Center.z
+      value: 0.34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4068530058336476244, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1992371245}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
 --- !u!1 &1319139830
@@ -22331,6 +22462,22 @@ Transform:
   - {fileID: 989763681}
   m_Father: {fileID: 858812924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992371243 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5940107423363709228, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+  m_PrefabInstance: {fileID: 2039829292}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1992371245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+  m_PrefabInstance: {fileID: 2039829292}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2005591388
 GameObject:
   m_ObjectHideFlags: 0
@@ -23130,7 +23277,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 635397783}
     m_Modifications:
     - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_SceneBindings.Array.size
@@ -23148,25 +23295,37 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 257103818180221293, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 257103818180221293, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 853140189153506568, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1911030382895311678, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5751535
+      value: 0.5964782
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22100002
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.265925
+      value: 2.3770826
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7244055
+      value: 0.11357678
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalRotation.x
@@ -23174,7 +23333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6893741
+      value: -0.99352926
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalRotation.z
@@ -23190,6 +23349,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3153918004124690005, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050387619446137934, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6368374241009719512, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
@@ -23583,7 +23746,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.5, y: 2, z: 0.5}
   m_Center: {x: 0, y: 1, z: 0}
@@ -24164,4 +24327,3 @@ SceneRoots:
   - {fileID: 9449830}
   - {fileID: 1323747146}
   - {fileID: 1318245203}
-  - {fileID: 2039829292}
