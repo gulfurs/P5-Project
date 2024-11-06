@@ -500,8 +500,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3405,7 +3405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorObject: {fileID: 0}
   selectable: 1
-  actorID: {fileID: 1129060846}
+  actorID: {fileID: 73493565}
   actorColor: {r: 0.32877922, g: 0.7509433, b: 0.1856105, a: 1}
   faceID: {fileID: 0}
   actorName: Frederik
@@ -4690,11 +4690,6 @@ Transform:
   - {fileID: 1732498713}
   m_Father: {fileID: 1671578677}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1129060846 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2164392535951013889, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
-  m_PrefabInstance: {fileID: 605726167}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1144662073
 GameObject:
   m_ObjectHideFlags: 0
