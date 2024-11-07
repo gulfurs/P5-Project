@@ -483,6 +483,7 @@ MonoBehaviour:
   actorID: {fileID: 0}
   actorColor: {r: 1, g: 1, b: 1, a: 1}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!1 &5612575194259812835
 GameObject:
   m_ObjectHideFlags: 0

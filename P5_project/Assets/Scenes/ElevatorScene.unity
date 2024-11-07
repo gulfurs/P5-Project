@@ -6296,14 +6296,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: m_CameraYOffset
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: m_RequestedTrackingOriginMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.437
