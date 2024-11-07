@@ -100,11 +100,10 @@ public class DialogueManager : MonoBehaviour
     // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
     public void StartDialogue() {   
         midConvo = true;
-
+        AnimNext();
         getButtonA?.onClick.AddListener(OnChoiceA);
         getButtonB?.onClick.AddListener(OnChoiceB);
         getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
-
         currentNode = nodes[currentNodeIndex];
         PlayTimeline(currentNode.startTimeline);
         StartDialogueSequence(currentNode.startDialogue, currentNode.options);
@@ -117,7 +116,6 @@ public class DialogueManager : MonoBehaviour
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
-
         PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
     }
 
@@ -231,6 +229,7 @@ public class DialogueManager : MonoBehaviour
     // END DIALOGUE
     private void EndDialogue() {
         Debug.Log("End of dialogue nodes reached.");
+        AnimNext();
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
@@ -240,6 +239,14 @@ public class DialogueManager : MonoBehaviour
         getEventManager.actorManager.Actors.Remove(actor);
         }
         getEventManager.EndConversation();
+    }
+
+     // LOOP THROUGH EACH ANIMATOR
+    private void AnimNext() {
+    Animator[] childAnimators = GetComponentsInChildren<Animator>();
+    foreach (Animator animator in childAnimators) {
+        animator.SetTrigger("NextConvo");
+        }
     }
 
     //METHOD FOR PLAYING DIALOGUE
