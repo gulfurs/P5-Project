@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 849fd744c74a0ce4c9a0833c04c10976, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: d74b64489b4306546aef30793c1ecb8f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2322,6 +2322,7 @@ MonoBehaviour:
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
   getAudiomotor: {fileID: 0}
+  additionalActorsToRemove: []
 --- !u!114 &694017821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2896,6 +2897,7 @@ MonoBehaviour:
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
   getAudiomotor: {fileID: 0}
+  additionalActorsToRemove: []
 --- !u!114 &780922246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3912,6 +3914,7 @@ MonoBehaviour:
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
   getAudiomotor: {fileID: 0}
+  additionalActorsToRemove: []
 --- !u!114 &893819459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5987,6 +5990,7 @@ MonoBehaviour:
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
   getAudiomotor: {fileID: 0}
+  additionalActorsToRemove: []
 --- !u!114 &1194299228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6292,6 +6296,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301423348}
   m_Mesh: {fileID: -6199194599036011596, guid: 363e1a7b56dfa5c4ead6c2fffbf9031c, type: 3}
+--- !u!1 &1310264529
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1310264531}
+  - component: {fileID: 1310264530}
+  m_Layer: 0
+  m_Name: Audio Source (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1310264530
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310264529}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a258ddb1943c1864f9ce92ef9ad8856b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 6.3239603
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1310264531
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310264529}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23.6, y: -1.57, z: 15.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1313490978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6718,6 +6850,7 @@ MonoBehaviour:
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
   getAudiomotor: {fileID: 0}
+  additionalActorsToRemove: []
 --- !u!114 &1329483982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8615,6 +8748,7 @@ MonoBehaviour:
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
   getAudiomotor: {fileID: 0}
+  additionalActorsToRemove: []
 --- !u!114 &1701871879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8990,6 +9124,7 @@ MonoBehaviour:
   resumeButton: {fileID: 0}
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
+  actorManager: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &1743782179
 MonoBehaviour:
@@ -118632,3 +118767,4 @@ SceneRoots:
   - {fileID: 780922249}
   - {fileID: 1701871882}
   - {fileID: 526604612}
+  - {fileID: 1310264531}
