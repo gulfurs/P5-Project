@@ -11,7 +11,7 @@ public class AudioMotor : MonoBehaviour
     {
         // Check if the other object has an Animator component with the "NPCController" controller
         Animator npcAnimator = other.GetComponent<Animator>();
-        if (npcAnimator != null && npcAnimator.runtimeAnimatorController.name == "NPCController")
+        if (npcAnimator != null /*&& npcAnimator.runtimeAnimatorController.name == "NPCController"*/)
         {
             // Set the "Face" layer weight to 1
             Debug.Log("IT WOOOOOOOOOOOOOOOORKS");
@@ -23,7 +23,7 @@ public class AudioMotor : MonoBehaviour
     {
         // Check if the other object has an Animator component with the "NPCController" controller
         Animator npcAnimator = other.GetComponent<Animator>();
-        if (npcAnimator != null && npcAnimator.runtimeAnimatorController.name == "NPCController")
+        if (npcAnimator != null /*&& npcAnimator.runtimeAnimatorController.name == "NPCController"*/)
         {
             // Reset the "Face" layer weight to 0
             Debug.Log("Not anymore");

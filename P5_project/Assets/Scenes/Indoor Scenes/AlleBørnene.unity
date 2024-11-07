@@ -93038,6 +93038,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 33914451}
+    - target: {fileID: 8457013005953507290, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: f879d12694f3d00488faf348d469510b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -99072,6 +99076,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_SceneBindings.Array.data[5].key
+      value: 
+      objectReference: {fileID: -3604724684850444174, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
+    - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
+      propertyPath: m_SceneBindings.Array.data[6].key
+      value: 
+      objectReference: {fileID: -4211636966979941103, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
     - target: {fileID: 126074917216454543, guid: 8841dbc9982c7154a970fe55467913db, type: 3}
       propertyPath: m_SceneBindings.Array.data[2].value
       value: 

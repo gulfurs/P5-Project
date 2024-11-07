@@ -7,5 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SpecialIdle
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: b9bb8a26943f7ca4c9c84c1afe84e2c8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d9cabcc960462584791efe46b9b8cfde, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 14863254cd8a2c045a995b19458dda5a, type: 2}
