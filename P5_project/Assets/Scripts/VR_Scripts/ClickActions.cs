@@ -28,13 +28,13 @@ public class ClickActions : MonoBehaviour
             enabled = false;
             return;
         }
-
+        /*
         if (dialogueMan == null)
         {
             Debug.LogError("DialogueManager reference is missing in ClickActions script!", this);
             enabled = false;
             return;
-        }
+        }*/
 
         if (ButtonOption_A == null || ButtonOption_B == null)
         {
