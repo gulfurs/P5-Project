@@ -5256,7 +5256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: 294b5be9449ce2d4a80a3ac8d19134ec, type: 3}
-  dialogueMan: {fileID: 1044988918}
+  dialogueMan: {fileID: 0}
   ButtonOption_A: {fileID: 1550893776}
   ButtonOption_B: {fileID: 1550893775}
 --- !u!4 &526604612
@@ -5570,6 +5570,113 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1030057009}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &731331090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 731331094}
+  - component: {fileID: 731331093}
+  - component: {fileID: 731331092}
+  - component: {fileID: 731331091}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &731331091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731331090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 8a06da2e4c6159c479857b607b3f89ae, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 731331093}
+          m_TargetAssemblyTypeName: SceneMotor, Assembly-CSharp
+          m_MethodName: NextScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &731331092
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731331090}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 4500054638166973283, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1597594195264856033, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3356180983406582328, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
+    value: {fileID: 1196360278}
+  - key: {fileID: 4500054638166973283, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1597594195264856033, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
+    value: {fileID: 731331091}
+  - key: {fileID: 3356180983406582328, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
+    value: {fileID: 1196360278}
+  - key: {fileID: 1281871875705310703, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
+    value: {fileID: 248600909}
+  m_ExposedReferences:
+    m_References: []
+--- !u!114 &731331093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731331090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9971781c6cc3b1d4591c101a875a77f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &731331094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731331090}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.688124, y: 7.8183956, z: 23.191988}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741695376
 GameObject:
@@ -6593,12 +6700,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: ec2249478a3c7fa468d985a2b4114373, type: 2}
+    - {fileID: 11400000, guid: 8a06da2e4c6159c479857b607b3f89ae, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1030057005}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
           m_MethodName: OnSignalReceived
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 731331093}
+          m_TargetAssemblyTypeName: SceneMotor, Assembly-CSharp
+          m_MethodName: NextScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7083,12 +7205,57 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: ec2249478a3c7fa468d985a2b4114373, type: 2}
+    - {fileID: 11400000, guid: 8a06da2e4c6159c479857b607b3f89ae, type: 2}
+    - {fileID: 11400000, guid: 77167ddfd45573a448bdc46f3f1ece48, type: 2}
+    - {fileID: 11400000, guid: ed92912b65f65fd4382eb0badeb8a5c1, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1044988918}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
           m_MethodName: OnSignalReceived
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 731331093}
+          m_TargetAssemblyTypeName: SceneMotor, Assembly-CSharp
+          m_MethodName: NextScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 731331092}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 731331092}
+          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+          m_MethodName: Play
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -8182,6 +8349,11 @@ Transform:
   - {fileID: 3618203848656417349}
   m_Father: {fileID: 1241620708}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1196360278 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1400796282981520017, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1550893774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1235769337
 GameObject:
   m_ObjectHideFlags: 0
@@ -35879,3 +36051,4 @@ SceneRoots:
   - {fileID: 526604612}
   - {fileID: 1030057009}
   - {fileID: 605726167}
+  - {fileID: 731331094}
