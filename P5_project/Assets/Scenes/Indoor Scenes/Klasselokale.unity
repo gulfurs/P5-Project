@@ -5256,7 +5256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: 294b5be9449ce2d4a80a3ac8d19134ec, type: 3}
-  dialogueMan: {fileID: 1044988918}
+  dialogueMan: {fileID: 0}
   ButtonOption_A: {fileID: 1550893776}
   ButtonOption_B: {fileID: 1550893775}
 --- !u!4 &526604612
