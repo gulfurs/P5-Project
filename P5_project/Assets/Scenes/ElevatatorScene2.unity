@@ -3248,17 +3248,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305613910}
-  m_LocalRotation: {x: -0.00000037252897, y: -0.97353137, z: 0.00000068545336, w: 0.22855356}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.0000002504623, y: -0.99822426, z: 0.0000007388456, w: 0.059568226}
+  m_LocalPosition: {x: 0, y: 0, z: 1.227599}
   m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 721336913}
-  m_LocalEulerAnglesHint: {x: -26.424, y: -270, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: -173.17, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 1.3503247, y: -0.39000002}
+  m_SizeDelta: {x: 30.6305, y: 12.8017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305613912
 MonoBehaviour:
@@ -3292,7 +3292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bes\xF8g Klasse 8.z?\n"
+  m_text: "Start scenarie Inded\xF8rs\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
   m_sharedMaterial: {fileID: 1639534622193078873, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
@@ -3319,13 +3319,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 48.41
+  m_fontSizeBase: 48.41
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -5422,7 +5422,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.86
+      value: -2.66
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5430,7 +5430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.273
+      value: 4.06
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalRotation.w
