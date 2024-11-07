@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: f84a064daf404aa4a81cb04f36c5b303, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 849fd744c74a0ce4c9a0833c04c10976, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -4016,8 +4016,8 @@ MonoBehaviour:
   m_Camera: {fileID: 385427720}
   m_OriginBaseGameObject: {fileID: 1905393114}
   m_CameraFloorOffsetObject: {fileID: 1959981994}
-  m_RequestedTrackingOriginMode: 2
-  m_CameraYOffset: 1.1176
+  m_RequestedTrackingOriginMode: 1
+  m_CameraYOffset: 1.8176
 --- !u!4 &1905393122
 Transform:
   m_ObjectHideFlags: 0
