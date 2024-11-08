@@ -124,33 +124,38 @@ public class DialogueManager : MonoBehaviour
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
 
-        // Set initial text and play audio if any for the first line
+        // Display the first line and pause
+        waitingForPlayerInput = true;
         UpdateDialogueLine();
     }
 
     private void UpdateDialogueLine()
     {
+        // If we're out of lines in the sequence, return
         if (currentDialogueIndex >= currentDialogueSequence.Length) return;
 
         Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
 
-        // Update text
+        // Display dialogue text
         string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
         getSubtitles.text = actorName + " " + dialogue.dialogueText;
         getFollow.target = dialogue.actor.faceID?.transform;
 
-        // Track consequences
+        // Track consequences if any
         if (!string.IsNullOrEmpty(dialogue.consequenceUID))
         {
             getEventracker.Add(dialogue.consequenceUID);
         }
 
-        // Play voice line if it exists
+        // Play voice line if available
         if (dialogue.voiceLine != null)
         {
             getAudioSource.clip = dialogue.voiceLine;
             getAudioSource.Play();
         }
+
+        // Set waitingForPlayerInput to true to require player input for the next line
+        waitingForPlayerInput = true;
     }
 
     public void OnSignalReceived()
@@ -171,6 +176,7 @@ public class DialogueManager : MonoBehaviour
     {
         isDialoguePlaying = false;
 
+        // Display choices or conclude the dialogue sequence
         if (currentNode.options)
         {
             ShowChoices();
@@ -283,10 +289,21 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+    // Check if we're waiting for input and the button was pressed
         if (waitingForPlayerInput && continueDialogAction.action.WasPressedThisFrame())
+    {
+        waitingForPlayerInput = false; // Stop waiting for input after it's received
+        currentDialogueIndex++; // Move to the next line in the sequence
+
+        // If there are more lines, show the next one; otherwise, finish sequence
+        if (currentDialogueIndex < currentDialogueSequence.Length)
         {
-            waitingForPlayerInput = false;
-            playableDirector.Play();
+            UpdateDialogueLine(); // Show the next line
         }
+        else
+        {
+            FinishDialogueSequence(); // End the sequence if no more lines are left
+        }
+    }
     }
 }
