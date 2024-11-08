@@ -48,7 +48,8 @@ public class DialogueManager : MonoBehaviour
 
     private int currentNodeIndex = 0;
     private Dialogue[] currentDialogueSequence;
-    private int currentDialogueIndex = 0;
+    private int currentDialogueIndex = 0;      // Tracks audio line
+    private int lastTextIndex = -1;            // Tracks text display line (one behind audio)
     private DialogueNode currentNode;
 
     private EventManager getEventManager;
@@ -123,29 +124,36 @@ public class DialogueManager : MonoBehaviour
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
+        lastTextIndex = -1;  // Reset last text index
 
-        // Display the first line and pause
+        // Display the initial text and pause for player input
         waitingForPlayerInput = true;
-        UpdateDialogueLine();
+        UpdateTextDisplay();
     }
 
-    private void UpdateDialogueLine()
+    private void UpdateTextDisplay()
     {
-        // If we're out of lines in the sequence, return
+        // Update the text to the line one behind the current audio line
+        if (lastTextIndex >= 0 && lastTextIndex < currentDialogueSequence.Length)
+        {
+            Dialogue dialogue = currentDialogueSequence[lastTextIndex];
+
+            // Display dialogue text for the previous line
+            string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
+            getSubtitles.text = actorName + " " + dialogue.dialogueText;
+            getFollow.target = dialogue.actor.faceID?.transform;
+        }
+        else
+        {
+            getSubtitles.text = ""; // Clear if there's no previous line
+        }
+    }
+
+    private void PlayVoiceLine()
+    {
         if (currentDialogueIndex >= currentDialogueSequence.Length) return;
 
         Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
-
-        // Display dialogue text
-        string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
-        getSubtitles.text = actorName + " " + dialogue.dialogueText;
-        getFollow.target = dialogue.actor.faceID?.transform;
-
-        // Track consequences if any
-        if (!string.IsNullOrEmpty(dialogue.consequenceUID))
-        {
-            getEventracker.Add(dialogue.consequenceUID);
-        }
 
         // Play voice line if available
         if (dialogue.voiceLine != null)
@@ -153,31 +161,39 @@ public class DialogueManager : MonoBehaviour
             getAudioSource.clip = dialogue.voiceLine;
             getAudioSource.Play();
         }
-
-        // Pause the Timeline and wait for player input
-        playableDirector.Pause();
-        waitingForPlayerInput = true;
     }
 
     public void OnSignalReceived()
     {
-        // When a signal emitter is hit, update the dialogue if there's another line
+        // Play the current voice line
+        PlayVoiceLine();
+
+        // Move the text index up by one (show the previous line's text)
+        if (lastTextIndex < currentDialogueIndex)
+        {
+            lastTextIndex++;
+            UpdateTextDisplay();
+        }
+
+        // Advance to the next line for audio
         if (currentDialogueIndex < currentDialogueSequence.Length - 1)
         {
             currentDialogueIndex++;
-            UpdateDialogueLine();
         }
         else
         {
             FinishDialogueSequence();
         }
+
+        // Pause the Timeline and wait for player input to proceed
+        playableDirector.Pause();
+        waitingForPlayerInput = true;
     }
 
     private void FinishDialogueSequence()
     {
         isDialoguePlaying = false;
 
-        // Display choices or conclude the dialogue sequence
         if (currentNode.options)
         {
             ShowChoices();
