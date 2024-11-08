@@ -49,7 +49,7 @@ public class DialogueManager : MonoBehaviour
     private int currentNodeIndex = 0;
     private Dialogue[] currentDialogueSequence;
     private int currentDialogueIndex = 0;      // Tracks audio line
-    private int lastTextIndex = -1;            // Tracks text display line (one behind audio)
+    private int lastTextIndex = 0;            // Tracks text display line (one behind audio)
     private DialogueNode currentNode;
 
     private EventManager getEventManager;

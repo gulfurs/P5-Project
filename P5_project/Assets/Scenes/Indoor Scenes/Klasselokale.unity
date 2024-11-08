@@ -5891,6 +5891,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839609899}
   m_CullTransparentMesh: 1
+--- !u!114 &884559274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1550893774}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &886654207
 GameObject:
   m_ObjectHideFlags: 0
@@ -6742,102 +6753,132 @@ MonoBehaviour:
     - dialogueText: Hej Frederik, du virker lidt stille i dag.
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Er der noget, der trykker dig?
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Det er bare\u2026 Peter."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Han bliver ved med at skabe problemer
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "og g\xF8re mig til skurken i alt det her."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Han siger, at jeg f\xE5r det hele serveret,"
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "men han ser ikke, hvor meget jeg selv k\xE6mper."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: "St\xF8ttende og beroligende"
     choiceB: Direkte konfronterende svar
     playerChoiceA:
     - dialogueText: "Jeg forst\xE5r godt, at det er frustrerende."
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Nogle gange ser folk kun deres egen kamp og ikke, hvad andre
         g\xE5r igennem."
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Peter f\xF8ler sikkert, at han bliver sammenlignet med dig, "
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "og det g\xF8r tingene endnu v\xE6rre."
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Ja, m\xE5ske..."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Men det f\xF8les som om, han altid pr\xF8ver at tr\xE6kke mig
         ned,"
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: " i stedet for at fokusere p\xE5 sine egne problemer."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg tror, han er fanget i sine egne f\xF8lelser lige nu,"
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "men det \xE6ndrer ikke det faktum, at du ogs\xE5 har dine udfordringer."
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Det vigtigste er, at du forts\xE6tter med at g\xF8re dit bedste"
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: uden at lade dig rive med af hans usikkerheder.
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Du har nok ret...
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg skal bare lade v\xE6re med at lade det g\xE5 mig p\xE5."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Det er bare s\xE5 sv\xE6rt, n\xE5r han bliver ved med at angribe
         mig."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     playerChoiceB:
     - dialogueText: "Frederik, har du virkelig intet at g\xF8re med denne konflikt?"
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Der skal 2 til en tango, er du sikker p\xE5 du ikke har noget
         med dette at g\xF8re ogs\xE5"
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: og det ikke kun er Peter skyld, har du overvejet at snakke med
         ham
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Jeg ved det..
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Men det er ikke fair, at jeg skal tage det f\xF8rste skridt."
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Han har startet alt det her med sine beskyldninger.
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Hvorfor skal det v\xE6re mig, der g\xE5r hen til ham?"
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Intet bliver l\xF8st, hvis ingen g\xF8r noget"
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Du har nok ret
       actor: {fileID: 1030057007}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     endDialogue: []
     startTimeline: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
     choiceATimeline: {fileID: 11400000, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
@@ -6847,7 +6888,7 @@ MonoBehaviour:
   continueDialogAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Continue Dialog
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: d4ea904a-8d05-412d-a26d-5d211246c708
@@ -7003,8 +7044,8 @@ MonoBehaviour:
   selectable: 1
   actorID: {fileID: 945883296}
   actorColor: {r: 0.6754716, g: 0.4461733, b: 0.3198931, a: 1}
-  faceID: {fileID: 0}
-  actorName: 
+  faceID: {fileID: 945883296}
+  actorName: Peter
 --- !u!65 &1044988915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7081,113 +7122,145 @@ MonoBehaviour:
     - dialogueText: "Jeg er bare s\xE5 tr\xE6t af Frederik."
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Han f\xE5r altid opm\xE6rsomheden og alle tror han er s\xE5
         perfekt."
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Det er som om ingen ser hvor meget jeg arbejder.
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Men uanset hvad S\xE5 er det altid Frederik der f\xE5r ros"
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Ugh.
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: Empatisk
     choiceB: Konfronterende
     playerChoiceA:
     - dialogueText: Hey Peter, du virker lidt frustreret. Er alt okay?
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Er der noget du gerne vil snakke om?
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Det er bare...Frederik
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Han altid skal v\xE6re den der f\xE5r alt opm\xE6rksomheden"
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg pr\xF8ver virkelig, men det er som om ingen ser det."
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg kan se at du ikke har det helt godt, men det virker som
         om du lader det g\xE5 ud over Frederik."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Er du sikker p\xE5 at det er den rigtige m\xE5de at t\xE6n-"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Jeg ved det ikke!
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "M\xE5ske har du ret...Jeg er bare s\xE5 tr\xE6t af det hele"
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Det er som om...
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Intet jeg g\xF8r er godt nok"
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Du er god nok som du er Peter og jeg har lagt m\xE6rke til din
         indsats."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Tak.
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     playerChoiceB:
     - dialogueText: "Peter, jeg forst\xE5r godt at du er frustreret..."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Men at g\xE5 rundt og bebrejde Frederik hele tiden hj\xE6lper
         dig ikke"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Det virker som om du giver ham skylden for noget der ikke er
         hans skyld
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Har du t\xE6nkt p\xE5 om det her m\xE5ske handler om-"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Hvad mener du med det? Det er jo tydeligt at han altid f\xE5r
         opm\xE6rksomheden."
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg arbejder h\xE5rdt, men ingen ser det"
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Ugh.
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Peter, folk ser dig, men d-det er sv\xE6rt for dem, n\xE5r du
         hele tiden fokusere p\xE5 Frederik."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "M\xE5ske er det p\xE5 tide at kigge p\xE5 dig selv og ikke ham"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "S\xE5 kan det v\xE6re at det g\xE5r det op for dig hvad der
         holder dig tilbage"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Kan godt se hvad du mener!
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     endDialogue:
     - dialogueText: "Fokuser p\xE5 hvad du kan kontrollere Peter"
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Du er en god dreng og jeg ved du snart vil se resultater for
         dit gode arbejde
       actor: {fileID: 779223213}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: Okay hvis du siger det.
       actor: {fileID: 1044988914}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     startTimeline: {fileID: 11400000, guid: e84a2a588543b6b47a2ae4baf05bc9a3, type: 2}
     choiceATimeline: {fileID: 11400000, guid: bb1766dba708f184db5a9d5569237440, type: 2}
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
@@ -7206,6 +7279,14 @@ MonoBehaviour:
       - m_Name: 
         m_Id: 64a6160c-06ae-4d52-9ecb-c0c02468719b
         m_Path: <XRController>{LeftHand}/primaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
+      - m_Name: 
+        m_Id: 735c82dd-524f-45b6-bef4-007e95796c30
+        m_Path: <XRController>{LeftHand}/{PrimaryButton}
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -7297,7 +7378,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1044988913}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e84a2a588543b6b47a2ae4baf05bc9a3, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -8981,6 +9062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: actorName
+      value: Dig
+      objectReference: {fileID: 0}
     - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
       value: 2
@@ -10511,7 +10596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1938509115
 MonoBehaviour:
   m_ObjectHideFlags: 0
