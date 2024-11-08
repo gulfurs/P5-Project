@@ -14,6 +14,7 @@ public class Dialogue
     public string dialogueText;
     public Actor actor;
     public string consequenceUID;
+    public AudioClip voiceLine; // Audio clip for voice line
 }
 
 [System.Serializable]
@@ -42,6 +43,7 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI getSubtitles;
     private List<string> getEventracker;
     private GameObject getAudiomotor;
+    private AudioSource getAudioSource;
     private LazyFollow getFollow;
 
     private int currentNodeIndex = 0;
@@ -52,7 +54,6 @@ public class DialogueManager : MonoBehaviour
     private EventManager getEventManager;
     private bool midConvo = false;
     private bool isDialoguePlaying = false;
-    private bool signalReceived = false;
     private bool waitingForPlayerInput = false;
 
     private PlayableDirector playableDirector;
@@ -88,6 +89,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         getFollow = getAudiomotor.GetComponent<LazyFollow>();
+        getAudioSource = getAudiomotor.GetComponent<AudioSource>();
         playableDirector = GetComponent<PlayableDirector>();
         getClickActions = FindObjectOfType<ClickActions>();
     }
@@ -121,49 +123,68 @@ public class DialogueManager : MonoBehaviour
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
-        PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
+
+        // Display the first line and pause
+        waitingForPlayerInput = true;
+        UpdateDialogueLine();
     }
 
-    private void PlayDialogue(Dialogue dialogue, bool showChoicesAfter)
+    private void UpdateDialogueLine()
     {
-        if (dialogue == null) return;
+        // If we're out of lines in the sequence, return
+        if (currentDialogueIndex >= currentDialogueSequence.Length) return;
 
+        Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
+
+        // Display dialogue text
         string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
         getSubtitles.text = actorName + " " + dialogue.dialogueText;
         getFollow.target = dialogue.actor.faceID?.transform;
 
+        // Track consequences if any
         if (!string.IsNullOrEmpty(dialogue.consequenceUID))
         {
             getEventracker.Add(dialogue.consequenceUID);
         }
 
-        StartCoroutine(WaitForSignalOrTimeline(showChoicesAfter));
+        // Play voice line if available
+        if (dialogue.voiceLine != null)
+        {
+            getAudioSource.clip = dialogue.voiceLine;
+            getAudioSource.Play();
+        }
+
+        // Pause the Timeline and wait for player input
+        playableDirector.Pause();
+        waitingForPlayerInput = true;
     }
 
-    private IEnumerator WaitForSignalOrTimeline(bool showChoicesAfter)
+    public void OnSignalReceived()
     {
-        // Wait until a signal is received or the timeline has completed
-        yield return new WaitUntil(() => signalReceived || playableDirector.state != PlayState.Playing);
-        signalReceived = false;
-
-        currentDialogueIndex++;
-
-        if (currentDialogueIndex < currentDialogueSequence.Length)
+        // When a signal emitter is hit, update the dialogue if there's another line
+        if (currentDialogueIndex < currentDialogueSequence.Length - 1)
         {
-            PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
+            currentDialogueIndex++;
+            UpdateDialogueLine();
         }
         else
         {
-            if (showChoicesAfter)
-            {
-                ShowChoices();
-                isDialoguePlaying = false;
-            }
-            else
-            {
-                HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
-                isDialoguePlaying = false;
-            }
+            FinishDialogueSequence();
+        }
+    }
+
+    private void FinishDialogueSequence()
+    {
+        isDialoguePlaying = false;
+
+        // Display choices or conclude the dialogue sequence
+        if (currentNode.options)
+        {
+            ShowChoices();
+        }
+        else
+        {
+            HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
         }
     }
 
@@ -267,20 +288,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void OnSignalReceived()
-    {
-        playableDirector.Pause();
-        signalReceived = true;
-        waitingForPlayerInput = true;
-    }
-
     private void Update()
     {
+        // Check if waiting for player input and if the button was pressed
         if (waitingForPlayerInput && continueDialogAction.action.WasPressedThisFrame())
         {
-            waitingForPlayerInput = false;
-            playableDirector.Play();
-            signalReceived = false;
+            waitingForPlayerInput = false; // Stop waiting for input
+            playableDirector.Play(); // Resume the Timeline
         }
     }
 }
