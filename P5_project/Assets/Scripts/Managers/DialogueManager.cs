@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.UI;
+using UnityEngine.Timeline;
 
 [System.Serializable]
 public class Dialogue
