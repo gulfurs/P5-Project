@@ -6751,11 +6751,11 @@ MonoBehaviour:
     options: 1
     startDialogue:
     - dialogueText: Hej Frederik, du virker lidt stille i dag.
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: Er der noget, der trykker dig?
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Det er bare\u2026 Peter."
@@ -6782,12 +6782,12 @@ MonoBehaviour:
     choiceB: Direkte konfronterende svar
     playerChoiceA:
     - dialogueText: "Jeg forst\xE5r godt, at det er frustrerende."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Nogle gange ser folk kun deres egen kamp og ikke, hvad andre
         g\xE5r igennem."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Peter f\xF8ler sikkert, at han bliver sammenlignet med dig, "
@@ -6795,7 +6795,7 @@ MonoBehaviour:
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "og det g\xF8r tingene endnu v\xE6rre."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Ja, m\xE5ske..."
@@ -6812,23 +6812,23 @@ MonoBehaviour:
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Jeg tror, han er fanget i sine egne f\xF8lelser lige nu,"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "men det \xE6ndrer ikke det faktum, at du ogs\xE5 har dine udfordringer."
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Det vigtigste er, at du forts\xE6tter med at g\xF8re dit bedste"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: uden at lade dig rive med af hans usikkerheder.
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: Du har nok ret...
-      actor: {fileID: 1030057007}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Jeg skal bare lade v\xE6re med at lade det g\xE5 mig p\xE5."
@@ -6842,17 +6842,17 @@ MonoBehaviour:
       voiceLine: {fileID: 0}
     playerChoiceB:
     - dialogueText: "Frederik, har du virkelig intet at g\xF8re med denne konflikt?"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Der skal 2 til en tango, er du sikker p\xE5 du ikke har noget
         med dette at g\xF8re ogs\xE5"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: og det ikke kun er Peter skyld, har du overvejet at snakke med
         ham
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: Jeg ved det..
@@ -6872,7 +6872,7 @@ MonoBehaviour:
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Intet bliver l\xF8st, hvis ingen g\xF8r noget"
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: Du har nok ret
@@ -6894,7 +6894,15 @@ MonoBehaviour:
       m_Id: d4ea904a-8d05-412d-a26d-5d211246c708
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings: []
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: f6577eb4-3c3b-424d-9494-d4355f9ec9cd
+        m_Path: <XRController>{LeftHand}/{PrimaryButton}
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
 --- !u!114 &1030057006
@@ -7279,14 +7287,6 @@ MonoBehaviour:
       - m_Name: 
         m_Id: 64a6160c-06ae-4d52-9ecb-c0c02468719b
         m_Path: <XRController>{LeftHand}/primaryButton
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Continue Dialog
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 735c82dd-524f-45b6-bef4-007e95796c30
-        m_Path: <XRController>{LeftHand}/{PrimaryButton}
         m_Interactions: 
         m_Processors: 
         m_Groups: 
@@ -9063,6 +9063,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: actorName
+      value: Dig
+      objectReference: {fileID: 0}
+    - target: {fileID: 766232566658611590, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: actorName
       value: Dig
       objectReference: {fileID: 0}

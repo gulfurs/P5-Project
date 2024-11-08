@@ -1072,9 +1072,11 @@ MonoBehaviour:
     - dialogueText: "Det virkelig vildt hvad der foreg\xE5r mellem Peter og Frederik\u2026 "
       actor: {fileID: 365128641}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Det bliver sp\xE6ndene at se hvad der kommer til at ske"
       actor: {fileID: 365128641}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: A
     choiceB: B
     playerChoiceA: []
@@ -1083,12 +1085,32 @@ MonoBehaviour:
     - dialogueText: 
       actor: {fileID: 1614326103}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     startTimeline: {fileID: 11400000, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 11400000, guid: 0f7d0d8746ec0794c9e55c06b19eb195, type: 2}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Continue Dialog
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b726adaa-fc83-4f53-8ae5-d7cda6e3b23c
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: ac8b258c-9b32-44cc-b457-f3faaf8113ce
+        m_Path: <XRController>{LeftHand}/{PrimaryButton}
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &365128640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5110,13 +5132,16 @@ MonoBehaviour:
     - dialogueText: "Hvorfor sidder du helt stille helt over i hj\xF8rnet min ven"
       actor: {fileID: 1614326103}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg ved ikke\u2026 Det virker som om, folk taler bag om ryggen
         p\xE5 hinanden."
       actor: {fileID: 669658653}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg pr\xF8ver bare at holde mig udenfor det hele."
       actor: {fileID: 669658653}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: A
     choiceB: B
     playerChoiceA: []
@@ -5125,12 +5150,32 @@ MonoBehaviour:
     - dialogueText: 
       actor: {fileID: 1614326103}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     startTimeline: {fileID: 11400000, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 11400000, guid: 0f7d0d8746ec0794c9e55c06b19eb195, type: 2}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Continue Dialog
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 7c830a43-c9f9-46e2-bd4f-01c7a9bd86a0
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 19a1e37f-684a-46d0-be52-cea150298aff
+        m_Path: <XRController>{LeftHand}/{PrimaryButton}
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &669658652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9709,15 +9754,19 @@ MonoBehaviour:
     - dialogueText: Noget galt?
       actor: {fileID: 1614326103}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Tja\u2026 Jeg ved ikke rigtig."
       actor: {fileID: 1178072391}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Folk har bare v\xE6ret anderledes p\xE5 det sidste"
       actor: {fileID: 1178072391}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Nogle af os har h\xF8rt ting, der m\xE5ske ikke er helt sande\u2026"
       actor: {fileID: 1178072391}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: A
     choiceB: B
     playerChoiceA: []
@@ -9726,12 +9775,32 @@ MonoBehaviour:
     - dialogueText: 
       actor: {fileID: 1614326103}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     startTimeline: {fileID: 11400000, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 11400000, guid: 0f7d0d8746ec0794c9e55c06b19eb195, type: 2}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Continue Dialog
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e482ab3e-f03b-4564-8730-f3706b657a14
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 93456065-c394-4394-8cc1-945b8a60577e
+        m_Path: <XRController>{LeftHand}/{PrimaryButton}
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &1178072390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13640,6 +13709,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: actorName
+      value: Dig
+      objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.67

@@ -4606,6 +4606,8 @@ PlayableDirector:
     value: {fileID: 1025173371}
   - key: {fileID: 9119601264108967293, guid: 66a480e9bd51778478fae4e158125514, type: 2}
     value: {fileID: 318706447}
+  - key: {fileID: -762100930874602928, guid: 66a480e9bd51778478fae4e158125514, type: 2}
+    value: {fileID: 318706447}
   m_ExposedReferences:
     m_References:
     - 5ad4f785e395bcb48a4a1af083349f31: {fileID: 1555882985}
@@ -4629,36 +4631,61 @@ MonoBehaviour:
     - dialogueText: "Jeg ville lige n\xE6vne.."
       actor: {fileID: 1400935878}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "At der har v\xE6ret en del problemer mellem Peter og Frederik
         i din klasse"
       actor: {fileID: 1400935878}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Der er noget sp\xE6nding imellem dem og det p\xE5virker de andre
         elever"
       actor: {fileID: 1400935878}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Jeg t\xE6nkte at du n\xE5r vil f\xE5 brug for at h\xE5ndtere
         det i dag"
       actor: {fileID: 1400935878}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     - dialogueText: "Vises i l\xE6rerv\xE6relset! Jeg giver den f\xF8rste kaffe"
       actor: {fileID: 1400935878}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: 
     choiceB: 
     playerChoiceA:
     - dialogueText: 
       actor: {fileID: 0}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     playerChoiceB: []
     endDialogue: []
     startTimeline: {fileID: 11400000, guid: 6ce2c3b364651e34cbd805ba85151f4e, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 11400000, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove:
   - {fileID: 1405614295}
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Continue Dialog
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 99ccdeab-3d94-420c-91ee-18d57b5b380b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 63c4441c-3413-48d7-b928-939a0cef946a
+        m_Path: <XRController>{LeftHand}/{PrimaryButton}
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &1400935883
 MonoBehaviour:
   m_ObjectHideFlags: 0
