@@ -6843,8 +6843,19 @@ MonoBehaviour:
     choiceATimeline: {fileID: 11400000, guid: ca4fe01d1751a9d4686e984cc566c976, type: 2}
     choiceBTimeline: {fileID: 11400000, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
     endTimeline: {fileID: 0}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d4ea904a-8d05-412d-a26d-5d211246c708
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &1030057006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7181,8 +7192,27 @@ MonoBehaviour:
     choiceATimeline: {fileID: 11400000, guid: bb1766dba708f184db5a9d5569237440, type: 2}
     choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     endTimeline: {fileID: 11400000, guid: c36433762478765468da467d8cb34e0b, type: 2}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Continue Dialog
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 9619963d-63b7-404f-90db-4714335b749a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 64a6160c-06ae-4d52-9ecb-c0c02468719b
+        m_Path: <XRController>{LeftHand}/primaryButton
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Continue Dialog
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!114 &1044988919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8270,7 +8300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1144662074
 Transform:
   m_ObjectHideFlags: 0
