@@ -49,7 +49,7 @@ public class DialogueManager : MonoBehaviour
     private int currentNodeIndex = 0;
     private Dialogue[] currentDialogueSequence;
     private int currentDialogueIndex = 0;      // Tracks audio line
-    private int lastTextIndex = 0;            // Tracks text display line (one behind audio)
+    private int lastTextIndex = -1;            // Tracks text display line (one behind audio)
     private DialogueNode currentNode;
 
     private EventManager getEventManager;
@@ -126,14 +126,24 @@ public class DialogueManager : MonoBehaviour
         currentDialogueIndex = 0;
         lastTextIndex = -1;  // Reset last text index
 
-        // Display the initial text and pause for player input
-        waitingForPlayerInput = true;
+        // Display the initial line and start the first voice line without needing player input
+        PlayNextLine();
+    }
+
+    private void PlayNextLine()
+    {
+        // Update the text and voice line for the current line
         UpdateTextDisplay();
+        PlayVoiceLine();
+
+        // Pause the Timeline and wait for player input for the next line
+        playableDirector.Pause();
+        waitingForPlayerInput = true;
     }
 
     private void UpdateTextDisplay()
     {
-        // Update the text to the line one behind the current audio line
+        // Show the text for the line one behind the current audio line
         if (lastTextIndex >= 0 && lastTextIndex < currentDialogueSequence.Length)
         {
             Dialogue dialogue = currentDialogueSequence[lastTextIndex];
@@ -145,7 +155,7 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            getSubtitles.text = ""; // Clear if there's no previous line
+            getSubtitles.text = ""; // Clear if no previous line
         }
     }
 
@@ -155,7 +165,7 @@ public class DialogueManager : MonoBehaviour
 
         Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
 
-        // Play voice line if available
+        // Play the voice line if available
         if (dialogue.voiceLine != null)
         {
             getAudioSource.clip = dialogue.voiceLine;
@@ -165,15 +175,9 @@ public class DialogueManager : MonoBehaviour
 
     public void OnSignalReceived()
     {
-        // Play the current voice line
-        PlayVoiceLine();
-
-        // Move the text index up by one (show the previous line's text)
-        if (lastTextIndex < currentDialogueIndex)
-        {
-            lastTextIndex++;
-            UpdateTextDisplay();
-        }
+        // Prepare to show the previous line's text and play the current voice line
+        lastTextIndex = currentDialogueIndex;
+        PlayNextLine();
 
         // Advance to the next line for audio
         if (currentDialogueIndex < currentDialogueSequence.Length - 1)
@@ -184,10 +188,6 @@ public class DialogueManager : MonoBehaviour
         {
             FinishDialogueSequence();
         }
-
-        // Pause the Timeline and wait for player input to proceed
-        playableDirector.Pause();
-        waitingForPlayerInput = true;
     }
 
     private void FinishDialogueSequence()
