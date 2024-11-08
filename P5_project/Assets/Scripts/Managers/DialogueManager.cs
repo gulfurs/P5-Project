@@ -14,6 +14,7 @@ public class Dialogue
     public string dialogueText;
     public Actor actor;
     public string consequenceUID;
+    public AudioClip voiceLine;
 }
 
 [System.Serializable]
@@ -60,13 +61,11 @@ public class DialogueManager : MonoBehaviour
     private ClickActions getClickActions;
     public List<Actor> additionalActorsToRemove;
 
-    // New field to configure input in Inspector
     [Header("Input Settings")]
     public InputActionProperty continueDialogAction;
 
     private void Start()
     {
-        // Ensure input action is enabled
         continueDialogAction.action.Enable();
 
         getEventManager = GameObject.FindObjectOfType<EventManager>();
@@ -141,12 +140,20 @@ public class DialogueManager : MonoBehaviour
             getEventracker.Add(dialogue.consequenceUID);
         }
 
-        StartCoroutine(WaitForSignal(showChoicesAfter));
+        // Play the voice line if it exists
+        if (dialogue.voiceLine != null)
+        {
+            getAudioSource.clip = dialogue.voiceLine;
+            getAudioSource.Play();
+        }
+
+        StartCoroutine(WaitForSignalOrAudioEnd(showChoicesAfter));
     }
 
-    private IEnumerator WaitForSignal(bool showChoicesAfter)
+    private IEnumerator WaitForSignalOrAudioEnd(bool showChoicesAfter)
     {
-        yield return new WaitUntil(() => signalReceived);
+        // Wait until the signal is received or the audio finishes
+        yield return new WaitUntil(() => signalReceived || !getAudioSource.isPlaying);
         signalReceived = false;
 
         currentDialogueIndex++;
