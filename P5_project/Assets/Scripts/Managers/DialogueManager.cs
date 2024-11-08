@@ -154,13 +154,14 @@ public class DialogueManager : MonoBehaviour
             getAudioSource.Play();
         }
 
-        // Set waitingForPlayerInput to true to require player input for the next line
+        // Pause the Timeline and wait for player input
+        playableDirector.Pause();
         waitingForPlayerInput = true;
     }
 
     public void OnSignalReceived()
     {
-        // When the signal is received, update text to the next dialogue line if available
+        // When a signal emitter is hit, update the dialogue if there's another line
         if (currentDialogueIndex < currentDialogueSequence.Length - 1)
         {
             currentDialogueIndex++;
@@ -289,21 +290,11 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-    // Check if we're waiting for input and the button was pressed
+        // Check if waiting for player input and if the button was pressed
         if (waitingForPlayerInput && continueDialogAction.action.WasPressedThisFrame())
-    {
-        waitingForPlayerInput = false; // Stop waiting for input after it's received
-        currentDialogueIndex++; // Move to the next line in the sequence
-
-        // If there are more lines, show the next one; otherwise, finish sequence
-        if (currentDialogueIndex < currentDialogueSequence.Length)
         {
-            UpdateDialogueLine(); // Show the next line
+            waitingForPlayerInput = false; // Stop waiting for input
+            playableDirector.Play(); // Resume the Timeline
         }
-        else
-        {
-            FinishDialogueSequence(); // End the sequence if no more lines are left
-        }
-    }
     }
 }
