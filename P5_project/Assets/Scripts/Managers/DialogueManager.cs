@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.XR.Interaction.Toolkit.UI;
 using UnityEngine.Playables;
-using UnityEngine.Timeline;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.UI;
 
 [System.Serializable]
 public class Dialogue
@@ -15,58 +16,62 @@ public class Dialogue
     public string consequenceUID;
 }
 
-// CLASS FOR DIALOGUE NODES
 [System.Serializable]
 public class DialogueNode
 {
-    public bool closingDialogue;      // IS LAST DIALOGUE?
-    public bool options = true;     
-    public Dialogue[] startDialogue;    // START DIALOGUE?
+    public bool closingDialogue;
+    public bool options = true;
+    public Dialogue[] startDialogue;
+    public string choiceA;
+    public string choiceB;
+    public Dialogue[] playerChoiceA;
+    public Dialogue[] playerChoiceB;
+    public Dialogue[] endDialogue;
 
-    public string choiceA;            // PREVIEW OF OPTION A
-    public string choiceB;            // PREVIEW OF OPTION B
-    public Dialogue[] playerChoiceA;    // OPTION A DIALOGUE
-    public Dialogue[] playerChoiceB;    // OPTION B DIALOGUE
-    public Dialogue[] endDialogue;      // END DIALOGUE (OPTIONAL)
-
-    public PlayableAsset startTimeline; // Timeline to run for start dialogue
-    public PlayableAsset choiceATimeline; // Timeline for choice A
-    public PlayableAsset choiceBTimeline; // Timeline for choice B
-    public PlayableAsset endTimeline; // Timeline for end dialogue
+    public PlayableAsset startTimeline;
+    public PlayableAsset choiceATimeline;
+    public PlayableAsset choiceBTimeline;
+    public PlayableAsset endTimeline;
 }
 
-// CLASS FOR MANAGEMENT OF DIALOGUE NODES AND OVERALL DIALOGUE
 public class DialogueManager : MonoBehaviour
 {
-    public DialogueNode[] nodes; // List of dialogue nodes
-    private TextMeshProUGUI getTextA, getTextB; // UI for choices
+    public DialogueNode[] nodes;
+    private TextMeshProUGUI getTextA, getTextB;
     private Button getButtonA, getButtonB;
-    private TextMeshProUGUI getSubtitles; // UI for subtitles
+    private TextMeshProUGUI getSubtitles;
     private List<string> getEventracker;
-
-    public GameObject getAudiomotor;
+    private GameObject getAudiomotor;
     private AudioSource getAudioSource;
     private LazyFollow getFollow;
 
-    private int currentNodeIndex = 0; // Current node
+    private int currentNodeIndex = 0;
     private Dialogue[] currentDialogueSequence;
     private int currentDialogueIndex = 0;
-    private DialogueNode currentNode; // Current node data
+    private DialogueNode currentNode;
 
-    private EventManager getEventManager; // Event manager
-    private bool midConvo = false; // CHECK IF MID CONVO
-
-    private bool isDialoguePlaying = false; // CHECK IF DIALOGUE IS PLAYING
-    private bool signalReceived = false; // BOOL TO CHECK FOR SIGNAL
+    private EventManager getEventManager;
+    private bool midConvo = false;
+    private bool isDialoguePlaying = false;
+    private bool signalReceived = false;
+    private bool waitingForPlayerInput = false;
 
     private PlayableDirector playableDirector;
-
     private ClickActions getClickActions;
     public List<Actor> additionalActorsToRemove;
 
-    private void Start() {
+    // New field to configure input in Inspector
+    [Header("Input Settings")]
+    public InputActionProperty continueDialogAction;
+
+    private void Start()
+    {
+        // Ensure input action is enabled
+        continueDialogAction.action.Enable();
+
         getEventManager = GameObject.FindObjectOfType<EventManager>();
-        if (getEventManager == null) {
+        if (getEventManager == null)
+        {
             Debug.LogError("NO EVENTMANAGER HOMEBOY");
             return;
         }
@@ -79,7 +84,8 @@ public class DialogueManager : MonoBehaviour
         getEventracker = getEventManager.eventTrackerList ?? new List<string>();
 
         getAudiomotor = FindObjectOfType<AudioMotor>()?.gameObject;
-        if (getAudiomotor == null) {
+        if (getAudiomotor == null)
+        {
             Debug.LogError("NO AUDIOMOTOR HOMEBOY");
             return;
         }
@@ -90,15 +96,17 @@ public class DialogueManager : MonoBehaviour
         getClickActions = FindObjectOfType<ClickActions>();
     }
 
-    public bool ChoicesActive { 
-        get { 
-            return getTextA?.transform.parent.gameObject.activeSelf == true || 
-                   getTextB?.transform.parent.gameObject.activeSelf == true; 
-        } 
+    public bool ChoicesActive
+    {
+        get
+        {
+            return getTextA?.transform.parent.gameObject.activeSelf == true ||
+                   getTextB?.transform.parent.gameObject.activeSelf == true;
+        }
     }
 
-    // METHOD FOR STARTING DIALOGUE. OTHER CLASSES MIGHT WANT TO PUT THIS METHOD TO GOOD USE.
-    public void StartDialogue() {   
+    public void StartDialogue()
+    {
         midConvo = true;
         AnimNext();
         getButtonA?.onClick.AddListener(OnChoiceA);
@@ -111,7 +119,8 @@ public class DialogueManager : MonoBehaviour
         getEventManager.PlayerEvent = gameObject.transform;
     }
 
-    public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter) {
+    public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter)
+    {
         if (isDialoguePlaying) return;
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
@@ -119,52 +128,54 @@ public class DialogueManager : MonoBehaviour
         PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
     }
 
+    private void PlayDialogue(Dialogue dialogue, bool showChoicesAfter)
+    {
+        if (dialogue == null) return;
 
-        // PLAY DIALOGUE IN PROPER SHAPE AND IN THE FACE OF THE PROPER MAN.
-        private void PlayDialogue(Dialogue dialogue, bool showChoicesAfter) {
-            if (dialogue == null) return;
+        string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
+        getSubtitles.text = actorName + " " + dialogue.dialogueText;
+        getFollow.target = dialogue.actor.faceID?.transform;
 
-            string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
-            getSubtitles.text = actorName + " " + dialogue.dialogueText;
-            //getSubtitles.color = dialogue.actor.actorColor;
-            getFollow.target = dialogue.actor.faceID?.transform;
-
-            //CONSEQUENCES?
-            if (!string.IsNullOrEmpty(dialogue.consequenceUID)) {
-                getEventracker.Add(dialogue.consequenceUID);
-            }
-
-            // DEMAND TO KNOW IF SIGNAL IS STILL ACITVE
-            StartCoroutine(WaitForSignal(showChoicesAfter));
+        if (!string.IsNullOrEmpty(dialogue.consequenceUID))
+        {
+            getEventracker.Add(dialogue.consequenceUID);
         }
 
-        // SIGNAL? PLAY NEXT DIALOGUE ACCORDINGLY
-       private IEnumerator WaitForSignal(bool showChoicesAfter) {
-    yield return new WaitUntil(() => signalReceived);
-    signalReceived = false;
+        StartCoroutine(WaitForSignal(showChoicesAfter));
+    }
 
-    currentDialogueIndex++;
-    //Debug.Log($"Signal received - Current Dialogue Index: {currentDialogueIndex}, Current Node Index: {currentNodeIndex}");
+    private IEnumerator WaitForSignal(bool showChoicesAfter)
+    {
+        yield return new WaitUntil(() => signalReceived);
+        signalReceived = false;
 
-    if (currentDialogueIndex < currentDialogueSequence.Length) {
-        PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
-    } else {
-        if (showChoicesAfter) {
-            ShowChoices();
-            isDialoguePlaying = false;
-        } else {
-            HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
-            isDialoguePlaying = false;
+        currentDialogueIndex++;
+
+        if (currentDialogueIndex < currentDialogueSequence.Length)
+        {
+            PlayDialogue(currentDialogueSequence[currentDialogueIndex], showChoicesAfter);
+        }
+        else
+        {
+            if (showChoicesAfter)
+            {
+                ShowChoices();
+                isDialoguePlaying = false;
+            }
+            else
+            {
+                HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
+                isDialoguePlaying = false;
+            }
         }
     }
-}
 
-
-    // DISPLAY OPTIONS (UI-WISE)
-    private void ShowChoices() {
+    private void ShowChoices()
+    {
         Debug.Log("End of dialogue");
-        
-        if (getTextA != null && getTextB != null) {
+
+        if (getTextA != null && getTextB != null)
+        {
             getTextA.text = currentNode.choiceA;
             getTextB.text = currentNode.choiceB;
             getFollow.target = getEventManager.player.transform;
@@ -174,20 +185,20 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    // METHOD FOR CHOICE A AND ITS DIALOGUE. 
-    public void OnChoiceA() {
+    public void OnChoiceA()
+    {
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceA, currentNode.choiceATimeline);
-    }   
+    }
 
-    // METHOD FOR CHOICE B AND ITS DIALOGUE. 
-    public void OnChoiceB() {
+    public void OnChoiceB()
+    {
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceB, currentNode.choiceBTimeline);
     }
 
-    // METHOD FOR CHOICE A AND B DIALOGUE
-    private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline) {
+    private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline)
+    {
         getTextA?.transform.parent.gameObject.SetActive(false);
         getTextB?.transform.parent.gameObject.SetActive(false);
 
@@ -195,39 +206,38 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(HandlePlayerChoice(choiceDialogue));
     }
 
-    // Handle player's choice dialogue
-    private IEnumerator HandlePlayerChoice(Dialogue[] choiceDialogue) {
-        if (choiceDialogue != null && choiceDialogue.Length > 0) {
-            // Start the dialogue sequence for the player's choice
+    private IEnumerator HandlePlayerChoice(Dialogue[] choiceDialogue)
+    {
+        if (choiceDialogue != null && choiceDialogue.Length > 0)
+        {
             StartDialogueSequence(choiceDialogue, false);
-            yield return new WaitUntil(() => !isDialoguePlaying); // Wait until dialogue sequence is complete
+            yield return new WaitUntil(() => !isDialoguePlaying);
         }
         yield return StartCoroutine(CheckNextNode());
     }
 
-    // CHECK NEXT NODE
-    private IEnumerator CheckNextNode() {
-        //yield return new WaitForSeconds(2f);
-
-        if (currentNode.closingDialogue) {
-            //PlayTimeline(currentNode.endTimeline);
-            //StartDialogueSequence(currentNode.endDialogue, false);
+    private IEnumerator CheckNextNode()
+    {
+        if (currentNode.closingDialogue)
+        {
             yield return new WaitUntil(() => !isDialoguePlaying);
             EndDialogue();
             yield break;
         }
 
-        // Move to next node if available
-        if (currentNodeIndex < nodes.Length - 1) {
+        if (currentNodeIndex < nodes.Length - 1)
+        {
             currentNodeIndex++;
-            StartDialogue(); // Begin next dialogue
-        } else {
+            StartDialogue();
+        }
+        else
+        {
             EndDialogue();
         }
     }
 
-    // END DIALOGUE
-    private void EndDialogue() {
+    private void EndDialogue()
+    {
         Debug.Log("End of dialogue nodes reached.");
         AnimNext();
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
@@ -235,31 +245,45 @@ public class DialogueManager : MonoBehaviour
         getButtonB?.onClick.RemoveListener(OnChoiceB);
         midConvo = false;
         getEventManager.actorManager.Actors.Remove(gameObject.GetComponent<Actor>());
-         foreach (var actor in additionalActorsToRemove) {
-        getEventManager.actorManager.Actors.Remove(actor);
+        foreach (var actor in additionalActorsToRemove)
+        {
+            getEventManager.actorManager.Actors.Remove(actor);
         }
         getEventManager.EndConversation();
     }
 
-     // LOOP THROUGH EACH ANIMATOR
-    private void AnimNext() {
-    Animator[] childAnimators = GetComponentsInChildren<Animator>();
-    foreach (Animator animator in childAnimators) {
-        animator.SetTrigger("NextConvo");
+    private void AnimNext()
+    {
+        Animator[] childAnimators = GetComponentsInChildren<Animator>();
+        foreach (Animator animator in childAnimators)
+        {
+            animator.SetTrigger("NextConvo");
         }
     }
 
-    //METHOD FOR PLAYING DIALOGUE
     private void PlayTimeline(PlayableAsset timeline)
     {
         if (timeline != null)
         {
-        playableDirector.playableAsset = timeline;
-        playableDirector.Play();
+            playableDirector.playableAsset = timeline;
+            playableDirector.Play();
         }
     }
-    // SIGNAL EMITTED? SIGNAL RECEIVED NOW TRUE.
-    public void OnSignalReceived() {
+
+    public void OnSignalReceived()
+    {
+        playableDirector.Pause();
         signalReceived = true;
+        waitingForPlayerInput = true;
+    }
+
+    private void Update()
+    {
+        if (waitingForPlayerInput && continueDialogAction.action.WasPressedThisFrame())
+        {
+            waitingForPlayerInput = false;
+            playableDirector.Play();
+            signalReceived = false;
+        }
     }
 }
