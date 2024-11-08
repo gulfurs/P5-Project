@@ -7,7 +7,6 @@ using UnityEngine.Playables;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit.UI;
-using UnityEngine.Timeline;
 
 [System.Serializable]
 public class Dialogue
@@ -15,7 +14,6 @@ public class Dialogue
     public string dialogueText;
     public Actor actor;
     public string consequenceUID;
-    public AudioClip voiceLine;
 }
 
 [System.Serializable]
@@ -44,7 +42,6 @@ public class DialogueManager : MonoBehaviour
     private TextMeshProUGUI getSubtitles;
     private List<string> getEventracker;
     private GameObject getAudiomotor;
-    private AudioSource getAudioSource;
     private LazyFollow getFollow;
 
     private int currentNodeIndex = 0;
@@ -91,7 +88,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         getFollow = getAudiomotor.GetComponent<LazyFollow>();
-        getAudioSource = getAudiomotor.GetComponent<AudioSource>();
         playableDirector = GetComponent<PlayableDirector>();
         getClickActions = FindObjectOfType<ClickActions>();
     }
@@ -141,20 +137,13 @@ public class DialogueManager : MonoBehaviour
             getEventracker.Add(dialogue.consequenceUID);
         }
 
-        // Play the voice line if it exists
-        if (dialogue.voiceLine != null)
-        {
-            getAudioSource.clip = dialogue.voiceLine;
-            getAudioSource.Play();
-        }
-
-        StartCoroutine(WaitForSignalOrAudioEnd(showChoicesAfter));
+        StartCoroutine(WaitForSignalOrTimeline(showChoicesAfter));
     }
 
-    private IEnumerator WaitForSignalOrAudioEnd(bool showChoicesAfter)
+    private IEnumerator WaitForSignalOrTimeline(bool showChoicesAfter)
     {
-        // Wait until the signal is received or the audio finishes
-        yield return new WaitUntil(() => signalReceived || !getAudioSource.isPlaying);
+        // Wait until a signal is received or the timeline has completed
+        yield return new WaitUntil(() => signalReceived || playableDirector.state != PlayState.Playing);
         signalReceived = false;
 
         currentDialogueIndex++;
