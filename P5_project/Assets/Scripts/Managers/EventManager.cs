@@ -29,16 +29,16 @@ public class EventManager : MonoBehaviour
             if (player != null)
             {
                 PlayerInteraction playerInteraction = player.GetComponent<PlayerInteraction>();
-
+                /*
                 if (playerInteraction != null)
                 {
                     // NEW ACTOR STEPPING IN? NEW EVENT
                     playerInteraction.OnSelectionChanged += UpdatePlayerEvent;
-                }
+                }*/
             }
         }
     }   
-
+    /*
     // PREPARES NEW PLAYER EVENT
     private void UpdatePlayerEvent(Transform newSelection)
     {   
@@ -82,7 +82,7 @@ public class EventManager : MonoBehaviour
 
        
         //Debug.Log("PlayerEvent updated to: " + PlayerEvent);
-    }
+    } */
     
 
     public void StartConversation() {
