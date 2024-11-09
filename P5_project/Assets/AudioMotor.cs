@@ -6,27 +6,32 @@ public class AudioMotor : MonoBehaviour
 {
     // The layer index for "Face" in the NPC's Animator
     private const int faceLayerIndex = 1;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        // Check if the other object has an Animator component with the "NPCController" controller
         Animator npcAnimator = other.GetComponent<Animator>();
-        if (npcAnimator != null /*&& npcAnimator.runtimeAnimatorController.name == "NPCController"*/)
+        if (npcAnimator != null)
         {
-            // Set the "Face" layer weight to 1
-            Debug.Log("IT WOOOOOOOOOOOOOOOORKS");
+            
             npcAnimator.SetLayerWeight(faceLayerIndex, 1);
+            CustomAnimatorProfile customFace = other.GetComponent<CustomAnimatorProfile>();
+            if (customFace != null) {
+                npcAnimator.SetLayerWeight(faceLayerIndex, customFace.faceWeight);
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        // Check if the other object has an Animator component with the "NPCController" controller
         Animator npcAnimator = other.GetComponent<Animator>();
-        if (npcAnimator != null /*&& npcAnimator.runtimeAnimatorController.name == "NPCController"*/)
+        if (npcAnimator != null)
         {
-            // Reset the "Face" layer weight to 0
-            Debug.Log("Not anymore");
             npcAnimator.SetLayerWeight(faceLayerIndex, 0);
         }
     }

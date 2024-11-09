@@ -5,8 +5,7 @@ using UnityEngine;
 public class CustomAnimatorProfile : MonoBehaviour
 {
     private Animator animator;
-     private int faceLayerIndex = 1;
-     private int blinkLayerIndex = 2;
+    private int blinkLayerIndex = 2;
 
     [Range(0, 1)]
     public float faceWeight = 0.5f;

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.XR.Interaction.Toolkit;
 
 //MANAGES EVENT
 public class EventManager : MonoBehaviour
@@ -89,11 +90,12 @@ public class EventManager : MonoBehaviour
         //DISABLE COLLIDERS OF ALL ACTORS
         foreach (var actor in actorManager.Actors)
         {
-            Collider[] colliders = actor.actorObject.GetComponents<Collider>();  
+        // Get all XRSimpleInteractable components in the actorObject
+        XRSimpleInteractable[] interactables = actor.actorObject.GetComponents<XRSimpleInteractable>();
 
-            foreach (Collider collider in colliders)
+        foreach (XRSimpleInteractable interactable in interactables)
             {
-                collider.enabled = false;  // Disable each collider
+            interactable.enabled = false; // Enable or disable each XRSimpleInteractable as needed
             }
         }
     }
@@ -105,13 +107,15 @@ public class EventManager : MonoBehaviour
     
     foreach (var actor in actorManager.Actors)
     {
-        Collider[] colliders = actor.actorObject.GetComponents<Collider>();  
+    // Get all XRSimpleInteractable components in the actorObject
+    XRSimpleInteractable[] interactables = actor.actorObject.GetComponents<XRSimpleInteractable>();
 
-        foreach (Collider collider in colliders)
+    foreach (XRSimpleInteractable interactable in interactables)
         {
-            collider.enabled = true;  
+        interactable.enabled = true; // Enable or disable each XRSimpleInteractable as needed
         }
     }
+
 
     if (PlayerEvent != null)
     {
