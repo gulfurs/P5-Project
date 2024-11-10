@@ -19,6 +19,8 @@ public class ClickActions : MonoBehaviour
     private InputAction RightGrip;
     private InputAction RightTrigger;
 
+    public InputAction PrimaryLeft;
+
     private void Awake()
     {
         // Validate required components
@@ -28,13 +30,6 @@ public class ClickActions : MonoBehaviour
             enabled = false;
             return;
         }
-        /*
-        if (dialogueMan == null)
-        {
-            Debug.LogError("DialogueManager reference is missing in ClickActions script!", this);
-            enabled = false;
-            return;
-        }*/
 
         if (ButtonOption_A == null || ButtonOption_B == null)
         {
@@ -62,6 +57,7 @@ public class ClickActions : MonoBehaviour
             LeftTrigger = actionMap.FindAction("XR_TriggerButton_Left");
             RightGrip = actionMap.FindAction("XR_GripButton_Right");
             RightTrigger = actionMap.FindAction("XR_TriggerButton_Right");
+            PrimaryLeft = actionMap.FindAction("XR_Primary_Left");
 
             // Validate all actions were found
             if (LeftGrip == null || LeftTrigger == null || RightGrip == null || RightTrigger == null)
@@ -74,12 +70,14 @@ public class ClickActions : MonoBehaviour
             // Subscribe to events
             LeftTrigger.performed += OnLeftTriggerPress;
             RightTrigger.performed += OnRightTriggerPress;
+            PrimaryLeft.performed += LeftPrimaryPress;
 
             // Enable actions
             LeftGrip.Enable();
             LeftTrigger.Enable();
             RightGrip.Enable();
             RightTrigger.Enable();
+            PrimaryLeft.Enable();
         }
         catch (System.Exception e)
         {
@@ -104,6 +102,12 @@ public class ClickActions : MonoBehaviour
 
         if (LeftGrip != null) LeftGrip.Disable();
         if (RightGrip != null) RightGrip.Disable();
+
+        if (PrimaryLeft != null) 
+        {
+            PrimaryLeft.performed -= LeftPrimaryPress;
+            PrimaryLeft.Disable();
+        }
     }
 
     private void Update()
@@ -117,19 +121,40 @@ public class ClickActions : MonoBehaviour
 
     public void OnLeftTriggerPress(InputAction.CallbackContext context)
     {
+        //LeftPrimaryPress(new InputAction.CallbackContext());
+        //LeftPrimaryPress(context);   
         if (dialogueMan != null && ButtonOption_A != null && dialogueMan.ChoicesActive)
         {
+            
+          //  dialogueMan.SimulatePress();
+            PrimaryLeft.Enable();
+            LeftPrimaryPress(context); 
             dialogueMan.OnChoiceA();
             Debug.Log("Button A has been pressed!");
+
         }
     }
 
     public void OnRightTriggerPress(InputAction.CallbackContext context)
     {
+        //LeftPrimaryPress(new InputAction.CallbackContext());   
+        //LeftPrimaryPress(context);   
         if (dialogueMan != null && ButtonOption_B != null && dialogueMan.ChoicesActive)
         {
+            //
+           // dialogueMan.SimulatePress();
+            PrimaryLeft.Enable();
+            LeftPrimaryPress(context); 
             dialogueMan.OnChoiceB();
             Debug.Log("Button B has been pressed!");
+
         }
     }
+
+    public void LeftPrimaryPress(InputAction.CallbackContext context)
+    {
+        dialogueMan.PlayNextLine();
+        Debug.Log("second Tower is hit");
+    }
+
 }

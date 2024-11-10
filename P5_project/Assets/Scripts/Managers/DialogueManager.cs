@@ -130,15 +130,16 @@ public class DialogueManager : MonoBehaviour
         PlayNextLine();
     }
 
-    private void PlayNextLine()
+    public void PlayNextLine()
     {
         // Update the text and voice line for the current line
         UpdateTextDisplay();
         PlayVoiceLine();
 
         // Pause the Timeline and wait for player input for the next line
-        playableDirector.Pause();
-        waitingForPlayerInput = true;
+        //playableDirector.Pause();
+        //waitingForPlayerInput = true;
+       
     }
 
     private void UpdateTextDisplay()
@@ -161,7 +162,7 @@ public class DialogueManager : MonoBehaviour
 
     private void PlayVoiceLine()
     {
-        if (currentDialogueIndex >= currentDialogueSequence.Length) return;
+       /* if (currentDialogueIndex >= currentDialogueSequence.Length) return;
 
         Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
 
@@ -170,13 +171,15 @@ public class DialogueManager : MonoBehaviour
         {
             getAudioSource.clip = dialogue.voiceLine;
             getAudioSource.Play();
-        }
+        }*/
     }
 
     public void OnSignalReceived()
     {
         // Prepare to show the previous line's text and play the current voice line
         lastTextIndex = currentDialogueIndex;
+        waitingForPlayerInput = true;
+        playableDirector.Pause();
         PlayNextLine();
 
         // Advance to the next line for audio
@@ -223,12 +226,14 @@ public class DialogueManager : MonoBehaviour
     {
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceA, currentNode.choiceATimeline);
+       //playableDirector.Play();
     }
 
     public void OnChoiceB()
     {
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceB, currentNode.choiceBTimeline);
+        //playableDirector.Play();
     }
 
     private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline)
@@ -307,8 +312,14 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // Check if waiting for player input and if the button was pressed
-        if (waitingForPlayerInput && continueDialogAction.action.WasPressedThisFrame())
+        if (waitingForPlayerInput && getClickActions.PrimaryLeft.WasPressedThisFrame())
         {
+            SimulatePress();
+        }
+    }
+
+    public void SimulatePress(){
+        if(!ChoicesActive){
             waitingForPlayerInput = false; // Stop waiting for input
             playableDirector.Play(); // Resume the Timeline
         }

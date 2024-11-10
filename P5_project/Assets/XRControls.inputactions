@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "XR_Primary_Left",
+                    "type": "Button",
+                    "id": "67af62d9-1009-4abe-8eda-5d2882bb2fea",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -84,6 +93,17 @@
                     "processors": "",
                     "groups": "XRControls",
                     "action": "XR_TriggerButton_Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5cddd8bd-5d4a-4f80-94f1-12074a1223da",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "XRControls",
+                    "action": "XR_Primary_Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
