@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 94e145aa5d752b245b3426d16b538b9c, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: f4ff49eeef27d1747ac7141e421636bc, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -6028,7 +6028,7 @@ MonoBehaviour:
   ButtonOption_A: {fileID: 1550893776}
   ButtonOption_B: {fileID: 1550893775}
   PrimaryLeft:
-    m_Name: 
+    m_Name: Primary Left
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 5e1fe2a2-6f41-45ab-a28e-2bd4d0f676b7
@@ -8510,7 +8510,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1030057001}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 2c8b101803838f74a8633af7796d54eb, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: cce493df0da2e6e44b76b1234bc6eacc, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -8606,7 +8606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 0
+  - closingDialogue: 1
     options: 1
     startDialogue:
     - dialogueText: Hej Frederik, du virker lidt stille i dag.
@@ -8650,7 +8650,7 @@ MonoBehaviour:
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "Peter f\xF8ler sikkert, at han bliver sammenlignet med dig, "
-      actor: {fileID: 779223213}
+      actor: {fileID: 884559274}
       consequenceUID: 
       voiceLine: {fileID: 0}
     - dialogueText: "og det g\xF8r tingene endnu v\xE6rre."
@@ -12996,7 +12996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1836904223
 AudioSource:
   m_ObjectHideFlags: 0

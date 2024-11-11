@@ -154,7 +154,9 @@ public class ClickActions : MonoBehaviour
     public void LeftPrimaryPress(InputAction.CallbackContext context)
     {
         dialogueMan.PlayNextLine();
+        dialogueMan.SimulatePress();
         Debug.Log("second Tower is hit");
+        
     }
 
 }
