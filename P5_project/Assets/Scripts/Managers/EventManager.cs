@@ -17,11 +17,13 @@ public class EventManager : MonoBehaviour
     public List<string> eventTrackerList = new List<string>();
 
     public ActorManager actorManager; //ACTORMANAGER
+    public ClickActions clickAction;
     public GameObject player;
 
     void Start()
     {
         actorManager = GameObject.FindObjectOfType<ActorManager>();
+        clickAction = GameObject.FindObjectOfType<ClickActions>();
 
         if (actorManager != null)
         {
@@ -104,6 +106,7 @@ public class EventManager : MonoBehaviour
     {
     Debug.Log("EndConversation called"); // Debug log
     mainSubtitles.text = "";
+    clickAction.dialogueMan = null;
     
     foreach (var actor in actorManager.Actors)
     {

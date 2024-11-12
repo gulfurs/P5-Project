@@ -1050,7 +1050,7 @@ Transform:
   m_GameObject: {fileID: 504145896}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.896, y: 1.273, z: 1.868}
+  m_LocalPosition: {x: 2.851, y: 1.276, z: 1.868}
   m_LocalScale: {x: 3.32, y: 3.32, z: 3.32}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2431,6 +2431,7 @@ MonoBehaviour:
     - dialogueText: 
       actor: {fileID: 0}
       consequenceUID: 
+      voiceLine: {fileID: 0}
     choiceA: 
     choiceB: 
     playerChoiceA: []
@@ -2440,8 +2441,19 @@ MonoBehaviour:
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
-  getAudiomotor: {fileID: 0}
   additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 411e2086-bbdc-4e71-850f-e72cbca0a804
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!4 &998394446
 Transform:
   m_ObjectHideFlags: 0
@@ -3709,7 +3721,7 @@ SpriteRenderer:
   m_Size: {x: 5.91, y: 9.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1563813208
@@ -3991,6 +4003,15 @@ MonoBehaviour:
   dialogueMan: {fileID: 0}
   ButtonOption_A: {fileID: 5860252269959502566}
   ButtonOption_B: {fileID: 6571754000808252065}
+  PrimaryLeft:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a9277d60-6b55-4155-a1de-962d278c12f1
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &1663785725
 Transform:
   m_ObjectHideFlags: 0
@@ -4285,6 +4306,7 @@ MonoBehaviour:
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
   actorManager: {fileID: 0}
+  clickAction: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &1743782179
 MonoBehaviour:
@@ -5120,7 +5142,7 @@ SpriteRenderer:
   m_Size: {x: 5.91, y: 9.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &2064572573
