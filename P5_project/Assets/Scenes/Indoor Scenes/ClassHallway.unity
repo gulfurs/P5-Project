@@ -2712,6 +2712,15 @@ MonoBehaviour:
   dialogueMan: {fileID: 0}
   ButtonOption_A: {fileID: 0}
   ButtonOption_B: {fileID: 0}
+  PrimaryLeft:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 68c70951-1d4e-4f95-a271-a0454ba11156
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &526604612
 Transform:
   m_ObjectHideFlags: 0
@@ -22691,6 +22700,10 @@ PrefabInstance:
     - target: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: actorName
       value: Dig
+      objectReference: {fileID: 0}
+    - target: {fileID: 923482237724530364, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x

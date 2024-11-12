@@ -14923,11 +14923,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].choiceA
-      value: "St\xF8t peter"
+      value: Anerkend Peter
       objectReference: {fileID: 0}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].choiceB
-      value: "St\xF8t Frederik"
+      value: Anerkend Frederik
       objectReference: {fileID: 0}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].endTimeline
@@ -14968,11 +14968,11 @@ PrefabInstance:
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].endDialogue.Array.data[0].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].endDialogue.Array.data[1].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].endDialogue.Array.data[2].actor
       value: 
@@ -14988,11 +14988,11 @@ PrefabInstance:
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[0].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[1].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceA.Array.data[2].actor
       value: 
@@ -15012,15 +15012,15 @@ PrefabInstance:
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceB.Array.data[0].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceB.Array.data[1].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceB.Array.data[2].actor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1809667735}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].playerChoiceB.Array.data[3].actor
       value: 
@@ -33330,9 +33330,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: m_RequestedTrackingOriginMode
-      value: 2
+    - target: {fileID: 923482237724530364, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33374,18 +33374,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5561200277562962473, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: handText
-      value: 
-      objectReference: {fileID: 1320025565}
-    - target: {fileID: 6469943593759178431, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: handText
-      value: 
-      objectReference: {fileID: 456424919}
-    - target: {fileID: 8353134432169093002, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: handText
-      value: 
-      objectReference: {fileID: 186710927}
     - target: {fileID: 8896070815810241457, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -33404,6 +33392,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+--- !u!114 &1809667735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1809667734}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815161019
 GameObject:
   m_ObjectHideFlags: 0
