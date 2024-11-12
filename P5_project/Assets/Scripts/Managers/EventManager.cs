@@ -12,6 +12,7 @@ public class EventManager : MonoBehaviour
     public GameObject choiceButtonA;
     public GameObject choiceButtonB;
     public Button resumeButton;
+    public GameObject nextButton;
     public TextMeshProUGUI mainSubtitles;
     
     public List<string> eventTrackerList = new List<string>();

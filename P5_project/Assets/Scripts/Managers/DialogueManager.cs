@@ -162,7 +162,7 @@ public class DialogueManager : MonoBehaviour
         // Prepare to show the previous line's text and play the current voice line
         waitingForPlayerInput = true;
         playableDirector.Pause();
-
+        getEventManager?.nextButton?.SetActive(true);
         // Advance to the next line for audio
         if (currentDialogueIndex < currentDialogueSequence.Length-1)
         {
@@ -320,6 +320,7 @@ public class DialogueManager : MonoBehaviour
             waitingForPlayerInput = false; // Stop waiting for input
             PlayNextLine();
             playableDirector.Play(); // Resume the Timeline
+            getEventManager?.nextButton?.SetActive(false);
         }
     }
 }

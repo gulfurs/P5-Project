@@ -5432,6 +5432,7 @@ MonoBehaviour:
   choiceButtonA: {fileID: 5860252269959502566}
   choiceButtonB: {fileID: 6571754000808252065}
   resumeButton: {fileID: 0}
+  nextButton: {fileID: 1888219882}
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
   actorManager: {fileID: 0}
@@ -5460,6 +5461,11 @@ Transform:
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 34d37cd475c200547a4453e796fb814e, type: 3}
   m_PrefabInstance: {fileID: 82121466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1888219882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1947556116586393373, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 735629714603112179}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1896767246
 GameObject:
@@ -6401,10 +6407,30 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5105228180142433473, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105228180142433473, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5105228180142433473, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887548274777314081, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 10ffa6db1f5ed2a4fb2fb169a7f561b1, type: 2}
     - target: {fileID: 6469943593759178431, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: handText
       value: 
       objectReference: {fileID: 176081724}
+    - target: {fileID: 6682404798257231615, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8896070815810241457, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
