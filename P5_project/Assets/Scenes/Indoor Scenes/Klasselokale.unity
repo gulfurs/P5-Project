@@ -9871,6 +9871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1057475162}
   - component: {fileID: 1057475163}
+  - component: {fileID: 1057475164}
   m_Layer: 0
   m_Name: Etagere
   m_TagString: Untagged
@@ -9912,11 +9913,32 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1057475164
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057475161}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1061003675
 GameObject:
   m_ObjectHideFlags: 0
@@ -11178,8 +11200,8 @@ Transform:
   - {fileID: 8450073020969175318}
   m_Father: {fileID: 2122571184747655285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1394124659
-MeshCollider:
+--- !u!65 &1394124659
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11196,10 +11218,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1396203567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5804432838769213882, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
@@ -15842,6 +15863,7 @@ GameObject:
   - component: {fileID: 8032013662875753340}
   - component: {fileID: 8416531532052121413}
   - component: {fileID: 8416531532052121414}
+  - component: {fileID: 8416531532052121415}
   m_Layer: 0
   m_Name: GrandCasier.001|GrandCasier_L_GrandCasier.blend|Dupli|
   m_TagString: Untagged
@@ -37899,11 +37921,32 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3638270598009389362, guid: 363e1a7b56dfa5c4ead6c2fffbf9031c, type: 3}
+--- !u!65 &8416531532052121415
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572707413082919495}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.024759587, y: 0.010713369, z: 0.046414685}
+  m_Center: {x: -1.7251294e-16, y: -0.0053566843, z: 0.023207342}
 --- !u!4 &8420924184549829762
 Transform:
   m_ObjectHideFlags: 0
