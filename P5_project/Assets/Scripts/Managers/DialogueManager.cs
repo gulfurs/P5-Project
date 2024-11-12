@@ -49,7 +49,6 @@ public class DialogueManager : MonoBehaviour
     private int currentNodeIndex = 0;
     private Dialogue[] currentDialogueSequence;
     private int currentDialogueIndex = 0;      // Tracks audio line
-    private int lastTextIndex = -1;            // Tracks text display line (one behind audio)
     private DialogueNode currentNode;
 
     private EventManager getEventManager;
@@ -112,19 +111,19 @@ public class DialogueManager : MonoBehaviour
         getButtonB?.onClick.AddListener(OnChoiceB);
         getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
         currentNode = nodes[currentNodeIndex];
-        PlayTimeline(currentNode.startTimeline);
-        StartDialogueSequence(currentNode.startDialogue, currentNode.options);
+        //PlayTimeline(currentNode.startTimeline);
+        StartDialogueSequence(currentNode.startDialogue, currentNode.options, currentNode.startTimeline);
         getEventManager.StartConversation();
         getEventManager.PlayerEvent = gameObject.transform;
     }
 
-    public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter)
+    public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter, PlayableAsset choiceTimeline)
     {
-        if (isDialoguePlaying) return;
+        //if (isDialoguePlaying) return;
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
-        lastTextIndex = -1;  // Reset last text index
+        PlayTimeline(choiceTimeline);
 
         // Display the initial line and start the first voice line without needing player input
         PlayNextLine();
@@ -132,32 +131,17 @@ public class DialogueManager : MonoBehaviour
 
     public void PlayNextLine()
     {
-        // Update the text and voice line for the current line
         UpdateTextDisplay();
-        PlayVoiceLine();
-
-        // Pause the Timeline and wait for player input for the next line
-        //playableDirector.Pause();
-        //waitingForPlayerInput = true;
-       
     }
 
     private void UpdateTextDisplay()
     {
-        // Show the text for the line one behind the current audio line
-        if (lastTextIndex >= 0 && lastTextIndex < currentDialogueSequence.Length)
-        {
-            Dialogue dialogue = currentDialogueSequence[lastTextIndex];
+            Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
 
             // Display dialogue text for the previous line
             string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
             getSubtitles.text = actorName + " " + dialogue.dialogueText;
             getFollow.target = dialogue.actor.faceID?.transform;
-        }
-        else
-        {
-            getSubtitles.text = ""; // Clear if no previous line
-        }
     }
 
     private void PlayVoiceLine()
@@ -177,13 +161,11 @@ public class DialogueManager : MonoBehaviour
     public void OnSignalReceived()
     {
         // Prepare to show the previous line's text and play the current voice line
-        lastTextIndex = currentDialogueIndex;
         waitingForPlayerInput = true;
         playableDirector.Pause();
-        PlayNextLine();
 
         // Advance to the next line for audio
-        if (currentDialogueIndex < currentDialogueSequence.Length - 1)
+        if (currentDialogueIndex < currentDialogueSequence.Length-1)
         {
             currentDialogueIndex++;
         }
@@ -241,15 +223,15 @@ public class DialogueManager : MonoBehaviour
         getTextA?.transform.parent.gameObject.SetActive(false);
         getTextB?.transform.parent.gameObject.SetActive(false);
 
-        PlayTimeline(choiceTimeline);
-        StartCoroutine(HandlePlayerChoice(choiceDialogue));
+        
+        StartCoroutine(HandlePlayerChoice(choiceDialogue, choiceTimeline));
     }
 
-    private IEnumerator HandlePlayerChoice(Dialogue[] choiceDialogue)
+    private IEnumerator HandlePlayerChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline)
     {
         if (choiceDialogue != null && choiceDialogue.Length > 0)
         {
-            StartDialogueSequence(choiceDialogue, false);
+            StartDialogueSequence(choiceDialogue, false, choiceTimeline);
             yield return new WaitUntil(() => !isDialoguePlaying);
         }
         yield return StartCoroutine(CheckNextNode());
@@ -278,6 +260,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         Debug.Log("End of dialogue nodes reached.");
+        HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
         AnimNext();
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);
@@ -305,6 +288,7 @@ public class DialogueManager : MonoBehaviour
         if (timeline != null)
         {
             playableDirector.playableAsset = timeline;
+            playableDirector.time = 0;
             playableDirector.Play();
         }
     }
@@ -312,15 +296,16 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // Check if waiting for player input and if the button was pressed
-        if (waitingForPlayerInput && getClickActions.PrimaryLeft.WasPressedThisFrame())
+        /*if (waitingForPlayerInput && getClickActions.PrimaryLeft.WasPressedThisFrame())
         {
             SimulatePress();
-        }
+        }*/
     }
 
     public void SimulatePress(){
-        if(!ChoicesActive){
+        if(!ChoicesActive && waitingForPlayerInput){
             waitingForPlayerInput = false; // Stop waiting for input
+            PlayNextLine();
             playableDirector.Play(); // Resume the Timeline
         }
     }
