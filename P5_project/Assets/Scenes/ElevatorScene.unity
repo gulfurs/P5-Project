@@ -5271,6 +5271,15 @@ MonoBehaviour:
   dialogueMan: {fileID: 1400935882}
   ButtonOption_A: {fileID: 5860252269959502566}
   ButtonOption_B: {fileID: 6571754000808252065}
+  PrimaryLeft:
+    m_Name: Primary Left
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: f11b493a-3446-4dc0-b1fb-4af346c21819
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &1663785725
 Transform:
   m_ObjectHideFlags: 0
@@ -5426,6 +5435,7 @@ MonoBehaviour:
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
   actorManager: {fileID: 0}
+  clickAction: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &1743782179
 MonoBehaviour:

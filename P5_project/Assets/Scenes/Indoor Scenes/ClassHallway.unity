@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 94e145aa5d752b245b3426d16b538b9c, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3e966c7961490fd4ab0236664f98e975, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -2189,7 +2189,7 @@ MonoBehaviour:
     startTimeline: {fileID: 11400000, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
-    endTimeline: {fileID: 11400000, guid: 0f7d0d8746ec0794c9e55c06b19eb195, type: 2}
+    endTimeline: {fileID: 0}
   additionalActorsToRemove: []
   continueDialogAction:
     m_UseReference: 0
@@ -2710,8 +2710,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionAsset: {fileID: -944628639613478452, guid: 294b5be9449ce2d4a80a3ac8d19134ec, type: 3}
   dialogueMan: {fileID: 0}
-  ButtonOption_A: {fileID: 0}
-  ButtonOption_B: {fileID: 0}
+  ButtonOption_A: {fileID: 963831602}
+  ButtonOption_B: {fileID: 599652770}
+  PrimaryLeft:
+    m_Name: Primary Left
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a79e4e41-60e2-4534-b42a-c9e9533c8501
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &526604612
 Transform:
   m_ObjectHideFlags: 0
@@ -9932,6 +9941,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -151082164096018, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &599652770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235430018763318606, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1550893774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &602129774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8341510456522975324, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
@@ -10395,7 +10409,7 @@ MonoBehaviour:
     startTimeline: {fileID: 11400000, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
-    endTimeline: {fileID: 11400000, guid: 0f7d0d8746ec0794c9e55c06b19eb195, type: 2}
+    endTimeline: {fileID: 0}
   additionalActorsToRemove: []
   continueDialogAction:
     m_UseReference: 0
@@ -10489,6 +10503,7 @@ Transform:
   m_Children:
   - {fileID: 1210564945}
   - {fileID: 568656914}
+  - {fileID: 2038757347}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 12.001, z: 0}
 --- !u!1 &681516269
@@ -11581,6 +11596,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7152215973035796484, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &963831602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6527345424831775050, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1550893774}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &968246845 stripped
 Transform:
@@ -15694,7 +15714,7 @@ MonoBehaviour:
     startTimeline: {fileID: 11400000, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
-    endTimeline: {fileID: 11400000, guid: 0f7d0d8746ec0794c9e55c06b19eb195, type: 2}
+    endTimeline: {fileID: 0}
   additionalActorsToRemove: []
   continueDialogAction:
     m_UseReference: 0
@@ -23634,6 +23654,7 @@ MonoBehaviour:
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
   actorManager: {fileID: 0}
+  clickAction: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &1743782179
 MonoBehaviour:
@@ -24770,6 +24791,100 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -3813315674048536187, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2038757346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038757347}
+  - component: {fileID: 2038757348}
+  m_Layer: 0
+  m_Name: Area Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038757347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038757346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.15, y: 1.34, z: 0.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 669658655}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &2038757348
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038757346}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 2
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!4 &2038914021 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5654846247065713617, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}

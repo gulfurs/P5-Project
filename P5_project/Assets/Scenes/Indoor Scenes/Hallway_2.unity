@@ -11257,6 +11257,7 @@ MonoBehaviour:
   mainSubtitles: {fileID: 456424919}
   eventTrackerList: []
   actorManager: {fileID: 0}
+  clickAction: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &868788247
 MonoBehaviour:
@@ -32288,7 +32289,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

@@ -105,16 +105,15 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue()
     {
+        getEventManager.StartConversation();
+        getEventManager.PlayerEvent = gameObject.transform;
         midConvo = true;
         AnimNext();
         getButtonA?.onClick.AddListener(OnChoiceA);
         getButtonB?.onClick.AddListener(OnChoiceB);
         getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
         currentNode = nodes[currentNodeIndex];
-        //PlayTimeline(currentNode.startTimeline);
         StartDialogueSequence(currentNode.startDialogue, currentNode.options, currentNode.startTimeline);
-        getEventManager.StartConversation();
-        getEventManager.PlayerEvent = gameObject.transform;
     }
 
     public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter, PlayableAsset choiceTimeline)
@@ -171,23 +170,34 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            FinishDialogueSequence();
+            StartCoroutine(FinishDialogueSequence());
         }
     }
 
-    private void FinishDialogueSequence()
-    {
+        private IEnumerator FinishDialogueSequence() {   
         isDialoguePlaying = false;
 
+        // Check if the current node has options
         if (currentNode.options)
         {
-            ShowChoices();
+            ShowChoices();  // Display choice options
+            currentNode.options = false;  // Set options to false after displaying
         }
         else
         {
-            HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
+        // If there is an end dialogue sequence, play it
+        if (currentNode.endTimeline != null)
+        {
+            // Start the end dialogue sequence and wait until it completes
+            StartDialogueSequence(currentNode.endDialogue, !currentNode.options, currentNode.endTimeline);
+            yield return new WaitUntil(() => !isDialoguePlaying);
+        }
+        
+        // Move to the next node in the sequence
+        yield return StartCoroutine(CheckNextNode());
         }
     }
+
 
     private void ShowChoices()
     {
@@ -254,24 +264,27 @@ public class DialogueManager : MonoBehaviour
         else
         {
             EndDialogue();
+            yield break;
         }
     }
 
     private void EndDialogue()
     {
+        if (midConvo) {
         Debug.Log("End of dialogue nodes reached.");
         HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
         AnimNext();
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
-        midConvo = false;
         getEventManager.actorManager.Actors.Remove(gameObject.GetComponent<Actor>());
         foreach (var actor in additionalActorsToRemove)
         {
             getEventManager.actorManager.Actors.Remove(actor);
         }
         getEventManager.EndConversation();
+        midConvo = false;
+        }
     }
 
     private void AnimNext()
