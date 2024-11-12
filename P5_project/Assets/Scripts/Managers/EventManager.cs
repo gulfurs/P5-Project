@@ -108,7 +108,9 @@ public class EventManager : MonoBehaviour
     Debug.Log("EndConversation called"); // Debug log
     mainSubtitles.text = "";
     clickAction.dialogueMan = null;
-    
+    if (nextButton != null) {
+        nextButton.SetActive(false);
+    }
     foreach (var actor in actorManager.Actors)
     {
     // Get all XRSimpleInteractable components in the actorObject

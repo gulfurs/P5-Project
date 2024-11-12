@@ -211,6 +211,8 @@ public class DialogueManager : MonoBehaviour
 
             getTextA.transform.parent.gameObject.SetActive(true);
             getTextB.transform.parent.gameObject.SetActive(true);
+
+            getEventManager.nextButton.SetActive(false);
         }
     }
 

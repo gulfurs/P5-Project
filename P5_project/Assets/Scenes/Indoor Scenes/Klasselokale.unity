@@ -1256,7 +1256,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Subtitle
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7724,6 +7726,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9046138391078962209, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
   m_PrefabInstance: {fileID: 355825298}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &941939795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6410711204882238680, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1550893774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &942624372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3383061609120157691, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
@@ -9034,7 +9041,7 @@ MonoBehaviour:
       actor: {fileID: 1044988914}
       consequenceUID: 
       voiceLine: {fileID: 0}
-    - dialogueText: "Men uanset hvad S\xE5 er det altid Frederik der f\xE5r ros"
+    - dialogueText: "Men uanset hvad s\xE5 er det altid Frederik der f\xE5r ros"
       actor: {fileID: 1044988914}
       consequenceUID: 
       voiceLine: {fileID: 0}
@@ -9937,8 +9944,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 2.54, z: 1.46}
+  m_Center: {x: 2.25, y: 0.22, z: -5.05}
 --- !u!1 &1061003675
 GameObject:
   m_ObjectHideFlags: 0
@@ -11219,8 +11226,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.46, y: 1.98, z: 1}
+  m_Center: {x: -0.56, y: 0.94, z: -5.04}
 --- !u!4 &1396203567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5804432838769213882, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
@@ -11609,8 +11616,12 @@ PrefabInstance:
       value: Dig
       objectReference: {fileID: 0}
     - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: m_RequestedTrackingOriginMode
+      propertyPath: m_CameraYOffset
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_RequestedTrackingOriginMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11656,6 +11667,10 @@ PrefabInstance:
       propertyPath: handText
       value: 
       objectReference: {fileID: 1589976344}
+    - target: {fileID: 6410711204882238680, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6469943593759178431, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: handText
       value: 
@@ -12710,6 +12725,7 @@ MonoBehaviour:
   choiceButtonA: {fileID: 2005825897}
   choiceButtonB: {fileID: 2086587978}
   resumeButton: {fileID: 0}
+  nextButton: {fileID: 941939795}
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
   actorManager: {fileID: 0}

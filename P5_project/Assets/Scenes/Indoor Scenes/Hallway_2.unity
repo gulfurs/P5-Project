@@ -7748,7 +7748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Subtitle
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11254,6 +11254,7 @@ MonoBehaviour:
   choiceButtonA: {fileID: 414017479}
   choiceButtonB: {fileID: 742331989}
   resumeButton: {fileID: 0}
+  nextButton: {fileID: 1975225143}
   mainSubtitles: {fileID: 456424919}
   eventTrackerList: []
   actorManager: {fileID: 0}
@@ -15616,7 +15617,7 @@ PrefabInstance:
     - target: {fileID: 3837901935592212914, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: m_PlayableAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a7e1cf563c7842d4fb8689f8ff274584, type: 2}
+      objectReference: {fileID: 11400000, guid: 94088556cab645545975e7156c3a1b52, type: 2}
     - target: {fileID: 3837901935592212914, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: m_SceneBindings.Array.size
       value: 38
@@ -33375,6 +33376,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5561200277562962473, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: handText
+      value: 
+      objectReference: {fileID: 1320025565}
+    - target: {fileID: 6410711204882238680, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469943593759178431, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: handText
+      value: 
+      objectReference: {fileID: 456424919}
+    - target: {fileID: 8353134432169093002, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: handText
+      value: 
+      objectReference: {fileID: 186710927}
     - target: {fileID: 8896070815810241457, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -38827,6 +38844,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1346233175}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1975225143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6410711204882238680, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+  m_PrefabInstance: {fileID: 1809667734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1975348820
 GameObject:
   m_ObjectHideFlags: 0
