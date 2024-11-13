@@ -6415,10 +6415,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 10ffa6db1f5ed2a4fb2fb169a7f561b1, type: 2}
-    - target: {fileID: 6410711204882238680, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6469943593759178431, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: handText
       value: 

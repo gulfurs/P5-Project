@@ -33332,6 +33332,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 28158821493913397, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: actorName
+      value: Dig
+      objectReference: {fileID: 0}
     - target: {fileID: 923482237724530364, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Enabled
       value: 1

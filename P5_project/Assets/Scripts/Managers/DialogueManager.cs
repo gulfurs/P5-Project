@@ -140,7 +140,7 @@ public class DialogueManager : MonoBehaviour
             Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
 
             // Display dialogue text for the previous line
-            string actorName = $"<color=#{ColorUtility.ToHtmlStringRGB(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
+            string actorName = $"<color=#{ColorUtility.ToHtmlStringRGBA(dialogue.actor.actorColor)}>{dialogue.actor.actorName}:</color>";
             getSubtitles.text = actorName + " " + dialogue.dialogueText;
             getFollow.target = dialogue.actor.faceID?.transform;
     }
@@ -216,7 +216,7 @@ public class DialogueManager : MonoBehaviour
 
             getEventManager.nextButton.SetActive(false);
             Color newColor = getSubtitles.color;
-            newColor.a = 0f;
+            newColor.a = 50f;
             getSubtitles.color = newColor;
         }
     }
