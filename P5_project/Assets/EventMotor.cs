@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class EventMotor : MonoBehaviour
 {
@@ -8,25 +9,21 @@ public class EventMotor : MonoBehaviour
     public GameObject[] objectsToCheck;
 
     private EventManager eventManager;
+    private PlayableDirector playableDirector;
 
     void Start()
     {
         eventManager = GetComponent<EventManager>();
+        playableDirector = GetComponent<PlayableDirector>();
+
+        var actorManager = FindObjectOfType<ActorManager>();
+        actorManager.noActorsEvent += noActors;
     }
 
-    void Update()
+    void noActors()
     {
-        if (eventManager.eventTrackerList.Contains(consUID))
-        {
-            foreach (GameObject obj in objectsToCheck)
-            {
-                Actor actor = obj.GetComponent<Actor>();
-
-                if (actor != null)
-                {
-                    actor.selectable = true;
-                }
-            }
-        }
+        Debug.Log("NO ACTORS");
+        playableDirector.time = 0;
+        playableDirector?.Play();
     }
 }

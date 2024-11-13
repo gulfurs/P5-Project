@@ -22709,6 +22709,10 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1445610633071134029, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_CameraYOffset
+      value: 1.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1947556116586393373, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_IsActive
       value: 1

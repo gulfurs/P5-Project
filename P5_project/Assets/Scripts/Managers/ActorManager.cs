@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 //KEEPS PLAYER AND ACTORS UNDER WRAP
 public class ActorManager : MonoBehaviour
 {
     public List<Actor> Actors { get; private set; }
     public GameObject Player { get; private set; }
+
+    public event Action noActorsEvent;
 
     public void SetPlayer(GameObject player) => Player = player;
 
@@ -19,11 +22,28 @@ public class ActorManager : MonoBehaviour
             
             if (playerObject != null)
             {
-            SetPlayer(playerObject);  // Assign the found player object
+            SetPlayer(playerObject);
             }
             else
             {
             Debug.LogError("No GameObject tagged 'Player' found in the scene.");
             }
         }
+
+    public void RemoveActor(Actor actor)
+    {
+        if (Actors.Contains(actor))
+        {
+            Actors.Remove(actor);
+            CheckforActors();
+        }
+    }
+
+    private void CheckforActors()
+    {
+        if (Actors.Count == 0)
+        {
+            noActorsEvent?.Invoke();
+        }
+    }
 }

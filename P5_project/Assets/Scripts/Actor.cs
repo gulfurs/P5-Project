@@ -27,7 +27,7 @@ public class Actor : MonoBehaviour
             actorManager = GameObject.FindObjectOfType<ActorManager>();
 
             // REGISTER ACTOR
-            if (!actorManager.Actors.Contains(this))
+            if (actorManager.Player != gameObject && !actorManager.Actors.Contains(this))
             {
                 actorManager.Actors.Add(this);
             }

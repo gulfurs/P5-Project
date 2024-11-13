@@ -123,7 +123,9 @@ public class DialogueManager : MonoBehaviour
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
         PlayTimeline(choiceTimeline);
-
+        Color newColor = getSubtitles.color;
+        newColor.a = 255f;
+        getSubtitles.color = newColor;
         // Display the initial line and start the first voice line without needing player input
         PlayNextLine();
     }
@@ -213,6 +215,9 @@ public class DialogueManager : MonoBehaviour
             getTextB.transform.parent.gameObject.SetActive(true);
 
             getEventManager.nextButton.SetActive(false);
+            Color newColor = getSubtitles.color;
+            newColor.a = 0f;
+            getSubtitles.color = newColor;
         }
     }
 
@@ -279,10 +284,10 @@ public class DialogueManager : MonoBehaviour
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
-        getEventManager.actorManager.Actors.Remove(gameObject.GetComponent<Actor>());
+        getEventManager.actorManager.RemoveActor(gameObject.GetComponent<Actor>());
         foreach (var actor in additionalActorsToRemove)
         {
-            getEventManager.actorManager.Actors.Remove(actor);
+            getEventManager.actorManager.RemoveActor(actor);
         }
         getEventManager.EndConversation();
         midConvo = false;
