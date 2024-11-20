@@ -13,8 +13,6 @@ public class Dialogue
 {
     public string dialogueText;
     public Actor actor;
-    public string consequenceUID;
-    public AudioClip voiceLine; // Audio clip for voice line
 }
 
 [System.Serializable]
@@ -35,6 +33,7 @@ public class DialogueNode
     public PlayableAsset endTimeline;
 }
 
+[RequireComponent(typeof(Actor))]
 public class DialogueManager : MonoBehaviour
 {
     public DialogueNode[] nodes;
@@ -58,6 +57,10 @@ public class DialogueManager : MonoBehaviour
 
     private PlayableDirector playableDirector;
     private ClickActions getClickActions;
+    private ChoiceTracker getChoiceTracker;
+
+    [SerializeField]
+    private Actor myActor;
     public List<Actor> additionalActorsToRemove;
 
     [Header("Input Settings")]
@@ -92,6 +95,9 @@ public class DialogueManager : MonoBehaviour
         getAudioSource = getAudiomotor.GetComponent<AudioSource>();
         playableDirector = GetComponent<PlayableDirector>();
         getClickActions = FindObjectOfType<ClickActions>();
+        getChoiceTracker = FindObjectOfType<ChoiceTracker>();
+
+        myActor = GetComponent<Actor>();
     }
 
     public bool ChoicesActive
@@ -123,10 +129,6 @@ public class DialogueManager : MonoBehaviour
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
         PlayTimeline(choiceTimeline);
-        Color newColor = getSubtitles.color;
-        newColor.a = 255f;
-        getSubtitles.color = newColor;
-        // Display the initial line and start the first voice line without needing player input
         PlayNextLine();
     }
 
@@ -215,9 +217,6 @@ public class DialogueManager : MonoBehaviour
             getTextB.transform.parent.gameObject.SetActive(true);
 
             getEventManager.nextButton.SetActive(false);
-            Color newColor = getSubtitles.color;
-            newColor.a = 50f;
-            getSubtitles.color = newColor;
         }
     }
 
@@ -226,6 +225,7 @@ public class DialogueManager : MonoBehaviour
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceA, currentNode.choiceATimeline);
        //playableDirector.Play();
+       getChoiceTracker.AddChoice(myActor.actorName + currentDialogueIndex + "A");
     }
 
     public void OnChoiceB()
@@ -233,6 +233,7 @@ public class DialogueManager : MonoBehaviour
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceB, currentNode.choiceBTimeline);
         //playableDirector.Play();
+        getChoiceTracker.AddChoice(myActor.actorName + currentDialogueIndex + "B");
     }
 
     private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline)
@@ -284,7 +285,7 @@ public class DialogueManager : MonoBehaviour
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);
         getButtonB?.onClick.RemoveListener(OnChoiceB);
-        getEventManager.actorManager.RemoveActor(gameObject.GetComponent<Actor>());
+        getEventManager.actorManager.RemoveActor(myActor);
         foreach (var actor in additionalActorsToRemove)
         {
             getEventManager.actorManager.RemoveActor(actor);
