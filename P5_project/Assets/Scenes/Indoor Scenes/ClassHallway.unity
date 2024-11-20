@@ -10591,7 +10591,22 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 8a06da2e4c6159c479857b607b3f89ae, type: 2}
+    - {fileID: 11400000, guid: 999c5e9a40d07a94e81a91e8b9ee80df, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 695700966}
+          m_TargetAssemblyTypeName: SceneMotor, Assembly-CSharp
+          m_MethodName: ActivatePreloadedScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 695700966}
@@ -15630,7 +15645,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1178072385}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -15648,6 +15663,10 @@ PlayableDirector:
     value: {fileID: 97251733}
   - key: {fileID: -2942542857469969253, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
     value: {fileID: 285717356}
+  - key: {fileID: 716683016677633883, guid: 254703b9f6da1ca41a66d7ddb537ace7, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 716683016677633883, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
+    value: {fileID: 1999519634}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1178072388
@@ -24280,7 +24299,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
