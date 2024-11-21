@@ -31,6 +31,8 @@ public class DialogueNode
     public PlayableAsset choiceATimeline;
     public PlayableAsset choiceBTimeline;
     public PlayableAsset endTimeline;
+
+    public float initStartTime, initchoiceATime, initchoiceBTime, initEndTime;
 }
 
 [RequireComponent(typeof(Actor))]
