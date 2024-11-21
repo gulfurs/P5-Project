@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ElevatorScene.unity
-    guid: 81438c65abbced1478641d1a9872aae5
+    path: Assets/LoungeScene.unity
+    guid: 9a43cc794664f1f46b7af4bdbaf83431
   - enabled: 1
     path: Assets/Scenes/ElevatatorScene2.unity
     guid: 6eddbb8ccef4b09419becd52d32eca10
@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene/EndScene.unity
     guid: 5f4c6724c9b3c3346ac2e16d47b0bbfc
+  - enabled: 1
+    path: Assets/Scenes/ElevatorScene.unity
+    guid: 81438c65abbced1478641d1a9872aae5
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 936a8c8ee41a25c4aaf439ab36b79f8b, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3c7f630a56a6571479ffd9a07d838ec2, type: 2}
