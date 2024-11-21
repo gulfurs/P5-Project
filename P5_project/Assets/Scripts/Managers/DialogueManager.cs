@@ -68,6 +68,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Input Settings")]
     public InputActionProperty continueDialogAction;
 
+    private Coroutine currentNodeCoroutine;
+
     private void Start()
     {
         continueDialogAction.action.Enable();
@@ -119,7 +121,9 @@ public class DialogueManager : MonoBehaviour
         AnimNext();
         getButtonA?.onClick.AddListener(OnChoiceA);
         getButtonB?.onClick.AddListener(OnChoiceB);
+        if (getClickActions.dialogueMan == null) {
         getClickActions.dialogueMan = gameObject.GetComponent<DialogueManager>();
+        }
         currentNode = nodes[currentNodeIndex];
         StartDialogueSequence(currentNode.startDialogue, currentNode.options, currentNode.startTimeline);
     }
@@ -200,7 +204,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         // Move to the next node in the sequence
-        yield return StartCoroutine(CheckNextNode());
+        yield return currentNodeCoroutine = StartCoroutine(CheckNextNode());
         }
     }
 
@@ -254,8 +258,10 @@ public class DialogueManager : MonoBehaviour
             StartDialogueSequence(choiceDialogue, false, choiceTimeline);
             yield return new WaitUntil(() => !isDialoguePlaying);
         }
-        yield return StartCoroutine(CheckNextNode());
+        yield return currentNodeCoroutine = StartCoroutine(CheckNextNode());
     }
+
+    
 
     private IEnumerator CheckNextNode()
     {
@@ -263,6 +269,7 @@ public class DialogueManager : MonoBehaviour
         {
             yield return new WaitUntil(() => !isDialoguePlaying);
             EndDialogue();
+            currentNodeCoroutine = null;
             yield break;
         }
 
@@ -270,11 +277,16 @@ public class DialogueManager : MonoBehaviour
         {
             currentNodeIndex++;
             StartDialogue();
+            Debug.Log("Are we calling this or what?");
+            currentNodeCoroutine = null;
+            yield break; 
         }
         else
         {
             EndDialogue();
-            yield break;
+            Debug.Log("YAAAAAAAAHHHHHOOOOOOOOOOOOOOOOOOOOOOOOOO");
+            currentNodeCoroutine = null;
+            yield break;    
         }
     }
 
