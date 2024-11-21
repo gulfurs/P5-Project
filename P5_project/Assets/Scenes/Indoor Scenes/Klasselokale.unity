@@ -9391,7 +9391,7 @@ MonoBehaviour:
       actor: {fileID: 1044988914}
     - dialogueText: "Jeg brugte s\xE5 lang tid p\xE5 at lave den planche."
       actor: {fileID: 1044988914}
-    - dialogueText: "Ogs\xE5 dropper de den."
+    - dialogueText: "Og s\xE5 dropper de den."
       actor: {fileID: 1044988914}
     - dialogueText: "Ogs\xE5 double downer de ved at tegne over min planche."
       actor: {fileID: 1044988914}
@@ -9449,15 +9449,31 @@ MonoBehaviour:
       actor: {fileID: 28158822761690619}
     - dialogueText: 'og uenigheder skal ikke opfattes som personlige angreb. '
       actor: {fileID: 28158822761690619}
-    - dialogueText: "Jaa... Jeg vil pr\xF8ve at tale med Frederik efter timen"
+    - dialogueText: Jaa...
       actor: {fileID: 1044988914}
     - dialogueText: "Jeg vil pr\xF8ve at tale med Frederik efter timen"
       actor: {fileID: 1044988914}
-    playerChoiceB: []
+    playerChoiceB:
+    - dialogueText: "Nu sp\xF8rg jeg dig Peter,"
+      actor: {fileID: 28158822761690619}
+    - dialogueText: ' fik du nogensinde kommunikeret dette til dine klassekammerater?'
+      actor: {fileID: 28158822761690619}
+    - dialogueText: 'Kommunikeret hvad? '
+      actor: {fileID: 1044988914}
+    - dialogueText: Dine frustrationer.
+      actor: {fileID: 28158822761690619}
+    - dialogueText: 'Det vil have hjulpet hvis du havde kommunikeret dine frustrationer
+        tidligere i arbejdsprocessen. '
+      actor: {fileID: 28158822761690619}
+    - dialogueText: Tsch.
+      actor: {fileID: 1044988914}
+    - dialogueText: "G\xF8r mig en tjeneste og pr\xF8v at tal med Frederik efter
+        timen. "
+      actor: {fileID: 28158822761690619}
     endDialogue: []
-    startTimeline: {fileID: 11400000, guid: e84a2a588543b6b47a2ae4baf05bc9a3, type: 2}
-    choiceATimeline: {fileID: 11400000, guid: bb1766dba708f184db5a9d5569237440, type: 2}
-    choiceBTimeline: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
+    startTimeline: {fileID: 11400000, guid: c64f3bf18043b8f40a547d01988b843f, type: 2}
+    choiceATimeline: {fileID: 11400000, guid: 253675d2ba2f3fb44bca19dad74d5e1a, type: 2}
+    choiceBTimeline: {fileID: 11400000, guid: 74be9a074985c7647bd5316d78f333ee, type: 2}
     endTimeline: {fileID: 0}
     initStartTime: 0
     initchoiceATime: 0
@@ -9569,7 +9585,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1044988913}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 74be9a074985c7647bd5316d78f333ee, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -9599,6 +9615,24 @@ PlayableDirector:
     value: {fileID: 427217619531243598}
   - key: {fileID: -2361817885739366539, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
     value: {fileID: 427217619531243598}
+  - key: {fileID: -7538119620945284827, guid: fc978048b7d3e6e4383843f71ac9a34e, type: 2}
+    value: {fileID: 248600909}
+  - key: {fileID: 4589873471001416803, guid: c64f3bf18043b8f40a547d01988b843f, type: 2}
+    value: {fileID: 1044988919}
+  - key: {fileID: -5405710561931558290, guid: c64f3bf18043b8f40a547d01988b843f, type: 2}
+    value: {fileID: 248600909}
+  - key: {fileID: 8722290290903795689, guid: 253675d2ba2f3fb44bca19dad74d5e1a, type: 2}
+    value: {fileID: 1044988919}
+  - key: {fileID: -5858424038264896474, guid: 253675d2ba2f3fb44bca19dad74d5e1a, type: 2}
+    value: {fileID: 248600909}
+  - key: {fileID: 2229397457758331996, guid: 253675d2ba2f3fb44bca19dad74d5e1a, type: 2}
+    value: {fileID: 248600909}
+  - key: {fileID: -5864930390037257057, guid: 74be9a074985c7647bd5316d78f333ee, type: 2}
+    value: {fileID: 1044988919}
+  - key: {fileID: 6573284554951654752, guid: 74be9a074985c7647bd5316d78f333ee, type: 2}
+    value: {fileID: 248600909}
+  - key: {fileID: 980829502286940871, guid: 74be9a074985c7647bd5316d78f333ee, type: 2}
+    value: {fileID: 248600909}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1044988921
