@@ -8909,7 +8909,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1030057001}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 531e15fddf8327344b7ebbbe6cfbf4e2, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 1ccb7178fc4f2df49b50585a9ffbad09, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -8975,6 +8975,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: ec2249478a3c7fa468d985a2b4114373, type: 2}
     - {fileID: 11400000, guid: 8a06da2e4c6159c479857b607b3f89ae, type: 2}
+    - {fileID: 11400000, guid: ed92912b65f65fd4382eb0badeb8a5c1, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -9004,6 +9005,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1030057005}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: EndDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1030057005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9017,7 +9032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 1
+  - closingDialogue: 0
     options: 1
     startDialogue:
     - dialogueText: "Peter sagde han vil st\xE5 for planchen."
@@ -9059,7 +9074,7 @@ MonoBehaviour:
     initchoiceATime: 0
     initchoiceBTime: 0
     initEndTime: 0
-  - closingDialogue: 1
+  - closingDialogue: 0
     options: 1
     startDialogue:
     - dialogueText: "Vi fik s\xE5 7 siden Peter ikke var der til at freml\xE6gge
@@ -9380,7 +9395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 1
+  - closingDialogue: 0
     options: 1
     startDialogue:
     - dialogueText: 'Allerede fra begyndelsen, '
@@ -9419,7 +9434,7 @@ MonoBehaviour:
     initchoiceATime: 0
     initchoiceBTime: 0
     initEndTime: 0
-  - closingDialogue: 1
+  - closingDialogue: 0
     options: 1
     startDialogue:
     - dialogueText: Jeg kan godt lide at designe,
@@ -9564,9 +9579,9 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 731331092}
-          m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-          m_MethodName: Play
+        - m_Target: {fileID: 1044988918}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: EndDialogue
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9585,7 +9600,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1044988913}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 74be9a074985c7647bd5316d78f333ee, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 253675d2ba2f3fb44bca19dad74d5e1a, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1

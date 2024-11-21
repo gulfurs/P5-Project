@@ -10388,7 +10388,7 @@ PlayableDirector:
   m_GameObject: {fileID: 669658647}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: e22f14bcb73037c42883d27c4eca1a96, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -10459,12 +10459,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: ec2249478a3c7fa468d985a2b4114373, type: 2}
+    - {fileID: 11400000, guid: ed92912b65f65fd4382eb0badeb8a5c1, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 669658651}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
           m_MethodName: OnSignalReceived
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 669658651}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: EndDialogue
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
