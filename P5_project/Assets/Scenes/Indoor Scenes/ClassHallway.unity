@@ -10008,6 +10008,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8689439346868969906, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &636794321
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.171108
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.76467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.39074445
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3268752591144748831, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7553982893518203725, guid: a111284c442648d4d95aadf246077f7f, type: 3}
+      propertyPath: m_Name
+      value: ChoiceTracker
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a111284c442648d4d95aadf246077f7f, type: 3}
 --- !u!4 &638003772 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7116505694459723098, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
@@ -10331,7 +10388,7 @@ PlayableDirector:
   m_GameObject: {fileID: 669658647}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -10346,6 +10403,44 @@ PlayableDirector:
   - key: {fileID: 7988189759618943930, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
     value: {fileID: 1999519634}
   - key: {fileID: -5293351171216307021, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
+    value: {fileID: 642811426}
+  - key: {fileID: -2753002102722793026, guid: bfa8c90b4ab546a4f8c1450ae919bf3d, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 7988189759618943930, guid: bfa8c90b4ab546a4f8c1450ae919bf3d, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 5665071054406685815, guid: bfa8c90b4ab546a4f8c1450ae919bf3d, type: 2}
+    value: {fileID: 669658650}
+  - key: {fileID: -5293351171216307021, guid: bfa8c90b4ab546a4f8c1450ae919bf3d, type: 2}
+    value: {fileID: 642811426}
+  - key: {fileID: -2753002102722793026, guid: 3df99c753b8b0984e9fe42634a045a3b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 7988189759618943930, guid: 3df99c753b8b0984e9fe42634a045a3b, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 5665071054406685815, guid: 3df99c753b8b0984e9fe42634a045a3b, type: 2}
+    value: {fileID: 669658650}
+  - key: {fileID: -2753002102722793026, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 7988189759618943930, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 5665071054406685815, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
+    value: {fileID: 669658650}
+  - key: {fileID: -5293351171216307021, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
+    value: {fileID: 642811426}
+  - key: {fileID: 5665071054406685815, guid: e22f14bcb73037c42883d27c4eca1a96, type: 2}
+    value: {fileID: 669658650}
+  - key: {fileID: 7988189759618943930, guid: e22f14bcb73037c42883d27c4eca1a96, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: -2753002102722793026, guid: e22f14bcb73037c42883d27c4eca1a96, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: -5293351171216307021, guid: e22f14bcb73037c42883d27c4eca1a96, type: 2}
+    value: {fileID: 642811426}
+  - key: {fileID: -2753002102722793026, guid: 8a06ed0244c9a37458f4aa3d580672d0, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 7988189759618943930, guid: 8a06ed0244c9a37458f4aa3d580672d0, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 5665071054406685815, guid: 8a06ed0244c9a37458f4aa3d580672d0, type: 2}
+    value: {fileID: 669658650}
+  - key: {fileID: -5293351171216307021, guid: 8a06ed0244c9a37458f4aa3d580672d0, type: 2}
     value: {fileID: 642811426}
   m_ExposedReferences:
     m_References: []
@@ -10392,8 +10487,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 1
-    options: 0
+  - closingDialogue: 0
+    options: 1
     startDialogue:
     - dialogueText: "Hvorfor sidder du helt stille helt over i hj\xF8rnet min ven"
       actor: {fileID: 1614326103}
@@ -10402,14 +10497,54 @@ MonoBehaviour:
       actor: {fileID: 669658653}
     - dialogueText: "Jeg pr\xF8ver bare at holde mig udenfor det hele."
       actor: {fileID: 669658653}
-    choiceA: A
-    choiceB: B
-    playerChoiceA: []
-    playerChoiceB: []
+    choiceA: Nysgerrig
+    choiceB: Afslut samtale
+    playerChoiceA:
+    - dialogueText: " Kan du fort\xE6lle mig hvad der skete sidste torsdag?"
+      actor: {fileID: 1614326103}
+    - dialogueText: 'Jeg ved ik... '
+      actor: {fileID: 1614326103}
+    - dialogueText: Peter var tvunget ind i Frederik's gruppe
+      actor: {fileID: 669658653}
+    - dialogueText: "ogs\xE5 har alting  bare g\xE5et ned af bakke."
+      actor: {fileID: 669658653}
+    - dialogueText: Jeg har ikke sat mig ind i det.
+      actor: {fileID: 669658653}
+    playerChoiceB:
+    - dialogueText: Ok tak for det.
+      actor: {fileID: 1614326103}
     endDialogue: []
     startTimeline: {fileID: 11400000, guid: a9cd69af63a430e41a0cccac86d19bfb, type: 2}
-    choiceATimeline: {fileID: 0}
-    choiceBTimeline: {fileID: 0}
+    choiceATimeline: {fileID: 11400000, guid: bfa8c90b4ab546a4f8c1450ae919bf3d, type: 2}
+    choiceBTimeline: {fileID: 11400000, guid: 3df99c753b8b0984e9fe42634a045a3b, type: 2}
+    endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
+  - closingDialogue: 0
+    options: 1
+    startDialogue:
+    - dialogueText: Ok.
+      actor: {fileID: 1614326103}
+    choiceA: Insister
+    choiceB: Afslut samtale
+    playerChoiceA:
+    - dialogueText: "Er der mere du kunne t\xE6nke dig at fort\xE6lle mig?"
+      actor: {fileID: 1614326103}
+    - dialogueText: " Jeg ved det alts\xE5 ikke. "
+      actor: {fileID: 1614326103}
+    - dialogueText: "Peter er g\xE5et et \xE5r om hvis det hj\xE6lper"
+      actor: {fileID: 669658653}
+    - dialogueText: "men jeg er og vil helst ikke v\xE6re en del af det her."
+      actor: {fileID: 669658653}
+    playerChoiceB:
+    - dialogueText: Ok tak for det.
+      actor: {fileID: 1614326103}
+    endDialogue: []
+    startTimeline: {fileID: 11400000, guid: 1d2211b47682c944d8182dcd18efa4d6, type: 2}
+    choiceATimeline: {fileID: 11400000, guid: e22f14bcb73037c42883d27c4eca1a96, type: 2}
+    choiceBTimeline: {fileID: 11400000, guid: 3df99c753b8b0984e9fe42634a045a3b, type: 2}
     endTimeline: {fileID: 0}
     initStartTime: 0
     initchoiceATime: 0
@@ -22810,7 +22945,8 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 579782343363483816, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7037192228722001419, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
@@ -25161,84 +25297,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4891481225678913317, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1594085129265103218
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2151327683631878216, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2595626509944658906, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5880980990407487887, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -13.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6334641326448668391, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6727660501330769585, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7556459131067248288, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7556459131067248288, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2151327683631878216, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8e1dad26eb2bbd24891bc5ae9c47abfc, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -25247,7 +25305,6 @@ SceneRoots:
   - {fileID: 1896767250}
   - {fileID: 33914452}
   - {fileID: 1550893774}
-  - {fileID: 1594085129265103218}
   - {fileID: 1743782177}
   - {fileID: 481531569}
   - {fileID: 1938509118}
@@ -25260,3 +25317,4 @@ SceneRoots:
   - {fileID: 695700967}
   - {fileID: 681516270}
   - {fileID: 58007839}
+  - {fileID: 636794321}
