@@ -204,7 +204,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         // Move to the next node in the sequence
-        yield return currentNodeCoroutine = StartCoroutine(CheckNextNode());
+        yield return CheckNextNode();
         }
     }
 
@@ -258,7 +258,9 @@ public class DialogueManager : MonoBehaviour
             StartDialogueSequence(choiceDialogue, false, choiceTimeline);
             yield return new WaitUntil(() => !isDialoguePlaying);
         }
-        yield return currentNodeCoroutine = StartCoroutine(CheckNextNode());
+
+        currentNodeCoroutine = StartCoroutine(CheckNextNode());
+        yield return currentNodeCoroutine;
     }
 
     
@@ -269,7 +271,6 @@ public class DialogueManager : MonoBehaviour
         {
             yield return new WaitUntil(() => !isDialoguePlaying);
             EndDialogue();
-            currentNodeCoroutine = null;
             yield break;
         }
 
@@ -277,18 +278,10 @@ public class DialogueManager : MonoBehaviour
         {
             currentNodeIndex++;
             StartDialogue();
-            Debug.Log("Are we calling this or what?");
-            currentNodeCoroutine = null;
+            StopCoroutine(currentNodeCoroutine);
             yield break; 
         }
-        else
-        {
-            EndDialogue();
-            Debug.Log("YAAAAAAAAHHHHHOOOOOOOOOOOOOOOOOOOOOOOOOO");
-            currentNodeCoroutine = null;
-            yield break;    
-        }
-    }
+    } 
 
     public void EndDialogue()
     {
