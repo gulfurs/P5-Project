@@ -2177,12 +2177,8 @@ MonoBehaviour:
     startDialogue:
     - dialogueText: "Det virkelig vildt hvad der foreg\xE5r mellem Peter og Frederik\u2026 "
       actor: {fileID: 365128641}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     - dialogueText: "Det bliver sp\xE6ndene at se hvad der kommer til at ske"
       actor: {fileID: 365128641}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     choiceA: A
     choiceB: B
     playerChoiceA: []
@@ -2192,6 +2188,11 @@ MonoBehaviour:
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
+  myActor: {fileID: 0}
   additionalActorsToRemove: []
   continueDialogAction:
     m_UseReference: 0
@@ -10140,50 +10141,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2684839982629858435, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &658257198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 658257200}
-  - component: {fileID: 658257199}
-  m_Layer: 0
-  m_Name: ASyncManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &658257199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658257198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02a5bfc3a16a85c4f9905598183e5721, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &658257200
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 658257198}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7804544, y: 0.91206837, z: -4.051577}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &661164444 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8605966983706172872, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
@@ -10440,17 +10397,11 @@ MonoBehaviour:
     startDialogue:
     - dialogueText: "Hvorfor sidder du helt stille helt over i hj\xF8rnet min ven"
       actor: {fileID: 1614326103}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     - dialogueText: "Jeg ved ikke\u2026 Det virker som om, folk taler bag om ryggen
         p\xE5 hinanden."
       actor: {fileID: 669658653}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     - dialogueText: "Jeg pr\xF8ver bare at holde mig udenfor det hele."
       actor: {fileID: 669658653}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     choiceA: A
     choiceB: B
     playerChoiceA: []
@@ -10460,6 +10411,11 @@ MonoBehaviour:
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
+  myActor: {fileID: 0}
   additionalActorsToRemove: []
   continueDialogAction:
     m_UseReference: 0
@@ -15761,20 +15717,12 @@ MonoBehaviour:
     startDialogue:
     - dialogueText: Noget galt?
       actor: {fileID: 1614326103}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     - dialogueText: "Tja\u2026 Jeg ved ikke rigtig."
       actor: {fileID: 1178072391}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     - dialogueText: "Folk har bare v\xE6ret anderledes p\xE5 det sidste"
       actor: {fileID: 1178072391}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     - dialogueText: "Nogle af os har h\xF8rt ting, der m\xE5ske ikke er helt sande\u2026"
       actor: {fileID: 1178072391}
-      consequenceUID: 
-      voiceLine: {fileID: 0}
     choiceA: A
     choiceB: B
     playerChoiceA: []
@@ -15784,6 +15732,11 @@ MonoBehaviour:
     choiceATimeline: {fileID: 0}
     choiceBTimeline: {fileID: 0}
     endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
+  myActor: {fileID: 0}
   additionalActorsToRemove: []
   continueDialogAction:
     m_UseReference: 0
@@ -22780,6 +22733,10 @@ PrefabInstance:
       propertyPath: m_CameraYOffset
       value: 1.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1533340635646976393, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_CurrentTrackingState
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1947556116586393373, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -22840,13 +22797,17 @@ PrefabInstance:
       propertyPath: handText
       value: 
       objectReference: {fileID: 176081724}
+    - target: {fileID: 7783492721110611825, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8353134432169093002, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: handText
       value: 
       objectReference: {fileID: 839609901}
     - target: {fileID: 8896070815810241457, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Name
-      value: XR Origin (XR Rig)
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -25299,4 +25260,3 @@ SceneRoots:
   - {fileID: 695700967}
   - {fileID: 681516270}
   - {fileID: 58007839}
-  - {fileID: 658257200}
