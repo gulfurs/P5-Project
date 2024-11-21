@@ -278,7 +278,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void EndDialogue()
+    public void EndDialogue()
     {
         if (midConvo) {
         Debug.Log("End of dialogue nodes reached.");
