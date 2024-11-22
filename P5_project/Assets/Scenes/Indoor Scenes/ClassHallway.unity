@@ -15795,7 +15795,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1178072385}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 1d0e49e0f5e6f2747be60ad7fabe8ce3, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -15817,6 +15817,28 @@ PlayableDirector:
     value: {fileID: 1999519634}
   - key: {fileID: 716683016677633883, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
     value: {fileID: 1999519634}
+  - key: {fileID: 5892203505140726544, guid: 254703b9f6da1ca41a66d7ddb537ace7, type: 2}
+    value: {fileID: 97251733}
+  - key: {fileID: 6259431699338319039, guid: 254703b9f6da1ca41a66d7ddb537ace7, type: 2}
+    value: {fileID: 1178072388}
+  - key: {fileID: 0}
+    value: {fileID: 285717356}
+  - key: {fileID: -323584025645264947, guid: 254703b9f6da1ca41a66d7ddb537ace7, type: 2}
+    value: {fileID: 285717356}
+  - key: {fileID: 716683016677633883, guid: 1d0e49e0f5e6f2747be60ad7fabe8ce3, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 7494778509994195633, guid: 1d0e49e0f5e6f2747be60ad7fabe8ce3, type: 2}
+    value: {fileID: 1178072388}
+  - key: {fileID: 5886627210795331574, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
+    value: {fileID: 1178072388}
+  - key: {fileID: 118870446659676891, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
+    value: {fileID: 97251733}
+  - key: {fileID: -6205573247313024784, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
+    value: {fileID: 285717356}
+  - key: {fileID: 7053043120722061879, guid: 1d0e49e0f5e6f2747be60ad7fabe8ce3, type: 2}
+    value: {fileID: 285717356}
+  - key: {fileID: 5552154689287240353, guid: 1d0e49e0f5e6f2747be60ad7fabe8ce3, type: 2}
+    value: {fileID: 97251733}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1178072388
@@ -15834,12 +15856,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: ec2249478a3c7fa468d985a2b4114373, type: 2}
+    - {fileID: 11400000, guid: ed92912b65f65fd4382eb0badeb8a5c1, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1178072389}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
           m_MethodName: OnSignalReceived
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1178072389}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: EndDialogue
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15862,25 +15899,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodes:
-  - closingDialogue: 1
-    options: 0
+  - closingDialogue: 0
+    options: 1
     startDialogue:
-    - dialogueText: Noget galt?
+    - dialogueText: "Kan du fort\xE6lle mig hvad der skete sidste torsdag?"
       actor: {fileID: 1614326103}
-    - dialogueText: "Tja\u2026 Jeg ved ikke rigtig."
+    - dialogueText: Jeg var i gruppe med Frederik.
       actor: {fileID: 1178072391}
-    - dialogueText: "Folk har bare v\xE6ret anderledes p\xE5 det sidste"
+    - dialogueText: "men jeg har aldrig set Frederik hidse p\xE5 den der m\xE5de
+        f\xF8r."
       actor: {fileID: 1178072391}
-    - dialogueText: "Nogle af os har h\xF8rt ting, der m\xE5ske ikke er helt sande\u2026"
+    - dialogueText: "Frederik var helt op at k\xF8re"
       actor: {fileID: 1178072391}
-    choiceA: A
-    choiceB: B
-    playerChoiceA: []
-    playerChoiceB: []
+    - dialogueText: Jaa...Det jo klart
+      actor: {fileID: 1215310659}
+    - dialogueText: Carsten lad mig nu lige...
+      actor: {fileID: 1178072391}
+    choiceA: "Lad Miran forts\xE6tte?"
+    choiceB: Lad Carsten tale?
+    playerChoiceA:
+    - dialogueText: "Frederik lashede ud p\xE5 alle efter Peter ikke dukkede op til
+        freml\xE6ggelsen. "
+      actor: {fileID: 1178072391}
+    - dialogueText: Det var crazy.
+      actor: {fileID: 1178072391}
+    playerChoiceB:
+    - dialogueText: ' Hvad siger du Carsten?'
+      actor: {fileID: 1614326103}
+    - dialogueText: Jeg siger bare,  Peter valgte at blive hjemme den dag.
+      actor: {fileID: 1614326103}
     endDialogue: []
-    startTimeline: {fileID: 11400000, guid: 99d726c1ec6c129449a84d66ce3d4c37, type: 2}
-    choiceATimeline: {fileID: 0}
-    choiceBTimeline: {fileID: 0}
+    startTimeline: {fileID: 11400000, guid: 254703b9f6da1ca41a66d7ddb537ace7, type: 2}
+    choiceATimeline: {fileID: 11400000, guid: b282b00dd2ed8a541aa027237def3abe, type: 2}
+    choiceBTimeline: {fileID: 11400000, guid: 1d0e49e0f5e6f2747be60ad7fabe8ce3, type: 2}
     endTimeline: {fileID: 0}
     initStartTime: 0
     initchoiceATime: 0
@@ -16368,11 +16419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7994293847472876956, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08350896
+      value: -0.083508976
       objectReference: {fileID: 0}
     - target: {fileID: -7994293847472876956, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.043904237
+      value: 0.043904245
       objectReference: {fileID: 0}
     - target: {fileID: -7906298360899042358, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17600,11 +17651,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1073679856382840317, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08350896
+      value: -0.083508976
       objectReference: {fileID: 0}
     - target: {fileID: 1073679856382840317, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.043904237
+      value: 0.043904245
       objectReference: {fileID: 0}
     - target: {fileID: 1631334958989248831, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18680,6 +18731,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1215310658}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1215310659}
   m_SourcePrefab: {fileID: 100100000, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
 --- !u!4 &1215310656 stripped
 Transform:
@@ -18702,6 +18756,24 @@ MonoBehaviour:
   - m_Rig: {fileID: 285717357}
     m_Active: 1
   m_Effectors: []
+--- !u!114 &1215310659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874390876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2632723a51e76514e9f587c11aac9f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorObject: {fileID: 0}
+  selectable: 0
+  actorID: {fileID: 0}
+  actorColor: {r: 1, g: 0.78235924, b: 0.13396227, a: 1}
+  faceID: {fileID: 0}
+  actorName: Carsten
 --- !u!1 &1221204068
 GameObject:
   m_ObjectHideFlags: 0
