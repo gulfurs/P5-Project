@@ -647,6 +647,7 @@ MonoBehaviour:
   actorID: {fileID: 0}
   actorColor: {r: 0, g: 0, b: 0, a: 0}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!114 &284671961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4575,6 +4576,7 @@ MonoBehaviour:
   actorID: {fileID: 0}
   actorColor: {r: 1, g: 1, b: 1, a: 1}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!1 &791343061
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,6 +6750,7 @@ MonoBehaviour:
   actorID: {fileID: 945883296}
   actorColor: {r: 0, g: 0, b: 0, a: 0}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!65 &1044988915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6819,108 +6822,91 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - closingDialogue: 0
+    options: 1
     startDialogue:
     - dialogueText: Hej Peter
-      displayDuration: 1
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "Jeg ville h\xF8re om hvad du synes om timen i dag?"
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "Det er trods alt f\xF8rste dag p\xE5 jobbet."
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "Og du virker som den perfekte kandidat til at svare dette sp\xF8rgsm\xE5l!"
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: Rend mig.
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     choiceA: Skru ned for det der.
     choiceB: "Modtaget. Lad mig pr\xF8ve igen."
     playerChoiceA:
     - dialogueText: Skru lige ned for charmen.
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "Jeg pr\xF8ver bare at initiere en samtale her."
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     playerChoiceB:
     - dialogueText: Modtaget.
-      displayDuration: 0
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "Det lige en ommer, lad mig pr\xF8ve igen."
-      displayDuration: 0
       actor: {fileID: 0}
-      consequenceUID: 
     endDialogue: []
-    startQuip: {fileID: 0}
-    choiceAQuip: {fileID: 0}
-    choiceBQuip: {fileID: 0}
-    endQuip: {fileID: 0}
+    startTimeline: {fileID: 0}
+    choiceATimeline: {fileID: 0}
+    choiceBTimeline: {fileID: 0}
+    endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
   - closingDialogue: 0
+    options: 1
     startDialogue:
     - dialogueText: "Kunne du ikke t\xE6nke dig at tilbringe tiden udenfor"
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "Ud i det sk\xF8nne vejr, sammen med dine k\xE6re medstuderende?"
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: Jeg vil hellere begraves levende
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "End at omg\xE5s med de klaphatte."
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     choiceA: Surt Show
     choiceB: Det mener du ikke.
     playerChoiceA:
     - dialogueText: Surt show.
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "F\xF8rste skoledag efter ferien,"
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: 'er ellers det perfekte tidspunkt at, '
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: efterlade et godt indtryk hos klassekammeraterne
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: leaveClass-You-0001
     playerChoiceB:
     - dialogueText: Jeg ved at du ikke mener det der.
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: Samt med ved jeg at du ikke kommer langt med den attitude.
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: 
     - dialogueText: "S\xE5 den attitude kommer du og jeg til at arbejde p\xE5 sammen"
-      displayDuration: 2
       actor: {fileID: 0}
-      consequenceUID: leaveClass-You-0001
     endDialogue: []
-    startQuip: {fileID: 0}
-    choiceAQuip: {fileID: 0}
-    choiceBQuip: {fileID: 0}
-    endQuip: {fileID: 0}
-  getAudiomotor: {fileID: 0}
+    startTimeline: {fileID: 0}
+    choiceATimeline: {fileID: 0}
+    choiceBTimeline: {fileID: 0}
+    endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
+  myActor: {fileID: 0}
+  additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d2095f5e-caa6-4108-b2fa-286086ee24e9
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!1 &1235739651
 GameObject:
   m_ObjectHideFlags: 0
@@ -7163,53 +7149,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - closingDialogue: 0
+    options: 1
     startDialogue:
     - dialogueText: So there was I
-      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
     - dialogueText: Waiting...
-      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
     - dialogueText: To make a difference
-      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
     - dialogueText: And what did you do?
-      displayDuration: 5
       actor: {fileID: 779223213}
-      consequenceUID: 
     - dialogueText: 'Idk, '
-      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
     - dialogueText: I never made it this far
-      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
     choiceA: You stupid
     choiceB: You intelligent
     playerChoiceA:
     - dialogueText: Thanks!
-      displayDuration: 5
       actor: {fileID: 1576206520}
-      consequenceUID: 
     - dialogueText: No prob
-      displayDuration: 5
       actor: {fileID: 779223213}
-      consequenceUID: 
     playerChoiceB:
     - dialogueText: Well screw you then
-      displayDuration: 2
       actor: {fileID: 1576206520}
-      consequenceUID: 
     endDialogue: []
-    startQuip: {fileID: 0}
-    choiceAQuip: {fileID: 0}
-    choiceBQuip: {fileID: 0}
-    endQuip: {fileID: 0}
-  getAudiomotor: {fileID: 0}
+    startTimeline: {fileID: 0}
+    choiceATimeline: {fileID: 0}
+    choiceBTimeline: {fileID: 0}
+    endTimeline: {fileID: 0}
+    initStartTime: 0
+    initchoiceATime: 0
+    initchoiceBTime: 0
+    initEndTime: 0
+  myActor: {fileID: 0}
+  additionalActorsToRemove: []
+  continueDialogAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 8feacadd-de8c-474e-80fd-cee92c6b3f6e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
 --- !u!4 &1576206519
 Transform:
   m_ObjectHideFlags: 0
@@ -7243,6 +7229,7 @@ MonoBehaviour:
   actorID: {fileID: 0}
   actorColor: {r: 0, g: 0.80784315, b: 0.7497025, a: 1}
   faceID: {fileID: 0}
+  actorName: 
 --- !u!114 &1576206521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7854,8 +7841,12 @@ MonoBehaviour:
   PlayerEvent: {fileID: 0}
   choiceButtonA: {fileID: 2005825897}
   choiceButtonB: {fileID: 2086587978}
+  resumeButton: {fileID: 0}
+  nextButton: {fileID: 0}
   mainSubtitles: {fileID: 176081724}
   eventTrackerList: []
+  actorManager: {fileID: 0}
+  clickAction: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &1743782179
 MonoBehaviour:
