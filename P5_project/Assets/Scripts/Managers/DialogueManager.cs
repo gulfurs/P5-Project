@@ -172,6 +172,7 @@ public class DialogueManager : MonoBehaviour
         // Prepare to show the previous line's text and play the current voice line
         waitingForPlayerInput = true;
         playableDirector.Pause();
+        getFollow.target = getEventManager.player.transform;
         getEventManager?.nextButton?.SetActive(true);
         // Advance to the next line for audio
         if (currentDialogueIndex < currentDialogueSequence.Length-1)
