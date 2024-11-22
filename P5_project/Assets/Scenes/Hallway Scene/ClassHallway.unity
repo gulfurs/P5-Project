@@ -2294,6 +2294,10 @@ PlayableDirector:
     value: {fileID: 1999519634}
   - key: {fileID: -8975975120076688099, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
     value: {fileID: 1999519634}
+  - key: {fileID: 7436801844660062904, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
+    value: {fileID: 700410879}
+  - key: {fileID: -4469112690428614237, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
+    value: {fileID: 1434910766}
   m_ExposedReferences:
     m_References:
     - 4c680f0e6f00233488feebd9ecf99c1b: {fileID: 365128635}
@@ -19915,7 +19919,7 @@ Transform:
   m_GameObject: {fileID: 1406292107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.29, y: 0.39499998, z: 1.1}
+  m_LocalPosition: {x: -2.37, y: 0.39499998, z: -4.48}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23664,6 +23668,18 @@ PrefabInstance:
       propertyPath: actorName
       value: Dig
       objectReference: {fileID: 0}
+    - target: {fileID: 836698415192154294, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 836698415192154294, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_Color.g
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 836698415192154294, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5019608
+      objectReference: {fileID: 0}
     - target: {fileID: 923482237724530364, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -24417,7 +24433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "G\xE5 Ind i klassen\n"
+  m_text: "G\xE5 Ind i klassen?\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
   m_sharedMaterial: {fileID: 1639534622193078873, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
