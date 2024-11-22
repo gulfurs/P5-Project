@@ -1304,7 +1304,7 @@ GameObject:
   - component: {fileID: 721336913}
   - component: {fileID: 721336915}
   - component: {fileID: 721336914}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BillBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1320,7 +1320,7 @@ Transform:
   m_GameObject: {fileID: 721336912}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.712, y: 0.395, z: 0.584}
+  m_LocalPosition: {x: -1.712, y: 0.395, z: -1.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2950,7 +2950,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305613910}
   m_LocalRotation: {x: -0.0000002504623, y: -0.99822426, z: 0.0000007388456, w: 0.059568226}
-  m_LocalPosition: {x: 0, y: 0, z: 1.227599}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.10000001, y: 0.1, z: 0.10000002}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2958,7 +2958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -173.17, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3503247, y: -0.39000002}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 30.6305, y: 12.8017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1305613912
@@ -2993,7 +2993,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Start scenarie Inded\xF8rs\n"
+  m_text: "L\xE6rerv\xE6relset"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
   m_sharedMaterial: {fileID: 1639534622193078873, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
@@ -3056,7 +3056,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.563798, w: 0}
+  m_margin: {x: 0, y: 0, z: -2.0372066, w: 6.120028}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -3704,10 +3704,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "    Indend\xF8rs \u25BA\n"
+  m_text: "Mod L\xE6rerv\xE6relset \u25BA\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
+  m_sharedMaterial: {fileID: 1639534622193078873, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3738,8 +3738,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -3767,7 +3767,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.36800313, w: 0}
+  m_margin: {x: -1.5995488, y: 0, z: -1.3217528, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -3796,7 +3796,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 1639534622193078873, guid: 1f27ed043297bfd4ebd8bc3c195f83c2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3826,7 +3826,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711907915}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 3.74}
+  m_LocalPosition: {x: 0, y: 0, z: 3.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4933,7 +4933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.66
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4941,7 +4941,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.06
+      value: 6.23
       objectReference: {fileID: 0}
     - target: {fileID: 2943329009538314661, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4981,10 +4981,11 @@ PrefabInstance:
       objectReference: {fileID: 176081724}
     - target: {fileID: 8896070815810241457, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Name
-      value: XR Origin (XR Rig)
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 579782343363483816, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6244020267157575729, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       insertIndex: -1
