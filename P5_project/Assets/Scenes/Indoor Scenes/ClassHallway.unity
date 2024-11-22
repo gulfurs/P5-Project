@@ -2268,7 +2268,7 @@ PlayableDirector:
   m_GameObject: {fileID: 365128635}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2284,6 +2284,16 @@ PlayableDirector:
     value: {fileID: 700410879}
   - key: {fileID: 860612056348573959, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
     value: {fileID: 1434910766}
+  - key: {fileID: 8350523595833680950, guid: a9fac9784174f9948b230a1b7be684c5, type: 2}
+    value: {fileID: 365128638}
+  - key: {fileID: -9172684702748026495, guid: a9fac9784174f9948b230a1b7be684c5, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: 4026450026190651717, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
+    value: {fileID: 365128638}
+  - key: {fileID: -3403986497476524695, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
+    value: {fileID: 1999519634}
+  - key: {fileID: -8975975120076688099, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
+    value: {fileID: 1999519634}
   m_ExposedReferences:
     m_References:
     - 4c680f0e6f00233488feebd9ecf99c1b: {fileID: 365128635}
@@ -2304,12 +2314,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: ec2249478a3c7fa468d985a2b4114373, type: 2}
+    - {fileID: 11400000, guid: ed92912b65f65fd4382eb0badeb8a5c1, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 365128639}
           m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
           m_MethodName: OnSignalReceived
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 365128639}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: EndDialogue
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2335,18 +2360,36 @@ MonoBehaviour:
   - closingDialogue: 1
     options: 0
     startDialogue:
-    - dialogueText: "Det virkelig vildt hvad der foreg\xE5r mellem Peter og Frederik\u2026 "
+    - dialogueText: "S\xE5 Peter havde sin egen planche. "
       actor: {fileID: 365128641}
-    - dialogueText: "Det bliver sp\xE6ndene at se hvad der kommer til at ske"
+    - dialogueText: "som vi tre i gruppen s\xE5 droppede."
       actor: {fileID: 365128641}
-    choiceA: A
-    choiceB: B
-    playerChoiceA: []
-    playerChoiceB: []
+    - dialogueText: Og det var Peter apparently vild sur over.
+      actor: {fileID: 365128641}
+    choiceA: "Fors\xE6t med at lytte"
+    choiceB: Byde ind
+    playerChoiceA:
+    - dialogueText: "Uden at fort\xE6lle os andre,"
+      actor: {fileID: 365128641}
+    - dialogueText: "v\xE6lger Peter s\xE5 at blive hjemme."
+      actor: {fileID: 365128641}
+    - dialogueText: Hvilket var vild nederen for os andre.
+      actor: {fileID: 365128641}
+    - dialogueText: 'da vi allerede havde bestemt for hvem der siger hvad. '
+      actor: {fileID: 365128641}
+    playerChoiceB:
+    - dialogueText: 'Var det planchen han blev sur over? '
+      actor: {fileID: 1614326103}
+    - dialogueText: "Ja, Peter sagde han vil st\xE5 for planchen."
+      actor: {fileID: 365128641}
+    - dialogueText: "Dern\xE6st lavede Frederik en lang bedre planche."
+      actor: {fileID: 365128641}
+    - dialogueText: "S\xE5 den stak vi med efter afstemning i gruppen. "
+      actor: {fileID: 365128641}
     endDialogue: []
     startTimeline: {fileID: 11400000, guid: 9c2f799ad2bc5d340afeef7c73a783d4, type: 2}
-    choiceATimeline: {fileID: 0}
-    choiceBTimeline: {fileID: 0}
+    choiceATimeline: {fileID: 11400000, guid: a9fac9784174f9948b230a1b7be684c5, type: 2}
+    choiceBTimeline: {fileID: 11400000, guid: a3e684d4bdbffe543965af0b2ec67dcd, type: 2}
     endTimeline: {fileID: 0}
     initStartTime: 0
     initchoiceATime: 0
@@ -12058,6 +12101,7 @@ Transform:
   - {fileID: 131678634}
   - {fileID: 442739215}
   - {fileID: 1587513723}
+  - {fileID: 2028049764}
   m_Father: {fileID: 181120378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955810439
@@ -26174,6 +26218,112 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6190717741896014750, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
   m_PrefabInstance: {fileID: 991511409}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2028049763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2028049764}
+  - component: {fileID: 2028049767}
+  - component: {fileID: 2028049766}
+  - component: {fileID: 2028049765}
+  m_Layer: 0
+  m_Name: Karry tirsdag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2028049764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028049763}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
+  m_LocalPosition: {x: -0.01, y: 1.789, z: 14.975}
+  m_LocalScale: {x: 0.07, y: 1, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 955592676}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
+--- !u!64 &2028049765
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028049763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2028049766
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028049763}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 3b3b2f7e65ef83b4db83128d6721ad0a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2028049767
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2028049763}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &2030256379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4104167102334491768, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}

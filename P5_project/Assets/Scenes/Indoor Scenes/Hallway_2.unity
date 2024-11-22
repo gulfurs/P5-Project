@@ -10657,6 +10657,7 @@ GameObject:
   - component: {fileID: 801476572}
   - component: {fileID: 801476574}
   - component: {fileID: 801476573}
+  - component: {fileID: 801476575}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -10818,6 +10819,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &801476575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801476571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ea3eb5f17d0cc446be27fc49e50bcb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &803084174
 GameObject:
   m_ObjectHideFlags: 0
@@ -15994,9 +16007,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1323747144}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
-      propertyPath: nodes.Array.data[0].startDialogue.Array.data[2].actor
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[1].actor
       value: 
       objectReference: {fileID: 5940107423222360576}
+    - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
+      propertyPath: nodes.Array.data[0].startDialogue.Array.data[2].actor
+      value: 
+      objectReference: {fileID: 635397781}
     - target: {fileID: 2377589142799668303, guid: 52c81e3448a80e240b033d6b2bb1c944, type: 3}
       propertyPath: nodes.Array.data[0].startDialogue.Array.data[3].actor
       value: 
