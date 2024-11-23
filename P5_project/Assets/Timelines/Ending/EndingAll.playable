@@ -367,6 +367,28 @@ AnimationClip:
     classID: 23
     script: {fileID: 0}
     flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 2100000, guid: 785922f4fb6fd814ca73a7df5aaee6ae, type: 2}
+    - time: 12.4
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Miran/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom.003
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 2100000, guid: 785922f4fb6fd814ca73a7df5aaee6ae, type: 2}
+    - time: 12.4
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Miran/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop.003
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -527,6 +549,24 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3159557555
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3833880417
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: 2100000, guid: 785922f4fb6fd814ca73a7df5aaee6ae, type: 2}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
@@ -559,6 +599,10 @@ AnimationClip:
     - {fileID: -1191397961450007060, guid: c7fb0e57a42e66a4996d50903f0a624c, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -2361375807700560468, guid: c7fb0e57a42e66a4996d50903f0a624c, type: 3}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: 2100000, guid: 785922f4fb6fd814ca73a7df5aaee6ae, type: 2}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: 2100000, guid: 785922f4fb6fd814ca73a7df5aaee6ae, type: 2}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -746,6 +790,28 @@ AnimationClip:
     classID: 23
     script: {fileID: 0}
     flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -1790152553091968107, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
+    - time: 13.316667
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Carsten/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom.004
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -1790152553091968107, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
+    - time: 13.316667
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Carsten/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop.004
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -789,7 +855,29 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3653268064
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1967917001
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
+    - {fileID: -1790152553091968107, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: -1790152553091968107, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -1790152553091968107, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -1790152553091968107, guid: 1bf35a457a7817a44bb334e411b7ad71, type: 3}
@@ -1319,6 +1407,28 @@ AnimationClip:
     classID: 23
     script: {fileID: 0}
     flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -6223812407092648556, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
+    - time: 10.616667
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: William/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom.007
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -6223812407092648556, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
+    - time: 10.616667
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: William/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop.007
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -1371,7 +1481,29 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 4282491930
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1918353831
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
+    - {fileID: -6223812407092648556, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: -6223812407092648556, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -6223812407092648556, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -6223812407092648556, guid: 6ed5f603e1f956f4f86d6bd21a0290ba, type: 3}
@@ -2063,6 +2195,8 @@ AnimationClip:
     flags: 2
   - serializedVersion: 2
     curve:
+    - time: 0
+      value: {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
     - time: 15.583333
       value: {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
     attribute: m_Materials.Array.data[0]
@@ -2111,6 +2245,50 @@ AnimationClip:
       value: {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
     attribute: m_Materials.Array.data[0]
     path: FrederikNPC/Frederik/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/master_eye.R/MCH-eye.R/EyeRight.001
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
+    - time: 15.583333
+      value: {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: FrederikNPC/Frederik/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom.001
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -5970401928484220731, guid: 9d6fe892a451e3b458f90d03c18cf8ec, type: 3}
+    - time: 15.966666
+      value: {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Peter/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -5970401928484220731, guid: 9d6fe892a451e3b458f90d03c18cf8ec, type: 3}
+    - time: 15.966666
+      value: {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Peter/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
+    - time: 15.583333
+      value: {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: FrederikNPC/Frederik/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop.001
     classID: 23
     script: {fileID: 0}
     flags: 2
@@ -2220,6 +2398,42 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3262627767
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2217587022
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 2111364562
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 821604084
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: -5970401928484220731, guid: bf590d04ea7450b4882e42bc1d645155, type: 3}
     - {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
@@ -2233,12 +2447,21 @@ AnimationClip:
     - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
     - {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
     - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
+    - {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
     - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
     - {fileID: -5970401928484220731, guid: bf590d04ea7450b4882e42bc1d645155, type: 3}
     - {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
     - {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
     - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
     - {fileID: -5970401928484220731, guid: bf590d04ea7450b4882e42bc1d645155, type: 3}
+    - {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
+    - {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
+    - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
+    - {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
+    - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
+    - {fileID: -5970401928484220731, guid: 9d6fe892a451e3b458f90d03c18cf8ec, type: 3}
+    - {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
+    - {fileID: -5970401928484220731, guid: 9d6fe892a451e3b458f90d03c18cf8ec, type: 3}
     - {fileID: 2100000, guid: 5eb0c6c65b07c044d8c50e54a75b3f86, type: 2}
     - {fileID: 5328902396616547779, guid: d4e95e22eb7fea84780fe9311fa51d23, type: 3}
     - {fileID: 2100000, guid: 4ad119e408c9e2045a002e93bbf649a3, type: 2}
@@ -2545,6 +2768,28 @@ AnimationClip:
     classID: 23
     script: {fileID: 0}
     flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
+    - time: 11.516666
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: August/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/jaw_master/teeth.B/TeethBottom.008
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
+    - time: 11.516666
+      value: {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: August/Armature.009/mixamorig:Hips/mixamorig:Spine/mixamorig:Spine1/mixamorig:Spine2/mixamorig:Neck/mixamorig:Head/ORG-face/teeth.T/TeethTop.008
+    classID: 23
+    script: {fileID: 0}
+    flags: 2
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -2597,11 +2842,33 @@ AnimationClip:
       isPPtrCurve: 1
       isIntCurve: 0
       isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 1364600342
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    - serializedVersion: 2
+      path: 3383264152
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping:
     - {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
+    - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
+    - {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
     - {fileID: -7582317809096794398, guid: 434b63595c3ebf040bafc17517295fb1, type: 3}
     - {fileID: 2100000, guid: fd446f2332b915b4d97b8fb2224fcd16, type: 2}
