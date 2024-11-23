@@ -14,6 +14,7 @@ public class EventManager : MonoBehaviour
     public Button resumeButton;
     public GameObject nextButton;
     public TextMeshProUGUI mainSubtitles;
+    public TextMeshPro Subtitles;
     
     public List<string> eventTrackerList = new List<string>();
 
@@ -33,60 +34,9 @@ public class EventManager : MonoBehaviour
             if (player != null)
             {
                 PlayerInteraction playerInteraction = player.GetComponent<PlayerInteraction>();
-                /*
-                if (playerInteraction != null)
-                {
-                    // NEW ACTOR STEPPING IN? NEW EVENT
-                    playerInteraction.OnSelectionChanged += UpdatePlayerEvent;
-                }*/
             }
         }
-    }   
-    /*
-    // PREPARES NEW PLAYER EVENT
-    private void UpdatePlayerEvent(Transform newSelection)
-    {   
-         if (newSelection == null) {
-        return; 
-        }
-        
-        //DISABLE COLLIDERS OF ALL ACTORS
-        foreach (var actor in actorManager.Actors)
-        {
-            Collider[] colliders = actor.actorObject.GetComponents<Collider>();  
-
-            foreach (Collider collider in colliders)
-            {
-                collider.enabled = false;  // Disable each collider
-            }
-        }
-
-        PlayerEvent = newSelection;
-
-        //SET PLAYER TO POSITION OF THE SELECTION'S ROOT
-        Transform playerRoot = newSelection.Find("PlayerRoot");
-         if (playerRoot != null) {
-        player.transform.position = playerRoot.position;
-        }
-
-        //START THE DIALOGUE OF THE SELECTION
-        DialogueManager dialogueManager = newSelection.gameObject.GetComponent<DialogueManager>();
-        if (dialogueManager != null)
-        {
-        dialogueManager.StartDialogue();
-        }
-
-        //START THE DIALOGUE OF THE SELECTION
-        CustomInteraction getInteraction = newSelection.gameObject.GetComponent<CustomInteraction>();
-        if (getInteraction != null)
-        {
-        getInteraction.InitializeInteraction();
-        PlayerEvent = null;
-        }
-
-       
-        //Debug.Log("PlayerEvent updated to: " + PlayerEvent);
-    } */
+    } 
     
 
     public void StartConversation() {

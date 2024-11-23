@@ -70,6 +70,10 @@ public class DialogueManager : MonoBehaviour
 
     private Coroutine currentNodeCoroutine;
 
+    private TextMeshPro targetText;
+    public float activeAlpha = 0.3f;
+    private float normalAlpha;
+
     private void Start()
     {
         continueDialogAction.action.Enable();
@@ -102,6 +106,11 @@ public class DialogueManager : MonoBehaviour
         getChoiceTracker = FindObjectOfType<ChoiceTracker>();
 
         myActor = GetComponent<Actor>();
+        targetText = getEventManager.Subtitles;
+        if (targetText != null)
+        {
+            normalAlpha = targetText.color.a;
+        }
     }
 
     public bool ChoicesActive
@@ -116,6 +125,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue()
     {
         getEventManager.StartConversation();
+        getChoiceTracker = FindObjectOfType<ChoiceTracker>();
         getEventManager.PlayerEvent = gameObject.transform;
         midConvo = true;
         AnimNext();
@@ -131,6 +141,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogueSequence(Dialogue[] dialogueSequence, bool showChoicesAfter, PlayableAsset choiceTimeline)
     {
         //if (isDialoguePlaying) return;
+        SetMaterialAlpha(normalAlpha);
         isDialoguePlaying = true;
         currentDialogueSequence = dialogueSequence;
         currentDialogueIndex = 0;
@@ -153,18 +164,11 @@ public class DialogueManager : MonoBehaviour
             getFollow.target = dialogue.actor.faceID?.transform;
     }
 
-    private void PlayVoiceLine()
+    void SetMaterialAlpha(float alpha)
     {
-       /* if (currentDialogueIndex >= currentDialogueSequence.Length) return;
-
-        Dialogue dialogue = currentDialogueSequence[currentDialogueIndex];
-
-        // Play the voice line if available
-        if (dialogue.voiceLine != null)
-        {
-            getAudioSource.clip = dialogue.voiceLine;
-            getAudioSource.Play();
-        }*/
+        Color color = targetText.color; // Get current color
+        color.a = alpha; // Modify alpha
+        targetText.color = color; // Apply new color
     }
 
     public void OnSignalReceived()
@@ -224,7 +228,7 @@ public class DialogueManager : MonoBehaviour
             getTextB.transform.parent.gameObject.SetActive(true);
 
             getEventManager.nextButton.SetActive(false);
-
+            SetMaterialAlpha(activeAlpha);
         }
     }
 
@@ -233,7 +237,7 @@ public class DialogueManager : MonoBehaviour
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceA, currentNode.choiceATimeline);
        //playableDirector.Play();
-       getChoiceTracker.AddChoice(myActor.actorName + currentDialogueIndex + "A");
+       getChoiceTracker.AddChoice(myActor.actorName + currentNodeIndex + "A");
     }
 
     public void OnChoiceB()
@@ -241,7 +245,7 @@ public class DialogueManager : MonoBehaviour
         if (!ChoicesActive) return;
         HandleChoice(currentNode.playerChoiceB, currentNode.choiceBTimeline);
         //playableDirector.Play();
-        getChoiceTracker.AddChoice(myActor.actorName + currentDialogueIndex + "B");
+        getChoiceTracker.AddChoice(myActor.actorName + currentNodeIndex + "B");
     }
 
     private void HandleChoice(Dialogue[] choiceDialogue, PlayableAsset choiceTimeline)
@@ -289,7 +293,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (midConvo) {
         Debug.Log("End of dialogue nodes reached.");
-        //HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
+        SetMaterialAlpha(normalAlpha);
         AnimNext();
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);

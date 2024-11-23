@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChoiceTracker : MonoBehaviour
 {
     private static ChoiceTracker instance; 
+    [SerializeField]
     private List<string> playerChoices = new List<string>();
 
     //SINGLETON DONTDESTROY

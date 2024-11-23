@@ -22,10 +22,6 @@ public class ClickActions : MonoBehaviour
 
     public InputAction PrimaryLeft;
 
-    public TextMeshPro targetText;
-    public float activeAlpha = 0.3f;
-    private float normalAlpha;
-
     private void Awake()
     {
         // Validate required components
@@ -116,7 +112,7 @@ public class ClickActions : MonoBehaviour
     }
 
     void Start() {
-        if (targetText != null)
+        /*if (targetText != null)
         {
             // Save the original alpha value
             normalAlpha = targetText.color.a;
@@ -124,7 +120,7 @@ public class ClickActions : MonoBehaviour
         else
         {
             Debug.LogError("TextMesh is not assigned!");
-        }
+        }*/
     }
 
     private void Update()
@@ -134,7 +130,7 @@ public class ClickActions : MonoBehaviour
             ButtonOption_A.SetActive(dialogueMan.ChoicesActive);
             ButtonOption_B.SetActive(dialogueMan.ChoicesActive);
         }
-
+        /*
         if (dialogueMan != null && targetText != null)
         {
             if (dialogueMan.ChoicesActive)
@@ -145,16 +141,16 @@ public class ClickActions : MonoBehaviour
             {
                 SetMaterialAlpha(normalAlpha);
             }
-        }
+        }*/
     }
-
+/*
     void SetMaterialAlpha(float alpha)
     {
         Color color = targetText.color; // Get current color
         color.a = alpha; // Modify alpha
         targetText.color = color; // Apply new color
     }
-
+*/
     public void OnLeftTriggerPress(InputAction.CallbackContext context)
     {
         //LeftPrimaryPress(new InputAction.CallbackContext());
