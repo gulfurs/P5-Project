@@ -224,6 +224,7 @@ public class DialogueManager : MonoBehaviour
             getTextB.transform.parent.gameObject.SetActive(true);
 
             getEventManager.nextButton.SetActive(false);
+
         }
     }
 
@@ -288,7 +289,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (midConvo) {
         Debug.Log("End of dialogue nodes reached.");
-        HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
+        //HandleChoice(currentNode.endDialogue, currentNode.endTimeline);
         AnimNext();
         getFollow.target = getEventManager.player.GetComponent<Actor>().faceID.transform;
         getButtonA?.onClick.RemoveListener(OnChoiceA);

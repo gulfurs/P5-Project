@@ -9,6 +9,10 @@ public class TriggerEvents : MonoBehaviour
     public PlayableDirector triggerDirector;
     public PlayableAsset triggerTimeline; // Timeline to run for start dialogue
 
+    public void Start() {
+        Debug.Log(gameObject);
+    }
+
     public void triggeringTimeline() {
         PlayTimeline(triggerTimeline);
     }

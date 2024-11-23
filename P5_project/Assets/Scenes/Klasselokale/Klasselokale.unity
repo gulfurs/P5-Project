@@ -7345,7 +7345,6 @@ GameObject:
   m_Component:
   - component: {fileID: 731331094}
   - component: {fileID: 731331093}
-  - component: {fileID: 731331092}
   - component: {fileID: 731331091}
   m_Layer: 0
   m_Name: SceneManager
@@ -7369,7 +7368,25 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 8a06da2e4c6159c479857b607b3f89ae, type: 2}
+    - {fileID: 11400000, guid: ed92912b65f65fd4382eb0badeb8a5c1, type: 2}
+    - {fileID: 11400000, guid: 999c5e9a40d07a94e81a91e8b9ee80df, type: 2}
     m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 731331093}
+          m_TargetAssemblyTypeName: SceneMotor, Assembly-CSharp
+          m_MethodName: ActivatePreloadedScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls: []
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 731331093}
@@ -7384,37 +7401,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!320 &731331092
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731331090}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
-  m_InitialState: 0
-  m_WrapMode: 2
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: -1597594195264856033, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
-    value: {fileID: 0}
-  - key: {fileID: 3356180983406582328, guid: 2f4310bca2a78f44e89a44eb7f26357c, type: 2}
-    value: {fileID: 1400796283987152991}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  - key: {fileID: -1597594195264856033, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
-    value: {fileID: 731331091}
-  - key: {fileID: 3356180983406582328, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
-    value: {fileID: 1400796283987152991}
-  - key: {fileID: 1281871875705310703, guid: d7b74964b1e44e14d85a6b041749453b, type: 2}
-    value: {fileID: 248600909}
-  m_ExposedReferences:
-    m_References: []
 --- !u!114 &731331093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9663,7 +9649,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 731331092}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
           m_MethodName: Play
           m_Mode: 1
