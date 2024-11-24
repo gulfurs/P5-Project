@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.meta.xr.sdk.interaction": {
-      "version": "69.0.0",
+      "version": "71.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -191,7 +191,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.hands": {
-      "version": "1.4.3",
+      "version": "1.5.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -238,6 +238,15 @@
         "com.unity.modules.xr": "1.0.0",
         "com.unity.modules.subsystems": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.7"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.oculus": {
+      "version": "4.2.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "4.4.0"
       },
       "url": "https://packages.unity.com"
     },

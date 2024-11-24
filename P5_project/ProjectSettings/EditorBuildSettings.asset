@@ -27,6 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ElevatorScene/ElevatorScene.unity
     guid: 81438c65abbced1478641d1a9872aae5
   m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 0e9a313d1ce929946a226a76c79a07d9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 936a8c8ee41a25c4aaf439ab36b79f8b, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3c7f630a56a6571479ffd9a07d838ec2, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 4a1d395d766ee5d4dac404d54e6b3673, type: 2}
