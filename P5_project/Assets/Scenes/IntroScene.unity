@@ -5775,6 +5775,10 @@ PrefabInstance:
       propertyPath: handText
       value: 
       objectReference: {fileID: 176081724}
+    - target: {fileID: 7783492721110611825, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8896070815810241457, guid: 25787a8f52e6ad546b4dd5ea4d580aac, type: 3}
       propertyPath: m_Name
       value: Player

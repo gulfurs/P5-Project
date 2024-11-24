@@ -11395,7 +11395,7 @@ MonoBehaviour:
     - dialogueText: " Kan du fort\xE6lle mig hvad der skete sidste torsdag?"
       actor: {fileID: 1614326103}
     - dialogueText: 'Jeg ved ik... '
-      actor: {fileID: 1614326103}
+      actor: {fileID: 669658653}
     - dialogueText: Peter var tvunget ind i Frederik's gruppe
       actor: {fileID: 669658653}
     - dialogueText: "ogs\xE5 har alting  bare g\xE5et ned af bakke."
